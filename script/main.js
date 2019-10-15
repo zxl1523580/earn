@@ -15,23 +15,23 @@ function funIniGroup(){
        index: 0,
        frames:[{
            name: 'home',
-           url: '../html/home/home.html',
+           url: '/html/home/home.html',
            bgColor: '#fff'
        }, {
            name: 'classify',
-           url: '../html/classify/classify.html',
+           url: '/html/classify/classify.html',
            bgColor: '#fff'
        }, {
            name: 'vip',
-           url: '../html/vip/vip.html',
+           url: '/html/vip/vip.html',
            bgColor: '#fff'
        }, {
            name: 'message',
-           url: '../html/message/message.html',
+           url: '/html/message/message.html',
            bgColor: '#fff'
        }, {
            name: 'own',
-           url: '../html/own/own.html',
+           url: '/html/own/own.html',
            bgColor: '#fff'
        }]
 
