@@ -10,14 +10,111 @@
     <link rel="stylesheet" type="text/css" href="../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../css/base.css" />
 </head>
+
 <body>
-  首页
+  <div frame="Banners">
+sdasda
+  </div>
+  <span tapmode onclick="fnOpen()">open()</span>
+  <span tapmode onclick="fnClose()">close()</span>
+  <span tapmode onclick="fnShow()">show()</span>
+  <span tapmode onclick="fnHide()">hide()</span>
+  <span tapmode onclick="fnSetCurrentIndex()">setCurrentIndex()</span>
+  <!-- <span tapmode onclick="fnReloadData()">reloadData()</span> -->
+  <span tapmode onclick="fnAdEventListener()">addEventListener()</span>
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
+    var UIScrollPicture;
     apiready = function() {
-
+        UIScrollPicture = api.require('UIScrollPicture');
+        console.log(JSON.stringify(UIScrollPicture));
+        UIScrollPicture.open({
+            rect: {
+                x: 0,
+                y: 0,
+                w: api.winWidth,
+                h: 300
+            },
+            data: {
+                paths: ['https://pic.qiantucdn.com/images/banner/5da3d6d5eb9df.jpg', 'https://pic.qiantucdn.com/images/banner/5da3d85b4c80f.jpg', 'https://pic.qiantucdn.com/images/banner/5da3d6d5eb9df.jpg'], //数组类型；图片路径数组，支持http://，https://，widget://，fs://协议
+                captions: ['竹', '屋', '花']
+            },
+            styles: {
+                caption: {
+                    height: 35,
+                    color: '#E0FFFF',
+                    size: 13,
+                    bgColor: '#696969',
+                    position: 'bottom'
+                },
+                indicator: {
+                    dot: { // （可选项）JSON对象；指示器小圆点样式；不传则使用系统默认小圆点样式
+                        w: 10, //（必选项）数字类型；小圆点宽度
+                        h: 10, //（必选项）数字类型；小圆点高度
+                        r: 5, //（必选项）数字类型；corner 页面控制器指示标记（矩形）的圆角大小
+                        margin: 20 //（必选项）数字类型；小圆点间距
+                    },
+                    align: 'center',
+                    color: '#FFFFFF',
+                    activeColor: '#DA70D6'
+                }
+            },
+            placeholderImg: 'widget://image/loginImage.png',
+            contentMode: 'scaleToFill',
+            interval: 3,
+            loop: true,
+            fixedOn: 'Banners',
+            fixed: true
+        }, function(ret, err) {
+            if (ret) {
+                // alert(JSON.stringify(ret));
+            } else {
+                // alert(JSON.stringify(err));
+            }
+        });
     };
+
+
+    //
+    // function fnClose() {
+    //     UIScrollPicture.close();
+    // };
+    //
+    // function fnShow() {
+    //     UIScrollPicture.show();
+    // };
+    //
+    // function fnHide() {
+    //     UIScrollPicture.hide();
+    // };
+    //
+    // function fnSetCurrentIndex() {
+    //     UIScrollPicture.setCurrentIndex({
+    //         index: 2
+    //     });
+    // };
+    //
+    // // function fnReloadData() {
+    // //     UIScrollPicture.reloadData({
+    // //         data: {
+    // //             paths: ['widget://res/4.jpg', 'widget://res/5.jpg', 'widget://res/6.jpg'],
+    // //             captions: ['title1', 'title2', 'title3']
+    // //         }
+    // //     });
+    // // };
+    //
+    // function fnAdEventListener() {
+    //     UIScrollPicture.addEventListener({
+    //         name: 'scroll'
+    //     }, function(ret, err) {
+    //         if (ret) {
+    //             alert(JSON.stringify(ret));
+    //         } else {
+    //             alert(JSON.stringify(err));
+    //         }
+    //     });
+    // };
 </script>
 
 </html>
