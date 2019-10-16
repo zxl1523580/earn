@@ -12,21 +12,29 @@
 </head>
 
 <body>
-  <div frame="Banners">
-sdasda
-  </div>
-  <span tapmode onclick="fnOpen()">open()</span>
-  <span tapmode onclick="fnClose()">close()</span>
-  <span tapmode onclick="fnShow()">show()</span>
-  <span tapmode onclick="fnHide()">hide()</span>
-  <span tapmode onclick="fnSetCurrentIndex()">setCurrentIndex()</span>
-  <!-- <span tapmode onclick="fnReloadData()">reloadData()</span> -->
-  <span tapmode onclick="fnAdEventListener()">addEventListener()</span>
+    <div class="">
+
+    </div>
+    <div frame="Banners"> 
+        sdasda
+    </div>
+    <!-- <span tapmode onclick="fnOpen()">open()</span>
+    <span tapmode onclick="fnClose()">close()</span>
+    <span tapmode onclick="fnShow()">show()</span>
+    <span tapmode onclick="fnHide()">hide()</span>
+    <span tapmode onclick="fnSetCurrentIndex()">setCurrentIndex()</span> -->
+    <!-- <span tapmode onclick="fnReloadData()">reloadData()</span> -->
+    <!-- <span tapmode onclick="fnAdEventListener()">addEventListener()</span> -->
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript">
     var UIScrollPicture;
     apiready = function() {
+        api.setStatusBarStyle({
+            style: 'dark',
+            color: "#E699ED"
+        });
+
         UIScrollPicture = api.require('UIScrollPicture');
         console.log(JSON.stringify(UIScrollPicture));
         UIScrollPicture.open({
