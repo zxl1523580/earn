@@ -27,6 +27,18 @@ sdasda
 <script type="text/javascript">
     var UIScrollPicture;
     apiready = function() {
+      api.addEventListener({
+        name: 'classify'
+    }, function(ret, err) {
+        if (ret) {
+          api.setStatusBarStyle({
+            style: 'dark',
+            color: "#0f0"
+        });
+        } else {
+            alert(JSON.stringify(err));
+        }
+    })
         UIScrollPicture = api.require('UIScrollPicture');
         console.log(JSON.stringify(UIScrollPicture));
         UIScrollPicture.open({
