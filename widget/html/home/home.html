@@ -6,7 +6,6 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
 </head>
@@ -44,26 +43,12 @@
     var UIScrollPicture;
     apiready = function() {
       api.addEventListener({
-        name: 'classify'
-    }, function(ret, err) {
-        if (ret) {
-          api.setStatusBarStyle({
-            style: 'dark',
-            color: "#0f0"
-        });
-        } else {
-            alert(JSON.stringify(err));
-        }
-    })
-        // api.setStatusBarStyle({
-        //     style: 'dark',
-        //     color: "#E699ED"
-        // });
-
-        // 适配iOS 7+，Android 4.4+状态栏
-        // var header = $api.byId('wrap');
-        // $api.fixStatusBar(header);
-
+          name:'statusStyle'
+      }, function(ret, err){
+        api.setStatusBarStyle({
+            style: ret.value.key1
+        })
+      });
         UIScrollPicture = api.require('UIScrollPicture');
         console.log(JSON.stringify(UIScrollPicture));
         UIScrollPicture.open({
