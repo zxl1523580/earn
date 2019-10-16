@@ -50,7 +50,7 @@ html,body,
     display: none;
 }
 .messageModel{
-  padding: .32rem .24rem;
+  margin: .32rem .24rem;
 }
 .messageModelTop{
   height: .9rem;
@@ -108,6 +108,7 @@ html,body,
   color:rgba(153,153,153,1);
   line-height:.36rem;
   text-indent:2em;
+  margin-bottom: .16rem
 }
 .messageModelBottomImgOne{
   margin-top: .16rem
