@@ -1,0 +1,34 @@
+{
+    "data": [{
+        "id": 1,
+        "name": "女装"
+    }, {
+        "id": 2,
+        "name": "男装"
+    }, {
+        "id": 3,
+        "name": "家具"
+    }, {
+        "id": 4,
+        "name": "手机"
+    }, {
+        "id": 5,
+        "name": "数码"
+    }],
+    "shopData": [{
+        "title": "女装",
+        "imglist": [{
+            "img": "https://gaitaobao2.alicdn.com/tfscom/i4/412598020/O1CN01KA3n4x297Czdwy1ML_!!412598020.jpg_240x240xz.jpg",
+            "name": "女装"
+        }]
+
+    }, {
+        "title": "男装",
+        "imglist": [{
+            "img": "https://gaitaobao2.alicdn.com/tfscom/i4/412598020/O1CN01KA3n4x297Czdwy1ML_!!412598020.jpg_240x240xz.jpg",
+            "name": "男装"
+        }]
+
+    }]
+
+}
