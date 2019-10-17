@@ -114,6 +114,16 @@
                 }   
             });
         })
+
+        api.addEventListener({
+            name:'aa'
+        }, function(ret, err){
+          // alert(JSON.stringify(ret))
+          // alert(ret.value.key1)
+          api.setStatusBarStyle({
+              style: ret.value.key1
+          })
+        });
     };
     $.ajax({
         type: "GET",
@@ -131,7 +141,13 @@
             alert("连接失败")
         }
     });
-
+    function sdsa(val){
+      var html = '';
+      $.each(val, function(i, value) {
+           html += `<li class="li_item"><img src="${value.img}" /><span>${value.name}</span><li>`
+      })
+      return html
+    }
     $.ajax({
         type: "GET",
         url: "../../script/classify.json",
@@ -140,28 +156,21 @@
             var data = JSON.parse(res);
             var goodsDate = '';
             $.each(data.shopData, function(i, val) {
-                goodsDate +=
-                    `<div class="nav_content div2">
-                  <div class="nav_content_title">
-                      <div class="title">${val.title}</div>
-                      <div class="more">
-                          <span>查看全部</span>
-                          <img src="../../image/Rightarrow.png" />
-                      </div>
-                  </div>
-                  <div class="shopList">
-                      <ul class="ul_shopList">
-                      ${
-                        $.each(val.imglist, function(i, value) {
-                            alert(value.img)
-                            '<li class="li_item"><img src="'+value.img+'" /><span>'+value.name+'</span><li>'
-                        })
-                      }
-
-
-              </ul>
-                  </div>
-              </div>`;
+                      goodsDate +=
+                          `<div class="nav_content div2">
+                        <div class="nav_content_title">
+                            <div class="title">${val.title}</div>
+                            <div class="more">
+                                <span>查看全部</span>
+                                <img src="../../image/Rightarrow.png" />
+                            </div>
+                        </div>
+                        <div class="shopList">
+                            <ul class="ul_shopList">
+                              ${sdsa(val.imglist)}
+                          </ul>
+                        </div>
+                    </div>`
             });
             $('.nav_box').html(goodsDate)
         },
@@ -214,17 +223,9 @@
             $('.modal').fadeOut()
         }, 2000)
     })
-      api.addEventListener({
-          name:'aa'
-      }, function(ret, err){
-        // alert(JSON.stringify(ret))
-        // alert(ret.value.key1)
-        api.setStatusBarStyle({
-            style: ret.value.key1
-        })
-      });
 
-    }
+
+    // }
 </script>
 
 </html>
