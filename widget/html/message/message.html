@@ -22,7 +22,7 @@
     </header>
     <section>
       <div class="messageList">
-        <div class="messageModel">
+        <!-- <div class="messageModel">
           <div class="messageModelTop">
             <div class="messageModelTopL">
                 <img src="../../image/message2.png"/>
@@ -43,12 +43,12 @@
               <div class="messageModelBottomImgOne">
                     <img src="../../image/message1.png"/>
               </div>
-              <!-- <div class="messageModelBottomImgTwo">
+              <div class="messageModelBottomImgTwo">
                 <img src="../../image/message3.png"/>
                 <img src="../../image/message3.png"/>
-              </div> -->
+              </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
   </div>
@@ -59,47 +59,64 @@
     apiready = function() {
 
     };
+    $(".navBar").on("click","p",function(){
+        $(".navBar p").removeClass("navBaractive")
+        $(this).addClass("navBaractive")
+    })
     getdata()
     function getdata(){
       $.ajax({
         url: '../../script/message.json',
         success:function (data) {
-              // var data = eval("(" + data + ")")
-              var data =JSON.parse(data).data
-              var html = ''
-              $.each(data,function(item,index){
-                  html+='<div class="messageModel">'+
-                  '<div class="messageModelTop">'+
-                    '<div class="messageModelTopL">'+
-                        '<img src="'+index.img+'"/>'+
-                      '</div>'+
-                      '<div class="messageModelTopC">'+
-                        '<p class="messagename">'+index.name+'</p>'+
-                        '<p class="messagetime">'+index.time+'</p>'+
-                      '</div>'+
-                      '<div class="messageModelTopR">'+
-                            '<img class="messageBtn" src="../../image/sharBtn.png"/>'+
-                            '<span class="messagesharnum">'+index.sharnum+'</span>'+
-                      '</div>'+
-                    '</div>'+
-                    '<div class="messageModelBottom">'+
-                        '<div class="messageModelBottomText">'+index.content+'</div>'
-                          if(index.imgs.length>1){
-                              html+='<div class="messageModelBottomImgTwo">'
-                            $.each(index.imgs,function(all,itemL){
-                                  html+='<img src="'+itemL+'"/>'
-                            })
-                            html+='</div>'
-                          }else{
-                            html+='<div class="messageModelBottomImgOne">'+
-                                  '<img src="'+index.imgs[0]+'"/>'+
-                            '</div>'
+              var data =JSON.parse(data).message
+              console.log(data)
+              // var html = ''
+              // $.each(data,function(item,index){
+              //     html += '<p typeId="'+index.id+'">'+index.title+'</p>'
+              // })
+              // $(".navBar").html(html)
 
-                          }
-                      html+='</div>'+
-                  '</div>'
-              })
-              $(".messageList").html(html)
+         }  
+      })
+      $.ajax({
+        url: '../../script/message.json',
+        success:function (data) {
+              var data =JSON.parse(data).data
+              console.log(data)
+              // var html = ''
+              // $.each(data,function(item,index){
+              //     html+='<div class="messageModel">'+
+              //     '<div class="messageModelTop">'+
+              //       '<div class="messageModelTopL">'+
+              //           '<img src="'+index.img+'"/>'+
+              //         '</div>'+
+              //         '<div class="messageModelTopC">'+
+              //           '<p class="messagename">'+index.name+'</p>'+
+              //           '<p class="messagetime">'+index.time+'</p>'+
+              //         '</div>'+
+              //         '<div class="messageModelTopR">'+
+              //               '<img class="messageBtn" src="../../image/sharBtn.png"/>'+
+              //               '<span class="messagesharnum">'+index.sharnum+'</span>'+
+              //         '</div>'+
+              //       '</div>'+
+              //       '<div class="messageModelBottom">'+
+              //           '<div class="messageModelBottomText">'+index.content+'</div>'
+              //             if(index.imgs.length>1){
+              //                 html+='<div class="messageModelBottomImgTwo">'
+              //               $.each(index.imgs,function(all,itemL){
+              //                     html+='<img src="'+itemL+'"/>'
+              //               })
+              //               html+='</div>'
+              //             }else{
+              //               html+='<div class="messageModelBottomImgOne">'+
+              //                     '<img src="'+index.imgs[0]+'"/>'+
+              //               '</div>'
+              //
+              //             }
+              //         html+='</div>'+
+              //     '</div>'
+              // })
+              // $(".messageList").html(html)
 
          }  
       })
