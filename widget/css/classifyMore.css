@@ -51,17 +51,21 @@
   font-weight:400;
   color:rgba(255,255,255,1);
   text-align: center;
-  overflow:hidden;
   background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
 }
 .navBar_content{
-  width: 100%;
-  overflow-x: scroll;
-  /*white-space: nowrap;*/
+  width:100%;
+    height: 1.9rem;
+    display: inline;
+    white-space: nowrap;
+    overflow-x:scroll;
+    float:left;
+    overflow-y:hidden
 }
 .navBar_content>li{
-  float: left;
-  padding: 0 .3rem
+  padding: 0 .3rem;
+  display:inline-block;
+ margin:0;
 }
 .navBaractive{
   font-size:.28rem;

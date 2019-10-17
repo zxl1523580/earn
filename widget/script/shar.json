@@ -1,0 +1,32 @@
+{
+    "nav": [{
+        "title": "保存图片",
+        "sharimg": "../../image/dwonlound.png",
+        "id":1
+    },
+    {
+      "title": "微信好友",
+      "sharimg": "../../image/wx.png",
+      "id":2
+
+    },
+    {
+      "title": "微信朋友圈",
+      "sharimg": "../../image/wxcircle.png",
+      "id":3
+
+    },
+    {
+      "title": "QQ好友",
+      "sharimg": "../../image/qq.png",
+      "id":4
+
+    },
+    {
+      "title": "QQ空间",
+      "sharimg": "../../image/qqcircle.png",
+      "id":5
+
+    }]
+
+}
