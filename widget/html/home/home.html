@@ -11,18 +11,17 @@
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
 </head>
 <style>
-    #wrap{
-    background-color: #E699ED;
+    #wrap {
+        background-color: #E699ED;
     }
 </style>
 
 <body>
-<div id="wrap">
-    11111111111
-    <div id="result"></div>
-</div>
+    <div id="wrap">
+        <div id="result"></div>
+    </div>
     <div>
-        fdsafsdagsa
+        fdsafsda gsa
     </div>
     <div class="">
 
@@ -43,11 +42,14 @@
 <script type="text/javascript">
     var UIScrollPicture;
     apiready = function() {
-        // api.setStatusBarStyle({
-        //     style: 'dark',
-        //     color: "#E699ED"
-        // });
-
+        function fanhui() {
+            api.sendEvent({
+                name: 'shuaxin',
+            });
+            api.closeToWin({
+                name: 'pson'
+            });
+        }
         // 适配iOS 7+，Android 4.4+状态栏
         var header = $api.byId('wrap');
         $api.fixStatusBar(header);

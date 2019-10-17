@@ -6,18 +6,121 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="../css/api.css" />
-    <link rel="stylesheet" type="text/css" href="../css/public.css" />
-    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/message.css" />
 </head>
 <body>
-  消息
+  <div id="wrap">
+    <header>
+      <div class="statusBar"></div>
+      <div class="navBar">
+          <p class="navBaractive">爆款</p>
+          <p>素材</p>
+          <p>学院</p>
+      </div>
+    </header>
+    <section>
+      <div class="messageList">
+        <!-- <div class="messageModel">
+          <div class="messageModelTop">
+            <div class="messageModelTopL">
+                <img src="../../image/message2.png"/>
+            </div>
+            <div class="messageModelTopC">
+              <p class="messagename">雯雯大人</p>
+              <p class="messagetime">4分钟前</p>
+            </div>
+            <div class="messageModelTopR">
+                  <img class="messageBtn" src="../../image/sharBtn.png"/>
+                  <span class="messagesharnum">9604</span>
+            </div>
+          </div>
+          <div class="messageModelBottom">
+              <div class="messageModelBottomText">
+                这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文这里是正文
+              </div>
+              <div class="messageModelBottomImgOne">
+                    <img src="../../image/message1.png"/>
+              </div>
+              <div class="messageModelBottomImgTwo">
+                <img src="../../image/message3.png"/>
+                <img src="../../image/message3.png"/>
+              </div>
+          </div>
+        </div> -->
+      </div>
+    </section>
+  </div>
 </body>
-<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
 <script type="text/javascript">
     apiready = function() {
 
     };
+    $(".navBar").on("click","p",function(){
+        $(".navBar p").removeClass("navBaractive")
+        $(this).addClass("navBaractive")
+    })
+    getdata()
+    function getdata(){
+      $.ajax({
+        url: '../../script/message.json',
+        success:function (data) {
+              var data =JSON.parse(data).message
+              console.log(data)
+              // var html = ''
+              // $.each(data,function(item,index){
+              //     html += '<p typeId="'+index.id+'">'+index.title+'</p>'
+              // })
+              // $(".navBar").html(html)
+
+         }  
+      })
+      $.ajax({
+        url: '../../script/message.json',
+        success:function (data) {
+              var data =JSON.parse(data).data
+              console.log(data)
+              // var html = ''
+              // $.each(data,function(item,index){
+              //     html+='<div class="messageModel">'+
+              //     '<div class="messageModelTop">'+
+              //       '<div class="messageModelTopL">'+
+              //           '<img src="'+index.img+'"/>'+
+              //         '</div>'+
+              //         '<div class="messageModelTopC">'+
+              //           '<p class="messagename">'+index.name+'</p>'+
+              //           '<p class="messagetime">'+index.time+'</p>'+
+              //         '</div>'+
+              //         '<div class="messageModelTopR">'+
+              //               '<img class="messageBtn" src="../../image/sharBtn.png"/>'+
+              //               '<span class="messagesharnum">'+index.sharnum+'</span>'+
+              //         '</div>'+
+              //       '</div>'+
+              //       '<div class="messageModelBottom">'+
+              //           '<div class="messageModelBottomText">'+index.content+'</div>'
+              //             if(index.imgs.length>1){
+              //                 html+='<div class="messageModelBottomImgTwo">'
+              //               $.each(index.imgs,function(all,itemL){
+              //                     html+='<img src="'+itemL+'"/>'
+              //               })
+              //               html+='</div>'
+              //             }else{
+              //               html+='<div class="messageModelBottomImgOne">'+
+              //                     '<img src="'+index.imgs[0]+'"/>'+
+              //               '</div>'
+              //
+              //             }
+              //         html+='</div>'+
+              //     '</div>'
+              // })
+              // $(".messageList").html(html)
+
+         }  
+      })
+    }
 </script>
 
 </html>

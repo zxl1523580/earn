@@ -2,6 +2,7 @@ apiready = function() {
  funIniGroup();
 };
 function funIniGroup(){
+
    var eHeaderLis = $api.domAll('header li')
    api.openFrameGroup({
        name: 'group',
@@ -68,6 +69,21 @@ function randomSwitchBtn( tag ) {
            $api.removeCls(eHeaderLis[i], 'active');
        }
    }
+    if(index == 1){
+      api.sendEvent({
+          name: 'statusStyle',
+          extra: {
+              key1: "dark",
+          }
+      });
+    }else{
+      api.sendEvent({
+          name: 'statusStyle',
+          extra: {
+              key1: "light",
+          }
+      });
+    }
    $api.addCls( eFootLis[index], 'active');
    $api.addCls( eHeaderLis[index], 'active');
    api.setFrameGroupIndex({

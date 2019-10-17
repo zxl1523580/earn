@@ -6,7 +6,6 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title></title>
-    <!-- <link rel="stylesheet" type="text/css" href="../../css/api.css" /> -->
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../../css/classify.css" />
@@ -215,6 +214,17 @@
             $('.modal').fadeOut()
         }, 2000)
     })
+      api.addEventListener({
+          name:'aa'
+      }, function(ret, err){
+        // alert(JSON.stringify(ret))
+        // alert(ret.value.key1)
+        api.setStatusBarStyle({
+            style: ret.value.key1
+        })
+      });
+
+    }
 </script>
 
 </html>
