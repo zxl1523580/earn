@@ -12,32 +12,208 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="wrap" class="wrap">
         <!-- <header> -->
-            <div class="search_box">
-                <div class="search_con">
-                    <div class="select_title">
-                        <span>淘券</span>
-                        <img src="../../image/Downarrow.png" />
-                    </div>
-                    <div class="search_text">
-                        <img class="search_icon" src="../../image/icon_search.png" />
-                        <input class="Input" type="text" placeholder="请输入您要找的商品" />
-                    </div>
+        <div class="search_box">
+            <div class="search_con">
+                <div class="select_title" id="modalShow">
+                    <span class="span">淘券</span>
+                    <span class="spanActive">淘券</span>
+                    <img class="img" src="../../image/Downarrow.png" />
+                    <img class="imgActive" src="../../image/DownarrowActive.png" />
+                </div>
+                <!-- <div class="select_title_active">
+                    <span>淘券</span>
+                    <img src="../../image/DownarrowActive.png" />
+                </div> -->
+                <div class="search_text">
+                    <img class="search_icon" src="../../image/icon_search.png" />
+                    <input class="Input" type="text" placeholder="请输入您要找的商品" />
                 </div>
             </div>
+        </div>
         <!-- </header> -->
 
         <main class="content">
-            <div class="nav">左侧</div>
-            <div class="nav_content">右侧</div>
+            <div class="nav">
+                <ul class="ul_nav">
+                    <!-- <li class="active li1">女装</li>
+                    <li class="li2">男装</li> -->
+                </ul>
+            </div>
+            <div class="nav_box">
+                <div class="nav_content div1">
+                    <div class="nav_content_title">
+                        <div class="title">女装</div>
+                        <div class="more">
+                            <span>查看全部</span>
+                            <img src="../../image/Rightarrow.png" />
+                        </div>
+                    </div>
+                    <div class="shopList">
+                        <ul class="ul_shopList">
+                            <li class="li_item">
+                                <img src="https://img.alicdn.com/bao/uploaded/i3/2113775255/O1CN01bJIRPM1ogptJr6j39_!!2113775255.jpg_190x190q90s150.jpg" />
+                                <span>女装</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="nav_content div2">
+                    <div class="nav_content_title">
+                        <div class="title">男装</div>
+                        <div class="more">
+                            <span>查看全部</span>
+                            <img src="../../image/Rightarrow.png" />
+                        </div>
+                    </div>
+                    <div class="shopList">
+                        <ul class="ul_shopList">
+                            <li class="li_item">
+                                <img src="https://img.alicdn.com/bao/uploaded/i3/2113775255/O1CN01bJIRPM1ogptJr6j39_!!2113775255.jpg_190x190q90s150.jpg" />
+                                <span>男装</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </main>
+    </div>
+    <!-- 弹储层 -->
+    <div class="modal">
+        <ul class="modal_con">
+            <li class="modal_item Textactive" data-name="淘券">
+                <span class="text">淘券</span>
+                <img class="yes_icon" src="../../image/yes_icon.png" />
+            </li>
+            <li class="modal_item" data-name="拼券">
+                <span class="text">拼券</span>
+                <img src="../../image/yes_icon.png" />
+            </li>
+            <li class="modal_item" data-name="京券">
+                <span class="text">京券</span>
+                <img src="../../image/yes_icon.png" />
+            </li>
+        </ul>
     </div>
 </body>
 
 <script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
 <script type="text/javascript">
     apiready = function() {
+        var header = $api.byId('wrap');
+        $api.fixStatusBar(header);
+        $('.nav_content_title').on("click", '.more', function() {
+            api.openWin({     
+                name: 'classifyMore',
+                     url: './classifyMore.html',
+                     pageParam: {       
+                    id: 1     
+                }   
+            });
+        })
+    };
+    $.ajax({
+        type: "GET",
+        url: "../../script/classify.json",
+        async: true,
+        success: function(res) {
+            var data = JSON.parse(res);
+            var str = '';
+            $.each(data.data, function(i, val) {
+                str += `<li  class="${i == 0 ? 'active' : ''} li${i}" >${val.name}</li>`;
+            });
+            $(".ul_nav").html(str);
+        },
+        error: function() {
+            alert("连接失败")
+        }
+    });
+
+    $.ajax({
+        type: "GET",
+        url: "../../script/classify.json",
+        async: true,
+        success: function(res) {
+            var data = JSON.parse(res);
+            var goodsDate = '';
+            $.each(data.shopData, function(i, val) {
+                goodsDate +=
+                    `<div class="nav_content div2">
+                  <div class="nav_content_title">
+                      <div class="title">${val.title}</div>
+                      <div class="more">
+                          <span>查看全部</span>
+                          <img src="../../image/Rightarrow.png" />
+                      </div>
+                  </div>
+                  <div class="shopList">
+                      <ul class="ul_shopList">
+                      ${
+                        $.each(val.imglist, function(i, value) {
+                            alert(value.img)
+                            '<li class="li_item"><img src="'+value.img+'" /><span>'+value.name+'</span><li>'
+                        })
+                      }
+
+
+              </ul>
+                  </div>
+              </div>`;
+            });
+            $('.nav_box').html(goodsDate)
+        },
+        error: function() {
+            alert("连接失败")
+        }
+    });
+
+    var arrOffsetTop = [
+        $('.div1').offset().top,
+        $('.div2').offset().top
+    ];
+
+    var fTotalHgt = 0;
+    for (var i = 0; i < $('.nav_content').length; i++) {
+        fTotalHgt += $('.nav_content').eq(i).outerHeight();
+    }
+    var fAverageHgt = parseFloat(fTotalHgt / $('.nav_content').length);
+    // 滚动事件(每次滚动都做一次循环判断)
+    $('.nav_box').scroll(function() {
+        for (var i = 0; i < $('.nav_content').length; i++) {
+            if ($(this).scrollTop() > arrOffsetTop[i] - fAverageHgt) { // 减去一个固定值，是定位准确点
+                $('.ul_nav li').eq(i).addClass('active').siblings().removeClass('active');
+            }
+        }
+    });
+    /* 点击事件 */
+    $(document).on('click', '.ul_nav li', function() {
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.nav_box').animate({
+            scrollTop: parseFloat(arrOffsetTop[$(this).index()] - 88)
+        }, 500);
+    })
+
+    $('.yes_icon').show()
+    $('#modalShow').click(function() {
+        $('.modal').fadeIn()
+        $('.img').hide()
+        $('.imgActive').show()
+        $('.span').hide()
+        $('.spanActive').show()
+    })
+    $('.modal_item').click(function() {
+        $(this).addClass('Textactive').siblings().removeClass('Textactive');
+        $(this).children('img').show()
+        $(this).siblings().children('img').hide()
+        $('.spanActive').html($(this).data().name)
+        $('.select_title_active').hide()
+        setTimeout(function() {
+            $('.modal').fadeOut()
+        }, 2000)
+    })
       api.addEventListener({
           name:'aa'
       }, function(ret, err){

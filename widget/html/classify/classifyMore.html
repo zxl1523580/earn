@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/classifyMore.css" />
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+        <div class="header">
+            <!-- 头部 -->
+            <div class="title">
+                <img src="../../image/backArrow.png" />
+                <span>女装</span>
+                <div class="select_Coupon">
+                    <span>淘券</span>
+                    <img src="../../image/DownarrowWhite.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--中间内容  -->
+    <main class="content">
+        <!-- Tab切换 -->
+        <div class="navBar">
+            <ul class="navBar_content">
+                <li class="navBaractive">爆款</li>
+                <li>素材</li>
+                <li>学院</li>
+                <li>素材</li>
+                <li>学院</li>
+                <li>素材</li>
+                <li>学院</li>
+                <li>素材</li>
+                <li>学院</li>
+                <li>素材</li>
+                <li>学院</li>
+                <li>素材</li>
+                <li>学院</li>
+            </ul>
+
+        </div>
+
+    </main>
+
+
+    <!--弹储层 -->
+    <div class="modal">
+        <ul class="modal_con">
+            <li class="modal_item Textactive" data-name="淘券">
+                <span class="text">淘券</span>
+                <img class="yes_icon" src="../../image/yes_icon.png" />
+            </li>
+            <li class="modal_item" data-name="拼券">
+                <span class="text">拼券</span>
+                <img src="../../image/yes_icon.png" />
+            </li>
+            <li class="modal_item" data-name="京券">
+                <span class="text">京券</span>
+                <img src="../../image/yes_icon.png" />
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        var header = $api.byId('wrap');
+        $api.fixStatusBar(header);
+    };
+</script>
+
+</html>
