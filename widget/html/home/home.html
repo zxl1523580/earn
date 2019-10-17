@@ -9,38 +9,56 @@
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/home/homeIndex.css" />
 </head>
 <style>
-    #wrap {
-        background-color: #E699ED;
-    }
+  .Banners{
+    width: 100vw;
+    height: 500px;
+  }
 </style>
 
 <body>
     <div id="wrap">
-        <div id="result"></div>
+        <!-- 输入框 -->
+        <div class="flex height88 headerSearch alineCenter spaceBetween">
+            <div class="bgfff flex searchInput radius20 por">
+                <i class="searchIcon poa topCenter"></i>
+                <input type="text" name="" value="" placeholder="复制商品标题搜淘宝 天猫 京东 拼多多优惠券" class="color666 fs24">
+            </div>
+            <a href="javascript:;" class="flex alineCenter"><img src="../../image/homepage_icon_news.png" alt="" class="newIcon" /></a>
+        </div>
+        <!-- 输入框 -->
+        <!-- 导航栏 -->
+        <div class="flex HeadNav height88" id="HeadNav"></div>
+        <!-- 导航栏 -->
+        <!-- 轮播 -->
+        <div>
+          sdadsa
+        </div>
+        <!-- 轮播 -->
     </div>
-    <div>
-        fdsafsda gsa
-    </div>
-    <div class="">
+
+
+    <div frame="Banners" class="Banners">
 
     </div>
-    <div frame="Banners">
 
-
-    </div>
-    <!-- <span tapmode onclick="fnOpen()">open()</span>
-    <span tapmode onclick="fnClose()">close()</span>
-    <span tapmode onclick="fnShow()">show()</span>
-    <span tapmode onclick="fnHide()">hide()</span>
-    <span tapmode onclick="fnSetCurrentIndex()">setCurrentIndex()</span> -->
-    <!-- <span tapmode onclick="fnReloadData()">reloadData()</span> -->
-    <!-- <span tapmode onclick="fnAdEventListener()">addEventListener()</span> -->
 </body>
 <script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript" src="../../script/home/homeAjax.js"></script>
+<script type="text/javascript" src="../../script/home/homeIndex.js"></script>
+<script>
+    getdata()
+    // 导航栏切换
+    $("#HeadNav").on("click","p",function(){
+        $("#HeadNav p").removeClass("active")
+        $(this).addClass("active")
+    })
+</script>
 <script type="text/javascript">
-    var UIScrollPicture;
     apiready = function() {
         function fanhui() {
             api.sendEvent({
@@ -54,8 +72,9 @@
         var header = $api.byId('wrap');
         $api.fixStatusBar(header);
 
-        UIScrollPicture = api.require('UIScrollPicture');
-        console.log(JSON.stringify(UIScrollPicture));
+
+        console.log(JSON.stringify(api.require('UIScrollPicture')))
+        var UIScrollPicture = api.require('UIScrollPicture');
         UIScrollPicture.open({
             rect: {
                 x: 0,
