@@ -1,0 +1,30 @@
+.flex{display: flex;}
+.spaceAround{justify-content: space-around;}
+.spaceBetween{justify-content: space-between;}
+.alineCenter{align-items: center;}
+.textCenter{text-align: center;}
+.shrink{flex-shrink: 0;}
+.color666{color: #666;}
+.color999{color: #999;}
+.color333{color:#333333};
+.colorred{color: #FF0101;}
+.fs22{font-size: 0.22rem;}
+.fs24{font-size: 0.24rem;}
+.fs28{font-size: 0.28rem;}
+.fs32{font-size: 0.32rem;}
+.bgfff{background-color: #fff}
+.radius20{border-radius: 20px;}
+.por{position: relative;}
+.poa{position: absolute;}
+.topCenter{top: 50%;transform: translateY(-50%);}
+.leftCenter{left: 50%;transform: translateX(-50%);}
+.posCenter{top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.redButtonGradual{background:linear-gradient(90deg,rgba(255,43,42,1) 0%,rgba(255,92,92,1) 100%);border-radius:20px;}
+.block{display: block;}
+.topAnimation{
+  animation: topAnimation 5s;
+}
+@keyframes topAnimation {
+  from {top:2rem;}
+  to {top:50%;}
+}
