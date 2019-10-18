@@ -69,15 +69,40 @@
                   <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="../../image/vip7.png"/><p>地推物料免费领取<p></div>
                     <div class="swiper-slide"><img src="../../image/vip8.png"/><p>云发单高级权限</p></div>
-                    <div class="swiper-slide"><img src="../../image/vip7.png"/><p>地推物料免费领取</p></div>
+                    <div class="swiper-slide"><img src="../../image/vip7.png"/><p>地推物料免费领</p></div>
                   </div>
-                  <!-- Add Pagination -->
-                  <!-- <div class="swiper-pagination"></div> -->
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
                 </div>
-
             </div>
         </div>
-
+        <div class="director">
+            <div class="directorTitle">如何晋升运营总监</div>
+            <div class="selectcontent">
+              <div class="selectcontentpartM">
+                <div class="selectcontentpartMTop">
+                  <p>有效直属会员：<span class="selectcontenttip">80</span>人</p>
+                  <p><span class="selectcontenttip">48</span>/<span>80</span>人</p>
+                </div>
+                <div class="selectcontentpartMBottom">
+                  <p class="selectcontentpartMA"></p>
+                </div>
+              </div>
+              <div class="selectcontentpartM">
+                <div class="selectcontentpartMTop">
+                  <p>有效次级会员：<span class="selectcontenttip">160</span>人</p>
+                  <p><span class="selectcontenttip">40</span>/<span>160</span>人</p>
+                </div>
+                <div class="selectcontentpartMBottom">
+                  <p class="selectcontentpartMA1"></p>
+                </div>
+              </div>
+            </div>
+            <div class="tipText">
+              注：有效会员是指2019年9月10日起，自买或分享1单且付款总金额不小于1元，退款视为失效，不纳入统计范围
+            </div>
+            <div class="equitiesbtn">邀请好友加入我的团队</div>
+        </div>
 
 
 
@@ -94,12 +119,16 @@
     var swiper = new Swiper('.swiper-container', {
      slidesPerView: 3,
      spaceBetween: 30,
-   centeredSlides: true,
-   loop: true,
-     pagination: {
-       el: '.swiper-pagination',
-       clickable: true,
-     },
+     centeredSlides: true,
+     loop: true,
+       pagination: {
+         el: '.swiper-pagination',
+         clickable: true,
+       },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
    });
 
 </script>
