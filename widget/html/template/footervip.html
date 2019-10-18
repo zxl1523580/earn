@@ -35,7 +35,7 @@
 <script type="text/javascript" src="../../script/jqmin.js"></script>
 <script>
 apiready = function() {
-  $("body").on("click",".vipBtn",function(){
+  $(".vipBtn").click(function(){
     api.openFrame({
       name: 'vip',
       url: '../../html/vip/vip.html',
@@ -43,7 +43,7 @@ apiready = function() {
         x: 0,
         y: 0,
         w:'auto',
-        h:710,
+        h:500,
       },
       pageParam: {
           name: ''

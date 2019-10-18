@@ -2,7 +2,6 @@ apiready = function() {
  funIniGroup();
 };
 function funIniGroup(){
-
    var eHeaderLis = $api.domAll('header li')
    api.openFrameGroup({
        name: 'group',
@@ -39,16 +38,16 @@ function funIniGroup(){
    }, function (ret, err) {
 
    });
-   api.openFrame({
-     name: 'footervip',
-     url: '../html/template/footervip.html',
-     rect: {
-         x: $api.dom('.flex-con').offsetWidth *2,
-         y: $api.dom('main').offsetHeight-$api.dom('footer').offsetHeight/4,
-         w: $api.dom('.flex-con').offsetWidth,
-         h: $api.dom('footer').offsetHeight*2- $api.dom('footer').offsetHeight/4
-     }
- });
+ //   api.openFrame({
+ //     name: 'footervip',
+ //     url: '../html/template/footervip.html',
+ //     rect: {
+ //         x: $api.dom('.flex-con').offsetWidth *2,
+ //         y: $api.dom('main').offsetHeight-$api.dom('footer').offsetHeight/4,
+ //         w: $api.dom('.flex-con').offsetWidth,
+ //         h: $api.dom('footer').offsetHeight*2- $api.dom('footer').offsetHeight/3
+ //     }
+ // });
 }
 
 // 随意切换按钮
