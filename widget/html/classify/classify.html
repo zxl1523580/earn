@@ -8,7 +8,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/classify.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/classify/classify.css" />
 </head>
 
 <body>
@@ -22,10 +22,6 @@
                     <img class="img" src="../../image/Downarrow.png" />
                     <img class="imgActive" src="../../image/DownarrowActive.png" />
                 </div>
-                <!-- <div class="select_title_active">
-                    <span>淘券</span>
-                    <img src="../../image/DownarrowActive.png" />
-                </div> -->
                 <div class="search_text">
                     <img class="search_icon" src="../../image/icon_search.png" />
                     <input class="Input" type="text" placeholder="请输入您要找的商品" />
@@ -105,7 +101,8 @@
     apiready = function() {
         var header = $api.byId('wrap');
         $api.fixStatusBar(header);
-        $('.nav_content_title').on("click", '.more', function() {
+        $(".more").click(function(){
+        // $('.nav_content_title').on("click", '', function() {
             api.openWin({     
                 name: 'classifyMore',
                      url: './classifyMore.html',
@@ -114,6 +111,15 @@
                 }   
             });
         })
+        api.addEventListener({
+            name: 'aa'
+        }, function(ret, err) {
+            // alert(JSON.stringify(ret))
+            // alert(ret.value.key1)
+            api.setStatusBarStyle({
+                style: ret.value.key1
+            })
+        });
     };
     $.ajax({
         type: "GET",
@@ -153,7 +159,6 @@
                       <ul class="ul_shopList">
                       ${
                         $.each(val.imglist, function(i, value) {
-                            alert(value.img)
                             '<li class="li_item"><img src="'+value.img+'" /><span>'+value.name+'</span><li>'
                         })
                       }
@@ -209,22 +214,11 @@
         $(this).children('img').show()
         $(this).siblings().children('img').hide()
         $('.spanActive').html($(this).data().name)
-        $('.select_title_active').hide()
-        setTimeout(function() {
             $('.modal').fadeOut()
-        }, 2000)
     })
-      api.addEventListener({
-          name:'aa'
-      }, function(ret, err){
-        // alert(JSON.stringify(ret))
-        // alert(ret.value.key1)
-        api.setStatusBarStyle({
-            style: ret.value.key1
-        })
-      });
-
-    }
+    $('.modal').click(function(){
+        $('.modal').hide()
+    })
 </script>
 
 </html>

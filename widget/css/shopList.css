@@ -1,0 +1,225 @@
+.shopList_box {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.shopList_con {
+    width: 100%;
+}
+
+.shop_item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.shopImg {
+    width: 2.26rem;
+    height: 2.26rem;
+    border-radius: .1rem;
+    overflow: hidden;
+}
+
+.shopImg>img {
+    width: 100%;
+    height: 100%;
+}
+
+.shopInfo {
+    width: 4.51rem;
+    height: 2.26rem;
+    margin-left: .2rem;
+}
+
+.shopName_box {
+    width: 100%;
+    height: .75rem;
+    font-size: .24rem;
+    line-height: .36rem;
+    color: #333333;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.labals {
+    font-size: .18rem;
+    width: .52rem;
+    height: .28rem;
+    line-height: .3rem;
+    text-align: center;
+    color: #FFFFFF;
+    border-radius: .04rem;
+    background: #FF0030;
+    display: inline-block;
+}
+
+.shopname {
+    display: inline-block;
+    font-size: .24rem;
+    color: #333333;
+}
+
+.shopCoupon {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: .15rem 0rem .1rem 0rem;
+}
+
+.priceCoupon {
+    display: inline-block;
+    width: .92rem;
+    height: .32rem;
+    background: url('../image/coupon.png')no-repeat;
+    background-size: 100% 100%;
+    font-size: .22rem;
+    text-align: center;
+    line-height: .32rem;
+    color: #FF3D3D;
+}
+
+.sold {
+    color: #999999;
+    font-size: .24rem;
+}
+
+.shopPrice {
+    font-size: .24rem;
+    color: #333333;
+    margin-bottom: .2rem;
+}
+
+.shopPrice>span {
+    font-weight: bold;
+}
+
+.upgrade_share {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.share {
+    width: 1.9rem;
+    height: .4rem;
+    background: linear-gradient(90deg, rgba(255, 111, 49, 1), rgba(255, 149, 104, 1));
+    border-radius: .2rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.upgrade {
+    width: 1.9rem;
+    height: .4rem;
+    background: linear-gradient(90deg, rgba(255, 43, 42, 1) 0%, rgba(255, 92, 92, 1) 100%);
+    border-radius: .2rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-left: .2rem;
+}
+.share>img{
+  width: .21rem;
+  height: .24rem;
+  margin-left: .15rem;
+}
+.upgrade>img{
+  width: .2rem;
+  height: .26rem;
+  margin-left: .15rem;
+}
+.upgrade>p , .share>p{
+  font-size: .22rem;
+  display:inline-block;
+  color: #FFFFFF;
+  margin-right: .15rem;
+}
+
+
+/*商品列表*/
+.goodsList_box{
+  width: 96%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.goodsList_com{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.goods_item{
+  width: 3.43rem;
+  margin-bottom: .5rem;
+}
+.goodsImg{
+  width: 3.43rem;
+  height: 3.5rem;
+  border-radius: .1rem;
+  overflow: hidden;
+}
+.goodsImg>img{
+  width: 100%;
+  height: 100%;
+}
+.goodsInfo{
+  width: 100%;
+}
+.goodsName{
+  width: 100%;
+  height: .6rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #333333;
+  font-size: .24rem;
+}
+.goodsCoupon{
+  display: flex;
+  justify-content: space-between;
+}
+.goodsPrice{
+  font-size: .24rem;
+  color: #333333;
+  margin-bottom: .2rem;
+}
+.goodsPrice>span {
+    font-weight: bold;
+}
+.gupgrade_share{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.gshare {
+    width: 1.36rem;
+    height: .34rem;
+    background: linear-gradient(90deg, rgba(255, 111, 49, 1), rgba(255, 149, 104, 1));
+    border-radius: .2rem;
+    display: flex;
+    justify-content:center;;
+    align-items: center;
+    font-size: .2rem;
+    color: #FFFFFF;
+}
+
+.gupgrade {
+    width: 1.36rem;
+    height: .34rem;
+    background: linear-gradient(90deg, rgba(255, 43, 42, 1) 0%, rgba(255, 92, 92, 1) 100%);
+    border-radius: .2rem;
+    display: flex;
+    justify-content:center;;
+    align-items: center;
+    font-size: .2rem;
+    color: #FFFFFF;
+    margin-left: .2rem;
+}
