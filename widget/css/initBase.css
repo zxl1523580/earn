@@ -9,7 +9,9 @@
 .flexCloum{flex-direction: column;}
 .color666{color: #666;}
 .color999{color: #999;}
-.color333{color:#333333};
+.color333{color:#333333;}
+.colorgray{color: #C2C2C2;}
+.colorfff{color:#fff;}
 .colorred{color: #FF0101;}
 .fs22{font-size: 0.22rem;}
 .fs24{font-size: 0.24rem;}
@@ -17,8 +19,15 @@
 .fs32{font-size: 0.32rem;}
 .fs30{font-size: 0.3rem;}
 .fs36{font-size: 0.36rem;}
+.fs40{font-size: 0.40rem;}
 .bgfff{background-color: #fff}
-.bgf5{background-color: #F5F5F5}
+.bgf5{
+  background-color: #F5F5F5;
+  background-image: url(../image/loginImage.png);
+  background-repeat: no-repeat;
+  background-position: center center;;
+  background-size: 1.37rem 1.07rem;
+}
 .radius20{border-radius: 20px;}
 .por{position: relative;}
 .poa{position: absolute;}

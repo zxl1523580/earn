@@ -6,15 +6,43 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title></title>
-    <link rel="stylesheet" href="../../css/home/swiper.css">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
     <link rel="stylesheet" type="text/css" href="../../css/home/homeIndex.css" />
     <style>
-        .nextIcon{
-          width: 0.48rem;
-          height: 0.48rem;
+        .timeGo {
+            padding: 0 0.24rem;
+        }
+
+        .ml8 {
+            margin-left: 0.1rem;
+        }
+
+        .mt9 {
+            margin-left: 0.1rem;
+        }
+
+        .timeInt {
+            width: 1.5rem;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            border-radius: 4px;
+        }
+
+        .TimeList {
+            width: 1.4rem;
+        }
+
+        .TimeList.active p:first-child {
+            background: linear-gradient(90deg, rgba(255, 42, 42, 1) 0%, rgba(255, 92, 92, 1) 100%);
+            border-radius: 20px;
+            color: #fff;
+        }
+
+        .TimeList.active p:last-child {
+            color: rgba(255, 50, 50, 1);
         }
     </style>
 
@@ -35,44 +63,75 @@
             <!-- 轮播 -->
             <div class="swiper-container" id="banner">
                 <div class="swiper-wrapper" id="IndexBanner">
-                    <div class="swiper-slide"><img src="../../image/BannerL.png" data-cache="no" class="bgf5" /></div>
+                    <!-- <div class="swiper-slide"><img src="../../image/BannerL.png" data-cache="no" class="bgf5" /></div> -->
                 </div>
                 <div class="swiper-pagination" id="BannerRedio"></div>
             </div>
-        </div>
-        <div class="navCenter swiper-container" id="navBarList">
-            <div class="swiper-wrapper flex flexWrap flexCloum" id="navs"></div>
-            <div class="strip por" id="strip"><i class="block poa"></i></div>
-        </div>
-        <div class="flex spaceBetween tips alineCenter height88">
-          <img src="../../image/homepage_icon_notice.png" alt="">
-          <p class="fs30">今日已经为用户省钱<i class="money fs36 blod">51654654</i>元</p>
+
         </div>
         <div>
-          <img src="../../image/message3.png" alt="" class="navImage">
+            <div class="navCenter swiper-container por" id="navBarList">
+                <div class="swiper-wrapper flex flexWrap flexCloum" id="navs"></div>
+                <div class="strip por" id="strip"><i class="block poa"></i></div>
+            </div>
+        </div>
+
+        <div class="flex spaceBetween tips alineCenter height88">
+            <img src="../../image/homepage_icon_notice.png" alt="">
+            <p class="fs30">今日已经为用户省钱<i class="money fs36 blod">51654654</i>元</p>
+        </div>
+        <div>
+            <img src="../../image/BannerL.png" data-cache="no" class="navImage bgf5" data-src="https://www.w3school.com.cn/sp/header.gif" />
         </div>
         <!-- 限时抢购 -->
+        <div class="timeGo">
+            <div class="timeTitle flex alineCenter spaceBetween">
+                <div>
+                    <p class="fs40 colorred blod">限时抢购</p>
+                    <div class="flex alineCenter">
+                        <p class="fs28 colorfff bgred timeInt textCenter">01:23:46</p>
+                        <p class="colorgray fs22 ml8">倒计时</p>
+                    </div>
+                </div>
+                <div class="flex alineCenter" id="timeTab">
+                    <div class="TimeList textCenter active">
+                        <p class="color999 fs32">12:00</p>
+                        <p class="color999 fs24 mt9">抢购中</p>
+                    </div>
+                    <div class="TimeList textCenter">
+                        <p class="color999 fs32">12:00</p>
+                        <p class="color999 fs24 mt9">抢购中</p>
+                    </div>
+                    <div class=" TimeList textCenter">
+                        <p class="color999 fs32   ">12:00</p>
+                        <p class="color999 fs24 mt9">抢购中</p>
+                    </div>
+                </div>
+            </div>
+            <div class="" id="RushBuyShop">
 
-        <div>
-          <div class="flex alineCenter spaceBetween">
-              <div>
-                <p class="coloeJin fs32">爆款好货五折开抢</p>
-                <p class="coloeJin fs24">活动时间：9.9-9.10</p>
-              </div>
-              <img src="../../image/homepage_icon_baokuanmore.png" alt="" class="nextIcon">
-          </div>
+            </div>
+        </div>
+        <div class="activity">
+            <div class="flex alineCenter spaceBetween">
+                <div>
+                    <p class="coloeJin fs32">爆款好货五折开抢</p>
+                    <p class="coloeJin fs24">活动时间：9.9-9.10</p>
+                </div>
+                <img src="../../image/homepage_icon_baokuanmore.png" alt="" class="nextIcon">
+            </div>
+            <div class="flex alineCenter activityImage" id="activity"></div>
         </div>
     </body>
+    <script type="text/javascript" src="../../script/home/imgLoding.js"></script>
     <script type="text/javascript" src="../../script/api.js"></script>
     <script type="text/javascript" src="../../script/jqmin.js"></script>
     <script type="text/javascript" src="../../script/home/homeAjax.js"></script>
     <script type="text/javascript" src="../../script/home/homeIndex.js"></script>
-    <script type="text/javascript" src="../../script/home/imgLoding.js"></script>
-    <script type="text/javascript" src="../../script/home/swiper.js"></script>
+    <script type="text/javascript" src="../../script/swiper.min.js"></script>
 </head>
 
 <script>
-
 </script>
 <script type="text/javascript">
     apiready = function() {
@@ -89,12 +148,18 @@
         $api.fixStatusBar(header);
         getBannerList();
         getdata();
-
         seTnavList();
+        getactivityList();
     };
     // 导航栏切换
     $("#HeadNav").on("click", "p", function() {
         $("#HeadNav p").removeClass("active")
+        $(this).addClass("active")
+    })
+
+    //抢购切换
+    $("#timeTab .TimeList").click(function() {
+        $("#timeTab .TimeList").removeClass("active")
         $(this).addClass("active")
     })
 </script>
