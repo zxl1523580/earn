@@ -4,6 +4,9 @@
 .alineCenter{align-items: center;}
 .textCenter{text-align: center;}
 .shrink{flex-shrink: 0;}
+.flexWrap{flex-wrap: wrap;}
+
+.flexCloum{flex-direction: column;}
 .color666{color: #666;}
 .color999{color: #999;}
 .color333{color:#333333};
@@ -12,10 +15,14 @@
 .fs24{font-size: 0.24rem;}
 .fs28{font-size: 0.28rem;}
 .fs32{font-size: 0.32rem;}
+.fs30{font-size: 0.3rem;}
+.fs36{font-size: 0.36rem;}
 .bgfff{background-color: #fff}
+.bgf5{background-color: #F5F5F5}
 .radius20{border-radius: 20px;}
 .por{position: relative;}
 .poa{position: absolute;}
+.blod{font-weight: bold;}
 .topCenter{top: 50%;transform: translateY(-50%);}
 .leftCenter{left: 50%;transform: translateX(-50%);}
 .posCenter{top: 50%;left: 50%;transform: translate(-50%,-50%);}
