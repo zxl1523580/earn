@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/api.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/home/search.css" />
+</head>
+
+<body>
+    <div id="wrap" class="wrap">
+      <div class="search">
+      <div class="search_box">
+          <div class="search_con">
+              <div class="select_title" id="modalShow">
+                  <span class="span">淘券</span>
+                  <span class="spanActive">淘券</span>
+                  <img class="img" src="../../image/Downarrow.png" />
+                  <img class="imgActive" src="../../image/DownarrowActive.png" />
+              </div>
+              <div class="search_text">
+                  <img class="search_icon" src="../../image/icon_search.png" />
+                  <input class="Input" type="text" placeholder="请输入您要找的商品" />
+              </div>
+          </div>
+      </div>
+      <div class="cancel">取消</div>
+      <div>
+        <!--中间内容  -->
+        <main class="content">
+
+        </main>
+    </div>
+    <!-- 弹储层 -->
+    <div class="modal">
+        <ul class="modal_con">
+            <li class="modal_item Textactive" data-name="淘券">
+                <span class="text">淘券</span>
+                <img class="yes_icon" src="../../image/yes_icon.png" />
+            </li>
+            <li class="modal_item" data-name="拼券">
+                <span class="text">拼券</span>
+                <img src="../../image/yes_icon.png" />
+            </li>
+            <li class="modal_item" data-name="京券">
+                <span class="text">京券</span>
+                <img src="../../image/yes_icon.png" />
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript" src="../../script/home/homeAjax.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        var param = api.pageParam;
+        var header = $api.byId('wrap');
+        $api.fixStatusBar(header);
+
+    };
+    $(function(){
+      $('.yes_icon').show()
+      $('#modalShow').click(function() {
+          $('.modal').fadeIn()
+          $('.img').hide()
+          $('.imgActive').show()
+          $('.span').hide()
+          $('.spanActive').show()
+      })
+      $('.modal_item').click(function() {
+          $(this).addClass('Textactive').siblings().removeClass('Textactive');
+          $(this).children('img').show()
+          $(this).siblings().children('img').hide()
+          $('.spanActive').html($(this).data().name)
+              $('.modal').fadeOut()
+      })
+      $('.modal').click(function(){
+          $('.modal').hide()
+      })
+    })
+</script>
+
+</html>
