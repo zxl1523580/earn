@@ -1,7 +1,16 @@
-.wrap {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+html,body,
+#wrap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#wrap header{
+  /*height:1.28rem;*/
+  background:linear-gradient(90deg,rgba(255,77,0,1) 0%,rgba(255,125,69,1) 100%);
+}
+.statusBar{
+  height: .4rem;
 }
 
 .header {
@@ -116,16 +125,17 @@
 
 /*条件查询框*/
 .condition {
-    width: 96%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: #FFFFFF;
     border-bottom: 1px solid #F5F5F5;
 }
 
 .condition_ul {
-    width: 100%;
+    width: 96%;
     height: .88rem;
     margin: 0 auto;
     display: flex;
@@ -183,7 +193,14 @@
 .selectActive{
   color: #FF4D00;
 }
-
+#wrap main{
+  width: 100%;
+  flex: 1;
+  overflow: auto;
+}
+#wrap main::-webkit-scrollbar {
+    display: none;
+}
 /*弹储层*/
 
 .modal {
