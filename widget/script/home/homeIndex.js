@@ -51,7 +51,7 @@ function bannerTemple(res, id) {
         },
         on: {
             slideChange: function() {
-                cacheImage();
+                // cacheImage();
                 // console.log(this.activeIndex)
                 $("#wrap").css("background-color", "red")
             },
@@ -70,14 +70,13 @@ var seTnavList = () => {
         console.log(err);
     })
 }
-
 function navList(res, id) {
     var html = "";
     var PageLength = Math.ceil((res.length + 1) / 10);
     $("#strip").css("width",(35 * PageLength / 100) + 'rem')
 
     for (var i = 0; i < PageLength; i++) {
-        var slideArr = res.slice(i > 0 ? (i * 10) + 1 : 0, (i + 1) * 10);
+        var slideArr = res.slice(i > 0 ? (i * 10)  : 0, (i + 1) * 10);
         var str = slideArr.map((item) => {
             return `<div class="SlideItem shrink textCenter"><img src="../../image/loginImage.png" data-src="${item.img}" data-cache="no" class="bgf5" /><p class="fs24 color333">${item.title}</p></div>`
         })
@@ -89,10 +88,42 @@ function navList(res, id) {
     new Swiper('#navBarList', {
       on: {
           slideChange: function() {
-              cacheImage();
+              // cacheImage();
               $("#strip i").css("left",((35 * this.activeIndex) / 100) + 'rem')
           },
       },
     })
     cacheImage();
+}
+
+
+//广告
+var getactivityList = () => {
+    ajaxPromise({
+        url: '../../script/home/home.json',
+    }).then(res => {
+        var data = JSON.parse(res).activity;
+        activity(data, "activity")
+    }).catch(err => {
+        console.log(err);
+    })
+}
+function activity(res,id){
+  var html = `
+  <div class="fileftImg shrink">
+      <img src="../../image/loginImage.png" data-cache="no" class="bgf5" data-src="${res[0]}" />
+  </div>
+  <div class="rightImg">
+      <div class="rightTopImg">
+          <img src="../../image/loginImage.png" data-cache="no" class="bgf5" data-src="${res[1]}" />
+      </div>
+      <div class="rightBottomImg flex">
+          <img src="../../image/loginImage.png" data-cache="no" class="bgf5" data-src="${res[2]}" />
+          <img src="../../image/loginImage.png" data-cache="no" class="bgf5" data-src="${res[3]}" />
+      </div>
+  </div>
+  `
+  $(`#${id}`).html(html);
+
+  cacheImage();
 }

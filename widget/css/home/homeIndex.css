@@ -111,7 +111,11 @@
 .navCenter {
     margin-top: 0.8rem;
     padding: 0.3rem 0.2rem 0.32rem;
-    height: calc(1.54rem * 2)
+    height: calc(1.54rem * 2);
+}
+#navs{
+
+  /*height: calc(1.54rem * 2);*/
 }
 .NavItem img {
     border-radius: 50%;
@@ -144,10 +148,15 @@
 }
 
 
+.bgred{
+  background-color: #FF2421;
+}
+
 .money{
   color: #FF4D00;
 }
 .tips{
+  margin: 0.2rem 0;
   padding: 0 0.25rem;
 
 }
@@ -162,3 +171,52 @@
 }
 
 .coloeJin{color: #F1A719;}
+
+
+
+
+.nextIcon {
+    width: 0.48rem;
+    height: 0.48rem;
+}
+
+.activity {
+    padding: 0 0.24rem;
+}
+
+.fileftImg {
+    margin-right: 0.1rem;
+    width: 2.64rem;
+}
+
+.fileftImg,
+.fileftImg img {
+    height: 4.1rem;
+    width: 2.64rem;
+}
+
+.activityImage {
+    margin-top: 0.16rem;
+}
+
+.activityImage img {
+    border-radius: 10px;
+}
+
+.rightImg {}
+
+.rightImg .rightTopImg,
+.rightImg .rightTopImg img {
+    width: 4.3rem;
+    height: 2rem;
+}
+
+.rightImg .rightBottomImg img {
+    width: 2.11rem;
+    height: 2rem;
+    margin-top: 0.1rem;
+}
+
+.rightImg .rightBottomImg img:last-child {
+    margin-left: 0.1rem;
+}
