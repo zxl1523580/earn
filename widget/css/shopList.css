@@ -280,13 +280,14 @@
   position: absolute;
   top: .4rem;
   right: 0rem;
-  width: 1.15rem;
-  height: .25rem;
+  /*width: 1.15rem;*/
+  padding: 0.04rem 0.1rem;
+  /*height: .25rem;*/
   border-radius: .04rem;
   border: 1px solid #FF3D3D;
   color: #FF3D3D;
   text-align: center;
-  line-height: .25rem;
+  /*line-height: .25rem;*/
   overflow: hidden;
   font-size: .18rem;
 }
