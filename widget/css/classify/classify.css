@@ -1,3 +1,6 @@
+body{
+  background: #FFFFFF;
+}
 .wrap{
   height: 100%;
   display: flex;
@@ -11,7 +14,8 @@
     margin: 0 auto;
     border-radius: .3rem;
     position: relative;
-    z-index: 999
+    z-index: 999;
+    margin-top: .1rem;
 }
 
 .search_con {
@@ -198,7 +202,7 @@ input::-webkit-input-placeholder {
 /*弹储层*/
 .modal{
   position: fixed;
-  top: .5rem;
+  top: .6rem;
   width: 100%;
   height:100%;
   bottom: 0rem;
@@ -209,8 +213,9 @@ input::-webkit-input-placeholder {
   width: 96%;
   background: #F5F5F5;
   margin: 0 auto;
-  border-radius:0rem 0rem .3rem .3rem;
-  padding-top: .5rem;
+  border-radius:.3rem .3rem .3rem .3rem;
+  padding-top: .6rem;
+  overflow: hidden;
 }
 .modal_item{
   width: 90%;

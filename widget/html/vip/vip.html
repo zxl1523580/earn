@@ -6,16 +6,131 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="../css/public.css" />
-    <link rel="stylesheet" type="text/css" href="../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/vip/vip.css" />
 </head>
-<body style="background:#fff">
+<body>
+  <div id="warp">
+    <header>
+        <div class="statusBar"></div>
+        <div class="title">VIP权益</div>
+        <div class="titleinfo">
+          <div class="titleinfoT">
+              <img class="headerImg" src="../../image/logo.png"/>
+              <p>李明明</p>
+          </div>
+          <div class="titleinfoB">
+            超级会员
+          </div>
+        </div>
+    </header>
+    <section>
+      <div class="equities">
+        <div class="equitiesTitle">运营总监权益</div>
+        <div class="equitiesnav">
+          <div class="equitiesnavM">
+            <img src="../../image/vip1.png"/>
+            <p>所有权益</p>
+            <p>超级会员</p>
+          </div>
+          <div class="equitiesnavM">
+            <img src="../../image/vip2.png"/>
+            <p>收益提升57.4%</p>
+            <p>自买返佣</p>
+          </div>
+          <div class="equitiesnavM">
+            <img src="../../image/vip3.png"/>
+            <p>收益提升57.4%</p>
+            <p>分享返佣</p>
+          </div>
+          <div class="equitiesnavM">
+            <img src="../../image/vip4.png"/>
+            <p>奖励45.3%</p>
+            <p>直接会员出单</p>
+          </div>
+          <div class="equitiesnavM">
+            <img src="../../image/vip5.png"/>
+            <p>奖励29.3%</p>
+            <p>间接会员出单</p>
+          </div>
+          <div class="equitiesnavM">
+            <img src="../../image/vip6.png"/>
+            <p>奖励6.66%</p>
+            <p>直属总监团队</p>
+          </div>
+        </div>
+        <div class="equitiesbtn">直属总监团队</div>
+        <div class="select">
+            <div class="selectTitle">运营总监权益精选</div>
+            <div class="selectcontent">
+              <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../../image/vip7.png"/><p>地推物料免费领取<p></div>
+                    <div class="swiper-slide"><img src="../../image/vip8.png"/><p>云发单高级权限</p></div>
+                    <div class="swiper-slide"><img src="../../image/vip7.png"/><p>地推物料免费领</p></div>
+                  </div>
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+        <div class="director">
+            <div class="directorTitle">如何晋升运营总监</div>
+            <div class="selectcontent">
+              <div class="selectcontentpartM">
+                <div class="selectcontentpartMTop">
+                  <p>有效直属会员：<span class="selectcontenttip">80</span>人</p>
+                  <p><span class="selectcontenttip">48</span>/<span>80</span>人</p>
+                </div>
+                <div class="selectcontentpartMBottom">
+                  <p class="selectcontentpartMA"></p>
+                </div>
+              </div>
+              <div class="selectcontentpartM">
+                <div class="selectcontentpartMTop">
+                  <p>有效次级会员：<span class="selectcontenttip">160</span>人</p>
+                  <p><span class="selectcontenttip">40</span>/<span>160</span>人</p>
+                </div>
+                <div class="selectcontentpartMBottom">
+                  <p class="selectcontentpartMA1"></p>
+                </div>
+              </div>
+            </div>
+            <div class="tipText">
+              注：有效会员是指2019年9月10日起，自买或分享1单且付款总金额不小于1元，退款视为失效，不纳入统计范围
+            </div>
+            <div class="equitiesbtn">邀请好友加入我的团队</div>
+        </div>
+
+
+
+      </div>
+    </section>
+  </div>
 </body>
-<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/api.js"></script>
+<script type="text/javascript" src="../../script/swiper.min.js"></script>
 <script type="text/javascript">
     apiready = function() {
 
     };
+    var swiper = new Swiper('.swiper-container', {
+     slidesPerView: 3,
+     spaceBetween: 30,
+     centeredSlides: true,
+     loop: true,
+       pagination: {
+         el: '.swiper-pagination',
+         clickable: true,
+       },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+   });
+
 </script>
 
 </html>

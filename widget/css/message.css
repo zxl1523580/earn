@@ -113,6 +113,9 @@ html,body,
 .messageModelBottomImgOne{
   margin-top: .16rem
 }
+.messageModelBottomImgOne img{
+  width: 100%;
+}
 .messageModelBottomImgTwo{
   display: flex;
   flex-wrap: wrap;

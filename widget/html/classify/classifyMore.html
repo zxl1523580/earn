@@ -9,64 +9,207 @@
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/classifyMore.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/classify/classifyMore.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/shopList.css">
 </head>
 
 <body>
-    <div id="wrap" class="wrap">
+    <div id="wrap" class="wrap modalBg">
         <div class="header">
             <!-- 头部 -->
             <div class="title">
-                <img src="../../image/backArrow.png" />
-                <span>女装</span>
+                <img src="../../image/backArrow.png" id="back" />
+                <span class="title_span">女装</span>
                 <div class="select_Coupon">
-                    <span>淘券</span>
-                    <img src="../../image/DownarrowWhite.png" />
+                    <span class="span">淘券</span>
+                    <img class="img" src="../../image/DownarrowWhite.png" />
                 </div>
             </div>
         </div>
+        <!--中间内容  -->
+        <main class="content">
+            <!-- Tab切换 -->
+            <div class="navBar">
+                <ul class="navBar_content">
+                    <li class="navBaractive">爆款</li>
+                    <li>素材</li>
+                    <li>学院</li>
+                    <li>素材</li>
+                    <li>学院</li>
+                    <li>素材</li>
+                    <li>学院</li>
+                    <li>素材</li>
+                    <li>学院</li>
+                    <li>素材</li>
+                    <li>学院</li>
+                    <li>素材</li>
+                    <li>学院</li>
+                </ul>
+            </div>
+            <div class="condition">
+                <ul class="condition_ul">
+                    <li class="rank selectActive" id="Rank" data-type='1'>
+                        <span class="ranking">推荐排序</span>
+                        <img class="ImgId" src="../../image/DownarrowActive.png" />
+                    </li>
+                    <li class="coupon" data-type='2'>优惠券</li>
+                    <li class="coupon" data-type='2'>新品</li>
+                    <li class="screen" id="screen" data-type='1'>
+                        <span>筛选</span>
+                        <img class="ImgId" src="../../image/Downarrow.png" />
+                    </li>
+                    <li class="menu" data-type="3">
+                        <img src="../../image/menu.png" />
+                    </li>
+                </ul>
+            </div>
+            <!-- 商品列表 -->
+            <div class="shopList_box">
+                <ul class="shopList_con">
+                    <li class="shop_item">
+                        <div class="shopImg">
+                            <img src="https://gaitaobao4.alicdn.com/tfscom/i1/3155376346/TB2Ov2is0cnBKNjSZR0XXcFqFXa_!!3155376346.jpg_240x240xz.jpg" />
+                        </div>
+                        <div class="shopInfo">
+                            <div class="shopName_box">
+                                <p class="labals">天猫</p>2019新款初秋ins女学生网红长袖上衣韩版宽松慵懒风bf套头卫衣潮的海景房电话就说复合大师打开市房管局
+                            </div>
+                            <div class="shopCoupon">
+                                <span class="priceCoupon">50元券</span>
+                                <span class="sold">已售 4699</span>
+                            </div>
+                            <div class="shopPrice">卷后价：<span>￥：69.9</span></div>
+                            <div class="upgrade_share">
+                                <div class="share">
+                                    <img src="../../image/share.png" />
+                                    <p>分享赚￥6.69</p>
+                                </div>
+                                <div class="upgrade">
+                                    <img src="../../image/share.png" />
+                                    <p>升级赚￥6.69</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 商品列表 -->
+            <div class="goodsList_box">
+                <ul class="goodsList_com">
+                    <li class="goods_item">
+                        <div class="goodsImg">
+                            <img src="https://gaitaobao4.alicdn.com/tfscom/i3/4029238012/O1CN019qzm1f293XopSRC3O_!!0-item_pic.jpg_240x240xz.jpg" />
+                        </div>
+                        <div class="goodsInfo">
+                            <div class="goodsName">
+                                <p class="labals">天猫</p>卫衣女潮ins宽松韩版bf慵懒风2019新款春秋薄款长袖女生秋季上衣
+                            </div>
+                            <div class="goodsCoupon">
+                              <span class="priceCoupon">50元券</span>
+                              <span class="sold">已售 4699</span>
+                            </div>
+                              <div class="goodsPrice">卷后价：<span>￥：69.9</span></div>
+                              <div class="gupgrade_share">
+                                  <div class="gshare">分享赚￥6.69</div>
+                                  <div class="gupgrade">  升级赚￥6.69</div>
+                              </div>
+                        </div>
+                    </li>
+                    <li class="goods_item">
+                        <div class="goodsImg">
+                            <img src="https://gaitaobao4.alicdn.com/tfscom/i3/4029238012/O1CN019qzm1f293XopSRC3O_!!0-item_pic.jpg_240x240xz.jpg" />
+                        </div>
+                        <div class="goodsInfo">
+                            <div class="goodsName">
+                                <p class="labals">天猫</p>卫衣女潮ins宽松韩版bf慵懒风2019新款春秋薄款长袖女生秋季上衣
+                            </div>
+                            <div class="goodsCoupon">
+                              <span class="priceCoupon">50元券</span>
+                              <span class="sold">已售 4699</span>
+                            </div>
+                              <div class="goodsPrice">卷后价：<span>￥：69.9</span></div>
+                              <div class="gupgrade_share">
+                                  <div class="gshare">分享赚￥6.69</div>
+                                  <div class="gupgrade">  升级赚￥6.69</div>
+                              </div>
+                        </div>
+                    </li>
+                    <li class="goods_item">
+                        <div class="goodsImg">
+                            <img src="https://gaitaobao4.alicdn.com/tfscom/i3/4029238012/O1CN019qzm1f293XopSRC3O_!!0-item_pic.jpg_240x240xz.jpg" />
+                        </div>
+                        <div class="goodsInfo">
+                            <div class="goodsName">
+                                <p class="labals">天猫</p>卫衣女潮ins宽松韩版bf慵懒风
+                            </div>
+                            <div class="goodsCoupon">
+                              <span class="priceCoupon">50元券</span>
+                              <span class="sold">已售 4699</span>
+                            </div>
+                              <div class="goodsPrice">卷后价：<span>￥：69.9</span></div>
+                              <div class="gupgrade_share">
+                                  <div class="gshare">分享赚￥6.69</div>
+                                  <div class="gupgrade">  升级赚￥6.69</div>
+                              </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
     </div>
-    <!--中间内容  -->
-    <main class="content">
-        <!-- Tab切换 -->
-        <div class="navBar">
-            <ul class="navBar_content">
-                <li class="navBaractive">爆款</li>
-                <li>素材</li>
-                <li>学院</li>
-                <li>素材</li>
-                <li>学院</li>
-                <li>素材</li>
-                <li>学院</li>
-                <li>素材</li>
-                <li>学院</li>
-                <li>素材</li>
-                <li>学院</li>
-                <li>素材</li>
-                <li>学院</li>
-            </ul>
 
-        </div>
-
-    </main>
-
-
-    <!--弹储层 -->
+    <!--淘券弹储层 -->
     <div class="modal">
         <ul class="modal_con">
             <li class="modal_item Textactive" data-name="淘券">
                 <span class="text">淘券</span>
-                <img class="yes_icon" src="../../image/yes_icon.png" />
             </li>
             <li class="modal_item" data-name="拼券">
                 <span class="text">拼券</span>
-                <img src="../../image/yes_icon.png" />
             </li>
             <li class="modal_item" data-name="京券">
                 <span class="text">京券</span>
+            </li>
+        </ul>
+    </div>
+    <!-- 推荐排序 -->
+    <div class="conditionModal">
+        <ul class="conditionModal_con">
+            <li class="Li_item Textactive" data-name="推荐排序">
+                <span>推荐排序</span>
+                <img class="yes_icon" src="../../image/yes_icon.png" />
+            </li>
+            <li class="Li_item" data-name="销量优先">
+                <span>销量优先</span>
+                <img src="../../image/yes_icon.png" />
+            </li>
+            <li class="Li_item" data-name="佣金比率">
+                <span>佣金比率</span>
                 <img src="../../image/yes_icon.png" />
             </li>
         </ul>
+    </div>
+    <!-- 筛选弹框 -->
+    <div class="screenModal">
+        <div class="screenModal_con">
+            <div class="scr_item" data-name="推荐排序">
+                <p>价格区间</p>
+                <div class="scr_price">
+                    <p class="minInput"><input type="number" placeholder="100" /></p>
+                    <span>—</span>
+                    <p class="maxInput"><input type="number" placeholder="180" /></p>
+                </div>
+            </div>
+            <div class="scr_item" data-name="销量优先">
+                <p>运费：</p>
+                <div class="pubClas allActive">全部</div>
+                <div class="pubClas">包邮</div>
+            </div>
+            <div class="subBtn">
+                <p class="Reset">重置</p>
+                <p class="Btnactive" id="confirm">确定</p>
+            </div>
+        </div>
     </div>
 </body>
 
@@ -74,9 +217,97 @@
 <script type="text/javascript" src="../../script/jqmin.js"></script>
 <script type="text/javascript">
     apiready = function() {
+        var param = api.pageParam;
         var header = $api.byId('wrap');
         $api.fixStatusBar(header);
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
     };
+    $(function() {
+        // 点击淘券显示弹框
+        $('.select_Coupon').click(function() {
+                $('.conditionModal').hide()
+                $('.screenModal').hide()
+                $('.modal').show()
+            })
+            // 点击选中的淘券
+        $('.modal_item').click(function() {
+                $(this).addClass('Textactive').siblings().removeClass('Textactive');
+                // $(this).children('img').show()
+                // $(this).siblings().children('img').hide()
+                $('.span').html($(this).data().name)
+                $('.modal').fadeOut()
+            })
+            // 点击弹框关闭淘券弹窗
+        $('.modal').click(function() {
+                $('.modal').hide()
+            })
+            // 分类的高亮
+        $('.navBar_content li').click(function() {
+                $(this).addClass('navBaractive').siblings().removeClass('navBaractive')
+            })
+            // 头部推荐排序的高亮
+        $('.condition_ul li').click(function() {
+                $(this).addClass('selectActive').siblings().removeClass('selectActive')
+                if ($(this).data().type == 2) {
+                    $(this).addClass('borderActive selectActive').siblings().removeClass('borderActive selectActive')
+                    $('.ImgId').attr('src', '../../image/Downarrow.png')
+                    $('.menu').attr('src', '../../image/menu.png')
+                    $('.screenModal').hide()
+                } else if ($(this).data().type == 1) {
+                    $(this).addClass('selectActive').siblings().removeClass('selectActive borderActive')
+                    $(this).children('img').attr('src', '../../image/DownarrowActive.png')
+                    $(this).siblings().children('.ImgId').attr('src', '../../image/Downarrow.png')
+                    $('.menu').children('img').attr('src', '../../image/menu.png')
+                } else if ($(this).data().type == 3) {
+                    $(this).children('img').attr("src", "../../image/menuActive.png")
+                    $(this).siblings().children('img').attr('src', '../../image/Downarrow.png')
+                    $(this).siblings().removeClass('borderActive selectActive')
+                    $('.screenModal').hide()
+                }
+            })
+            // 点击推荐排序显示列表
+        $('.yes_icon').show()
+        $('#Rank').click(function() {
+                $('.screenModal').hide()
+                $('.conditionModal').show()
+            })
+            // 点击弹框灰色背景关闭展示的推荐排序弹框
+        $('.conditionModal').click(function() {
+                $(this).hide()
+            })
+            // 点击选择排序
+        $('.conditionModal_con li').click(function() {
+                $(this).addClass('Textactive').siblings().removeClass('Textactive');
+                $(this).children('img').show()
+                $(this).siblings().children('img').hide()
+                $('.ranking').html($(this).data().name)
+                $('.conditionModal').hide()
+
+            })
+            // 点击筛选
+        $('#screen').click(function() {
+                $('.screenModal').show()
+                $('.conditionModal').hide()
+            })
+            // 点击筛选弹框灰色背景关闭弹框
+            // $('.screenModal').click(function(){
+            //   $(this).hide()
+            // })
+            // 筛选弹框的确定按钮
+        $('#confirm').click(function() {
+                $('.screenModal').hide()
+            })
+            // 点击全部或包邮
+        $('.pubClas').click(function() {
+            $(this).addClass('allActive').siblings().removeClass('allActive')
+        })
+    })
 </script>
 
 </html>
