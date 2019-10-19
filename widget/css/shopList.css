@@ -9,6 +9,7 @@
 
 .shop_item {
     width: 100%;
+    height: 2.74rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -146,7 +147,6 @@
 .goodsList_box{
   width: 96%;
   margin: 0 auto;
-  border: 1px solid red;
 }
 .goodsList_com{
   width: 100%;
@@ -156,7 +156,7 @@
 }
 .goods_item{
   width: 3.43rem;
-  margin-bottom: .5rem;
+  margin-bottom: .3rem;
 }
 .goodsImg{
   width: 3.43rem;
@@ -170,10 +170,14 @@
 }
 .goodsInfo{
   width: 100%;
+  margin-top: .08rem;
+  position: relative;
 }
 .goodsName{
   width: 100%;
-  height: .6rem;
+  height: .75rem;
+  line-height: .36rem;
+  position: relative;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -181,9 +185,17 @@
   color: #333333;
   font-size: .24rem;
 }
+.gsold{
+  position: absolute;
+  top: .4rem;
+  right: 0rem;
+  color: #999999;
+  font-size: .24rem;
+}
 .goodsCoupon{
   display: flex;
   justify-content: space-between;
+  margin: .03rem 0rem 0rem 0rem;
 }
 .goodsPrice{
   font-size: .24rem;
@@ -222,4 +234,67 @@
     font-size: .2rem;
     color: #FFFFFF;
     margin-left: .2rem;
+}
+
+
+/*首页限时抢购*/
+.RushShop{
+  width: 96%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.RushShop_item{
+  width:2.26rem;
+  margin-bottom: .3rem;
+}
+.RushShopImg{
+  width: 2.26rem;
+  height: 2.26rem;
+  border-radius: .1rem;
+  overflow: hidden;
+}
+.RushShopImg>img{
+  width: 100%;
+  height: 100%;
+}
+.RushShopInfo{
+  width: 100%;
+  margin-top: .08rem;
+  position: relative;
+}
+.RushShopName{
+  width: 100%;
+  height: .75rem;
+  line-height: .36rem;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  color: #333333;
+  font-size: .24rem;
+}
+.spike{
+  position: absolute;
+  top: .4rem;
+  right: 0rem;
+  width: 1.15rem;
+  height: .25rem;
+  border-radius: .04rem;
+  border: 1px solid #FF3D3D;
+  color: #FF3D3D;
+  text-align: center;
+  line-height: .25rem;
+  overflow: hidden;
+  font-size: .18rem;
+}
+.RushShopPrice{
+  font-size: .22rem;
+  color: #FF0101;
+  line-height: .36rem;
+}
+.RushShopPrice>span{
+  font-weight:bold;
 }

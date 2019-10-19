@@ -91,70 +91,28 @@
                             </div>
                         </div>
                     </li>
+
                 </ul>
             </div>
             <!-- 商品列表 -->
             <div class="goodsList_box">
                 <ul class="goodsList_com">
-                    <li class="goods_item">
-                        <div class="goodsImg">
-                            <img src="https://gaitaobao4.alicdn.com/tfscom/i3/4029238012/O1CN019qzm1f293XopSRC3O_!!0-item_pic.jpg_240x240xz.jpg" />
-                        </div>
-                        <div class="goodsInfo">
-                            <div class="goodsName">
-                                <p class="labals">天猫</p>卫衣女潮ins宽松韩版bf慵懒风2019新款春秋薄款长袖女生秋季上衣
-                            </div>
-                            <div class="goodsCoupon">
-                              <span class="priceCoupon">50元券</span>
-                              <span class="sold">已售 4699</span>
-                            </div>
-                              <div class="goodsPrice">卷后价：<span>￥：69.9</span></div>
-                              <div class="gupgrade_share">
-                                  <div class="gshare">分享赚￥6.69</div>
-                                  <div class="gupgrade">  升级赚￥6.69</div>
-                              </div>
-                        </div>
-                    </li>
-                    <li class="goods_item">
-                        <div class="goodsImg">
-                            <img src="https://gaitaobao4.alicdn.com/tfscom/i3/4029238012/O1CN019qzm1f293XopSRC3O_!!0-item_pic.jpg_240x240xz.jpg" />
-                        </div>
-                        <div class="goodsInfo">
-                            <div class="goodsName">
-                                <p class="labals">天猫</p>卫衣女潮ins宽松韩版bf慵懒风2019新款春秋薄款长袖女生秋季上衣
-                            </div>
-                            <div class="goodsCoupon">
-                              <span class="priceCoupon">50元券</span>
-                              <span class="sold">已售 4699</span>
-                            </div>
-                              <div class="goodsPrice">卷后价：<span>￥：69.9</span></div>
-                              <div class="gupgrade_share">
-                                  <div class="gshare">分享赚￥6.69</div>
-                                  <div class="gupgrade">  升级赚￥6.69</div>
-                              </div>
-                        </div>
-                    </li>
-                    <li class="goods_item">
-                        <div class="goodsImg">
-                            <img src="https://gaitaobao4.alicdn.com/tfscom/i3/4029238012/O1CN019qzm1f293XopSRC3O_!!0-item_pic.jpg_240x240xz.jpg" />
-                        </div>
-                        <div class="goodsInfo">
-                            <div class="goodsName">
-                                <p class="labals">天猫</p>卫衣女潮ins宽松韩版bf慵懒风
-                            </div>
-                            <div class="goodsCoupon">
-                              <span class="priceCoupon">50元券</span>
-                              <span class="sold">已售 4699</span>
-                            </div>
-                              <div class="goodsPrice">卷后价：<span>￥：69.9</span></div>
-                              <div class="gupgrade_share">
-                                  <div class="gshare">分享赚￥6.69</div>
-                                  <div class="gupgrade">  升级赚￥6.69</div>
-                              </div>
-                        </div>
-                    </li>
+
                 </ul>
             </div>
+            <!-- 限时抢购 -->
+            <ul class="RushShop">
+                <li class="RushShop_item">
+                    <div class="RushShopImg">
+                        <img src="https://gaitaobao2.alicdn.com/tfscom/i1/2067841650/O1CN01CWrt6B1O3k3clAulS_!!2067841650.jpg_240x240xz.jpg" />
+                    </div>
+                    <div class="RushShopInfo">
+                        <div class="RushShopName">choisi6卫衣女宽松韩版bf慵...</div>
+                        <div class="spike">4.4折秒杀价</div>
+                        <div class="RushShopPrice">￥ <span>69.9</span></div>
+                    </div>
+                </li>
+            </ul>
         </main>
     </div>
 
@@ -187,6 +145,14 @@
                 <span>佣金比率</span>
                 <img src="../../image/yes_icon.png" />
             </li>
+            <li class="Li_item" data-name="价高到低">
+                <span>价高到低</span>
+                <img src="../../image/yes_icon.png" />
+            </li>
+            <li class="Li_item" data-name="价低到高">
+                <span>价低到高</span>
+                <img src="../../image/yes_icon.png" />
+            </li>
         </ul>
     </div>
     <!-- 筛选弹框 -->
@@ -215,6 +181,7 @@
 
 <script type="text/javascript" src="../../script/api.js"></script>
 <script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript" src="../../script/home/homeAjax.js"></script>
 <script type="text/javascript">
     apiready = function() {
         var param = api.pageParam;
@@ -229,6 +196,76 @@
         })
     };
     $(function() {
+        // 获取数据
+        getdata()
+
+        function getdata() {
+            ajaxPromise({
+                url: '../../script/classify.json',
+            }).then(res => {
+                // alert(res)
+                var datas = JSON.parse(res).goodsList;
+                goodsData(datas, "goodsList")
+            }).catch(err => {
+                console.log(err);
+            })
+        }
+
+        function goodsData(res, id) {
+            var goodsList = '';
+            var shoplist = '';
+            res.filter((item, index) => {
+                // html += `<p class="${index == 0 ? 'active' : ''}" ind=${index}>${item}</p>`
+                goodsList +=
+                    `  <li class="goods_item">
+              <div class="goodsImg">
+                  <img src="${item.goodsImg}" />
+              </div>
+              <div class="goodsInfo">
+                  <div class="goodsName">
+                      <p class="labals">${item.labal}</p>${item.goodsName.substring(0,21) + "..."}
+                  </div>
+                  <div class="gsold">已售 ${item.sold}</div>
+                  <div class="goodsCoupon">
+                    <div class="goodsPrice">卷后价：<span>￥：${item.goodsPrice}</span></div>
+                    <span class="priceCoupon">${item.goodsCoupon}元券</span>
+                  </div>
+                    <div class="gupgrade_share">
+                        <div class="gshare">分享赚￥${item.goodsShare}</div>
+                        <div class="gupgrade">  升级赚￥${item.goodsupgrade}</div>
+                    </div>
+              </div>
+          </li>`
+                    // shopList +=`<li class="shop_item">
+                    //     <div class="shopImg">
+                    //         <img src="${item.goodsImg}" />
+                    //     </div>
+                    //     <div class="shopInfo">
+                    //         <div class="shopName_box">
+                    //             <p class="labals">${item.labal}</p>${item.goodsName.substring(0,21) + "..."}
+                    //         </div>
+                    //         <div class="shopCoupon">
+                    //             <span class="priceCoupon">${item.goodsCoupon}元券</span>
+                    //             <span class="sold">已售  ${item.sold}</span>
+                    //         </div>
+                    //         <div class="shopPrice">卷后价：<span>￥${item.goodsPrice}</span></div>
+                    //         <div class="upgrade_share">
+                    //             <div class="share">
+                    //                 <img src="../../image/share.png" />
+                    //                 <p>分享赚￥${item.goodsShare}</p>
+                    //             </div>
+                    //             <div class="upgrade">
+                    //                 <img src="../../image/share.png" />
+                    //                 <p>升级赚￥${item.goodsupgrade}</p>
+                    //             </div>
+                    //         </div>
+                    //     </div>
+                    // </li>`
+            })
+            $('.goodsList_com').html(goodsList)
+                // $('.shopList_con').html(shopList)
+        }
+
         // 点击淘券显示弹框
         $('.select_Coupon').click(function() {
                 $('.conditionModal').hide()

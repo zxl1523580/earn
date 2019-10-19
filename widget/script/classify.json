@@ -71,6 +71,25 @@
             "name": "男装"
         }]
 
-    }]
+    }],
+    "goodsList":[{
+        "labal":"天猫",
+        "goodsName":"卫衣女潮ins宽松韩版bf慵懒风2019新款",
+        "goodsCoupon":"50",
+        "sold":"4699",
+        "goodsPrice":"69.9",
+        "goodsShare":"6.69",
+        "goodsupgrade":"6.66",
+        "goodsImg":"https://gaitaobao3.alicdn.com/tfscom/i3/225325839/O1CN01brOzHh1t0JAqQIMiV_!!225325839.jpg_240x240xz.jpg"
+      },{
+            "labal":"天猫",
+            "goodsName":"卫衣2019新款女条纹宽松春秋上衣bf慵懒风韩版中长款潮ins长袖女",
+            "goodsCoupon":"50",
+            "sold":"4699",
+            "goodsPrice":"69.9",
+            "goodsShare":"6.69",
+            "goodsupgrade":"6.66",
+            "goodsImg":"https://gaitaobao4.alicdn.com/tfscom/i4/851003831/O1CN011eAdmmzAtshbaIk_!!851003831.jpg_240x240xz.jpg"
+          }]
 
 }
