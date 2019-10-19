@@ -6,56 +6,73 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
     <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
     <title></title>
+    <link rel="stylesheet" href="../../css/home/swiper.css">
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
     <link rel="stylesheet" type="text/css" href="../../css/home/homeIndex.css" />
-</head>
-<style>
-  .Banners{
-    width: 100vw;
-    height: 500px;
-  }
-</style>
+    <style>
+        .nextIcon{
+          width: 0.48rem;
+          height: 0.48rem;
+        }
+    </style>
 
-<body>
-    <div id="wrap">
-        <!-- 输入框 -->
-        <div class="flex height88 headerSearch alineCenter spaceBetween">
-            <div class="bgfff flex searchInput radius20 por">
-                <i class="searchIcon poa topCenter"></i>
-                <input type="text" name="" value="" placeholder="复制商品标题搜淘宝 天猫 京东 拼多多优惠券" class="color666 fs24">
+    <body>
+        <div id="wrap" class="por">
+            <!-- 输入框 -->
+            <div class="flex height88 headerSearch alineCenter spaceBetween">
+                <div class="bgfff flex searchInput radius20 por">
+                    <i class="searchIcon poa topCenter"></i>
+                    <input type="text" name="" value="" placeholder="复制商品标题搜淘宝 天猫 京东 拼多多优惠券" class="color666 fs24">
+                </div>
+                <a href="javascript:;" class="flex alineCenter"><img src="../../image/homepage_icon_news.png" alt="" class="newIcon" /></a>
             </div>
-            <a href="javascript:;" class="flex alineCenter"><img src="../../image/homepage_icon_news.png" alt="" class="newIcon" /></a>
+            <!-- 输入框 -->
+            <!-- 导航栏 -->
+            <div class="flex HeadNav height88" id="HeadNav"></div>
+            <!-- 导航栏 -->
+            <!-- 轮播 -->
+            <div class="swiper-container" id="banner">
+                <div class="swiper-wrapper" id="IndexBanner">
+                    <div class="swiper-slide"><img src="../../image/BannerL.png" data-cache="no" class="bgf5" /></div>
+                </div>
+                <div class="swiper-pagination" id="BannerRedio"></div>
+            </div>
         </div>
-        <!-- 输入框 -->
-        <!-- 导航栏 -->
-        <div class="flex HeadNav height88" id="HeadNav"></div>
-        <!-- 导航栏 -->
-        <!-- 轮播 -->
+        <div class="navCenter swiper-container" id="navBarList">
+            <div class="swiper-wrapper flex flexWrap flexCloum" id="navs"></div>
+            <div class="strip por" id="strip"><i class="block poa"></i></div>
+        </div>
+        <div class="flex spaceBetween tips alineCenter height88">
+          <img src="../../image/homepage_icon_notice.png" alt="">
+          <p class="fs30">今日已经为用户省钱<i class="money fs36 blod">51654654</i>元</p>
+        </div>
         <div>
-          sdadsa
+          <img src="../../image/message3.png" alt="" class="navImage">
         </div>
-        <!-- 轮播 -->
-    </div>
+        <!-- 限时抢购 -->
 
+        <div>
+          <div class="flex alineCenter spaceBetween">
+              <div>
+                <p class="coloeJin fs32">爆款好货五折开抢</p>
+                <p class="coloeJin fs24">活动时间：9.9-9.10</p>
+              </div>
+              <img src="../../image/homepage_icon_baokuanmore.png" alt="" class="nextIcon">
+          </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/jqmin.js"></script>
+    <script type="text/javascript" src="../../script/home/homeAjax.js"></script>
+    <script type="text/javascript" src="../../script/home/homeIndex.js"></script>
+    <script type="text/javascript" src="../../script/home/imgLoding.js"></script>
+    <script type="text/javascript" src="../../script/home/swiper.js"></script>
+</head>
 
-    <div frame="Banners" class="Banners">
-
-    </div>
-
-</body>
-<script type="text/javascript" src="../../script/api.js"></script>
-<script type="text/javascript" src="../../script/jqmin.js"></script>
-<script type="text/javascript" src="../../script/home/homeAjax.js"></script>
-<script type="text/javascript" src="../../script/home/homeIndex.js"></script>
 <script>
-    getdata()
-    // 导航栏切换
-    $("#HeadNav").on("click","p",function(){
-        $("#HeadNav p").removeClass("active")
-        $(this).addClass("active")
-    })
+
 </script>
 <script type="text/javascript">
     apiready = function() {
@@ -70,96 +87,16 @@
         // 适配iOS 7+，Android 4.4+状态栏
         var header = $api.byId('wrap');
         $api.fixStatusBar(header);
+        getBannerList();
+        getdata();
 
-
-        console.log(JSON.stringify(api.require('UIScrollPicture')))
-        var UIScrollPicture = api.require('UIScrollPicture');
-        UIScrollPicture.open({
-            rect: {
-                x: 0,
-                y: 0,
-                w: api.winWidth,
-                h: 300
-            },
-            data: {
-                paths: ['https://pic.qiantucdn.com/images/banner/5da3d6d5eb9df.jpg', 'https://pic.qiantucdn.com/images/banner/5da3d85b4c80f.jpg', 'https://pic.qiantucdn.com/images/banner/5da3d6d5eb9df.jpg'], //数组类型；图片路径数组，支持http://，https://，widget://，fs://协议
-                captions: ['竹', '屋', '花']
-            },
-            styles: {
-                caption: {
-                    height: 35,
-                    color: '#E0FFFF',
-                    size: 13,
-                    bgColor: '#696969',
-                    position: 'bottom'
-                },
-                indicator: {
-                    dot: { // （可选项）JSON对象；指示器小圆点样式；不传则使用系统默认小圆点样式
-                        w: 10, //（必选项）数字类型；小圆点宽度
-                        h: 10, //（必选项）数字类型；小圆点高度
-                        r: 5, //（必选项）数字类型；corner 页面控制器指示标记（矩形）的圆角大小
-                        margin: 20 //（必选项）数字类型；小圆点间距
-                    },
-                    align: 'center',
-                    color: '#FFFFFF',
-                    activeColor: '#DA70D6'
-                }
-            },
-            placeholderImg: 'widget://image/loginImage.png',
-            contentMode: 'scaleToFill',
-            interval: 3,
-            loop: true,
-            fixedOn: 'Banners',
-            fixed: true
-        }, function(ret, err) {
-            if (ret) {
-                // alert(JSON.stringify(ret));
-            } else {
-                // alert(JSON.stringify(err));
-            }
-        });
+        seTnavList();
     };
-
-
-    //
-    // function fnClose() {
-    //     UIScrollPicture.close();
-    // };
-    //
-    // function fnShow() {
-    //     UIScrollPicture.show();
-    // };
-    //
-    // function fnHide() {
-    //     UIScrollPicture.hide();
-    // };
-    //
-    // function fnSetCurrentIndex() {
-    //     UIScrollPicture.setCurrentIndex({
-    //         index: 2
-    //     });
-    // };
-    //
-    // // function fnReloadData() {
-    // //     UIScrollPicture.reloadData({
-    // //         data: {
-    // //             paths: ['widget://res/4.jpg', 'widget://res/5.jpg', 'widget://res/6.jpg'],
-    // //             captions: ['title1', 'title2', 'title3']
-    // //         }
-    // //     });
-    // // };
-    //
-    // function fnAdEventListener() {
-    //     UIScrollPicture.addEventListener({
-    //         name: 'scroll'
-    //     }, function(ret, err) {
-    //         if (ret) {
-    //             alert(JSON.stringify(ret));
-    //         } else {
-    //             alert(JSON.stringify(err));
-    //         }
-    //     });
-    // };
+    // 导航栏切换
+    $("#HeadNav").on("click", "p", function() {
+        $("#HeadNav p").removeClass("active")
+        $(this).addClass("active")
+    })
 </script>
 
 </html>
