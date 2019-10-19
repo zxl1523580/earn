@@ -8,100 +8,154 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../../css/classify/classifyMore.css" />
     <link rel="stylesheet" type="text/css" href="../../css/shopList.css">
 </head>
 
 <body>
-    <div id="wrap" class="wrap modalBg">
-        <div class="header">
-            <!-- 头部 -->
-            <div class="title">
-                <img src="../../image/backArrow.png" id="back" />
-                <span class="title_span">女装</span>
-                <div class="select_Coupon">
-                    <span class="span">淘券</span>
-                    <img class="img" src="../../image/DownarrowWhite.png" />
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="header">
+                <!-- 头部 -->
+                <div class="title">
+                    <img src="../../image/backArrow.png" id="back" />
+                    <span class="title_span">女装</span>
+                    <div class="select_Coupon">
+                        <span class="span">淘券</span>
+                        <img class="img" src="../../image/DownarrowWhite.png" />
+                    </div>
+                </div>
+                <!-- Tab切换 -->
+                <div class="navBar">
+                    <ul class="navBar_content">
+                        <li class="navBaractive">爆款</li>
+                        <li>素材</li>
+                        <li>学院</li>
+                        <li>素材</li>
+                        <li>学院</li>
+                        <li>素材</li>
+                        <li>学院</li>
+                        <li>素材</li>
+                        <li>学院</li>
+                        <li>素材</li>
+                        <li>学院</li>
+                        <li>素材</li>
+                        <li>学院</li>
+                    </ul>
+                </div>
+                <div class="condition">
+                    <ul class="condition_ul">
+                        <li class="rank selectActive" id="Rank" data-type='1'>
+                            <span class="ranking">推荐排序</span>
+                            <img class="ImgId" src="../../image/DownarrowActive.png" />
+                        </li>
+                        <li class="coupon" data-type='2'>优惠券</li>
+                        <li class="coupon" data-type='2'>新品</li>
+                        <li class="screen" id="screen" data-type='1'>
+                            <span>筛选</span>
+                            <img class="ImgId" src="../../image/Downarrow.png" />
+                        </li>
+                        <li class="menu" data-type="3">
+                            <img src="../../image/menu.png" />
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
+
+        </header>
         <!--中间内容  -->
         <main class="content">
-            <!-- Tab切换 -->
-            <div class="navBar">
-                <ul class="navBar_content">
-                    <li class="navBaractive">爆款</li>
-                    <li>素材</li>
-                    <li>学院</li>
-                    <li>素材</li>
-                    <li>学院</li>
-                    <li>素材</li>
-                    <li>学院</li>
-                    <li>素材</li>
-                    <li>学院</li>
-                    <li>素材</li>
-                    <li>学院</li>
-                    <li>素材</li>
-                    <li>学院</li>
-                </ul>
-            </div>
-            <div class="condition">
-                <ul class="condition_ul">
-                    <li class="rank selectActive" id="Rank" data-type='1'>
-                        <span class="ranking">推荐排序</span>
-                        <img class="ImgId" src="../../image/DownarrowActive.png" />
-                    </li>
-                    <li class="coupon" data-type='2'>优惠券</li>
-                    <li class="coupon" data-type='2'>新品</li>
-                    <li class="screen" id="screen" data-type='1'>
-                        <span>筛选</span>
-                        <img class="ImgId" src="../../image/Downarrow.png" />
-                    </li>
-                    <li class="menu" data-type="3">
-                        <img src="../../image/menu.png" />
-                    </li>
-                </ul>
-            </div>
-            <!-- 商品列表 -->
-            <div class="shopList_box">
-                <ul class="shopList_con">
-                    <li class="shop_item">
-                        <div class="shopImg">
-                            <img src="https://gaitaobao4.alicdn.com/tfscom/i1/3155376346/TB2Ov2is0cnBKNjSZR0XXcFqFXa_!!3155376346.jpg_240x240xz.jpg" />
-                        </div>
-                        <div class="shopInfo">
-                            <div class="shopName_box">
-                                <p class="labals">天猫</p>2019新款初秋ins女学生网红长袖上衣韩版宽松慵懒风bf套头卫衣潮的海景房电话就说复合大师打开市房管局
+
+            <div class="shopContainer">
+                <!-- 商品列表 -->
+                <div class="shopList_box">
+                    <ul class="shopList_con">
+                        <li class="shop_item">
+                            <div class="shopImg">
+                                <img src="https://gaitaobao4.alicdn.com/tfscom/i1/3155376346/TB2Ov2is0cnBKNjSZR0XXcFqFXa_!!3155376346.jpg_240x240xz.jpg" />
                             </div>
-                            <div class="shopCoupon">
-                                <span class="priceCoupon">50元券</span>
-                                <span class="sold">已售 4699</span>
-                            </div>
-                            <div class="shopPrice">卷后价：<span>￥：69.9</span></div>
-                            <div class="upgrade_share">
-                                <div class="share">
-                                    <img src="../../image/share.png" />
-                                    <p>分享赚￥6.69</p>
+                            <div class="shopInfo">
+                                <div class="shopName_box">
+                                    <p class="labals">天猫</p>2019新款初秋ins女学生网红长袖上衣韩版宽松慵懒风bf套头卫衣潮的海景房电话就说复合大师打开市房管局
                                 </div>
-                                <div class="upgrade">
-                                    <img src="../../image/share.png" />
-                                    <p>升级赚￥6.69</p>
+                                <div class="shopCoupon">
+                                    <span class="priceCoupon">50元券</span>
+                                    <span class="sold">已售 4699</span>
+                                </div>
+                                <div class="shopPrice">卷后价：<span>￥：69.9</span></div>
+                                <div class="upgrade_share">
+                                    <div class="share">
+                                        <img src="../../image/share.png" />
+                                        <p>分享赚￥6.69</p>
+                                    </div>
+                                    <div class="upgrade">
+                                        <img src="../../image/share.png" />
+                                        <p>升级赚￥6.69</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
+                        </li>
+                        <li class="shop_item">
+                            <div class="shopImg">
+                                <img src="https://gaitaobao4.alicdn.com/tfscom/i1/3155376346/TB2Ov2is0cnBKNjSZR0XXcFqFXa_!!3155376346.jpg_240x240xz.jpg" />
+                            </div>
+                            <div class="shopInfo">
+                                <div class="shopName_box">
+                                    <p class="labals">天猫</p>2019新款初秋ins女学生网红长袖上衣韩版宽松慵懒风bf套头卫衣潮的海景房电话就说复合大师打开市房管局
+                                </div>
+                                <div class="shopCoupon">
+                                    <span class="priceCoupon">50元券</span>
+                                    <span class="sold">已售 4699</span>
+                                </div>
+                                <div class="shopPrice">卷后价：<span>￥：69.9</span></div>
+                                <div class="upgrade_share">
+                                    <div class="share">
+                                        <img src="../../image/share.png" />
+                                        <p>分享赚￥6.69</p>
+                                    </div>
+                                    <div class="upgrade">
+                                        <img src="../../image/share.png" />
+                                        <p>升级赚￥6.69</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="shop_item">
+                            <div class="shopImg">
+                                <img src="https://gaitaobao4.alicdn.com/tfscom/i1/3155376346/TB2Ov2is0cnBKNjSZR0XXcFqFXa_!!3155376346.jpg_240x240xz.jpg" />
+                            </div>
+                            <div class="shopInfo">
+                                <div class="shopName_box">
+                                    <p class="labals">天猫</p>2019新款初秋ins女学生网红长袖上衣韩版宽松慵懒风bf套头卫衣潮的海景房电话就说复合大师打开市房管局
+                                </div>
+                                <div class="shopCoupon">
+                                    <span class="priceCoupon">50元券</span>
+                                    <span class="sold">已售 4699</span>
+                                </div>
+                                <div class="shopPrice">卷后价：<span>￥：69.9</span></div>
+                                <div class="upgrade_share">
+                                    <div class="share">
+                                        <img src="../../image/share.png" />
+                                        <p>分享赚￥6.69</p>
+                                    </div>
+                                    <div class="upgrade">
+                                        <img src="../../image/share.png" />
+                                        <p>升级赚￥6.69</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 商品列表 -->
+                <div class="goodsList_box">
+                    <ul class="goodsList_com">
 
-                </ul>
-            </div>
-            <!-- 商品列表 -->
-            <div class="goodsList_box">
-                <ul class="goodsList_com">
-
-                </ul>
-            </div>
-            <!-- 限时抢购 -->
-            <ul class="RushShop">
+                    </ul>
+                </div>
+                <!-- 限时抢购 -->
+                <ul class="RushShop">
                 <li class="RushShop_item">
                     <div class="RushShopImg">
                         <img src="https://gaitaobao2.alicdn.com/tfscom/i1/2067841650/O1CN01CWrt6B1O3k3clAulS_!!2067841650.jpg_240x240xz.jpg" />
@@ -113,6 +167,7 @@
                     </div>
                 </li>
             </ul>
+            </div>
         </main>
     </div>
 
@@ -185,8 +240,6 @@
 <script type="text/javascript">
     apiready = function() {
         var param = api.pageParam;
-        var header = $api.byId('wrap');
-        $api.fixStatusBar(header);
         $('.title').on('click', '#back', function() {
             api.historyBack({}, function(ret, err) {
                 if (!ret.status) {
