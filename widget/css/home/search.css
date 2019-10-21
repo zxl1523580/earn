@@ -1,33 +1,48 @@
-body {
-    background: #ffffff;
+html, body, #wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+}
+
+#wrap header {
+  color: #000;
+    /*background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);*/
+}
+
+.statusBar {
+    height: .4rem;
 }
 
 .search {
     width: 100%;
     height: .88rem;
-    border: 1px solid black;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.searchAll {
+    width: 95%;
+    height: .88rem;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
 .search_box {
-    width: 85%;
+    width: 90%;
     height: .6rem;
-    background: #f7f7f7;
-    /*background:rgba(255,255,255,1);*/
-    margin: 0 auto;
+    background: #F5F5F5;
     border-radius: .3rem;
     position: relative;
     z-index: 999;
-    margin-top: .1rem;
 }
 
 .search_con {
     width: 90%;
     height: .6rem;
     margin: 0 auto;
-    /*border: 1px solid black;*/
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -35,7 +50,6 @@ body {
 
 .select_title {
     width: 12%;
-    /*border: 1px solid red;*/
     height: .24rem;
     display: flex;
     justify-content: space-between;
@@ -96,7 +110,7 @@ input::-webkit-input-placeholder {
     margin-left: .1rem;
     text-align: left;
     border: none;
-    background: #f7f7f7;
+    background: #F5F5F5;
 }
 
 .cancel {
@@ -106,11 +120,104 @@ input::-webkit-input-placeholder {
 }
 
 
+/*搜索热词及搜索历史*/
+
+#wrap main {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+#wrap main::-webkit-scrollbar {
+    display: none;
+}
+
+.Hotword_box{
+    width: 96%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.hotTitle, .historyTitle {
+    width: 100%;
+    color: #333333;
+    font-size: .26rem;
+    line-height: .8rem;
+    margin-top: .2rem;
+}
+
+.Hotword_ul {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.Hotword_item {
+    padding: .1rem .2rem;
+    background: #F0F0F0;
+    color: #666666;
+    font-size: .26rem;
+    margin: 0rem .2rem .2rem 0rem;
+    border-radius: .3rem;
+}
+
+
+/*搜索历史*/
+
+.searchHistory{
+  width: 96%;
+  margin: 0 auto;
+  display: none;
+}
+.history_ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.history_item {
+    width: 100%;
+    height: .88rem;
+    border-bottom: 1px solid #F0F0F0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history_item>span {
+    font-size: .26rem;
+    font-weight: 500;
+    color: #666666;
+}
+
+.history_item>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.delectAll {
+    width: 1.87rem;
+    height: .6rem;
+    border: 1px solid #666666;
+    border-radius: .3rem;
+    font-size: .26rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #666666;
+    margin: .2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 /*弹储层*/
 
 .modal {
     position: fixed;
-    top: .6rem;
+    top: .4rem;
     width: 100%;
     height: 100%;
     bottom: 0rem;
@@ -123,7 +230,7 @@ input::-webkit-input-placeholder {
     background: #F5F5F5;
     margin: 0 auto;
     border-radius: .3rem .3rem .3rem .3rem;
-    padding-top: .6rem;
+    padding-top: .65rem;
     overflow: hidden;
 }
 

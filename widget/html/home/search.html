@@ -13,27 +13,55 @@
 </head>
 
 <body>
-    <div id="wrap" class="wrap">
-      <div class="search">
-      <div class="search_box">
-          <div class="search_con">
-              <div class="select_title" id="modalShow">
-                  <span class="span">淘券g</span>
-                  <span class="spanActive">淘券</span>
-                  <img class="img" src="../../image/Downarrow.png" />
-                  <img class="imgActive" src="../../image/DownarrowActive.png" />
-              </div>
-              <div class="search_text">
-                  <img class="search_icon" src="../../image/icon_search.png" />
-                  <input class="Input" type="text" placeholder="请输入您要找的商品" />
-              </div>
-          </div>
-      </div>
-      <div class="cancel">取消</div>
-      <div>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="search">
+                <div class="searchAll">
+                    <div class="search_box">
+                        <div class="search_con">
+                            <div class="select_title" id="modalShow">
+                                <span class="span">淘券</span>
+                                <span class="spanActive">淘券</span>
+                                <img class="img" src="../../image/Downarrow.png" />
+                                <img class="imgActive" src="../../image/DownarrowActive.png" />
+                            </div>
+                            <div class="search_text">
+                                <img class="search_icon" src="../../image/icon_search.png" />
+                                <input class="Input" type="text" placeholder="请输入您要找的商品" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cancel">取消</div>
+                </div>
+            </div>
+        </header>
         <!--中间内容  -->
         <main class="content">
-
+            <!-- 搜索热词 -->
+            <div class="Hotword_box">
+                <h2 class="hotTitle">热门搜索</h2>
+                <ul class="Hotword_ul">
+                    <li class="Hotword_item">格子衬衫</li>
+                    <li class="Hotword_item">背带夹</li>
+                    <li class="Hotword_item">祛痘精华</li>
+                    <li class="Hotword_item">only小白瓶</li>
+                    <li class="Hotword_item">打底衫</li>
+                    <li class="Hotword_item">工装裤</li>
+                    <li class="Hotword_item">经典马丁靴</li>
+                </ul>
+            </div>
+            <!-- 搜索历史 -->
+            <div class="searchHistory">
+                <h2 class="historyTitle">搜索历史</h2>
+                <ul class="history_ul">
+                    <!-- <li class="history_item">
+                        <span>格子衬衫</span>
+                        <img src="../../image/delete.png" />
+                    </li> -->
+                </ul>
+            </div>
+            <div class="delectAll">清空历史记录</div>
         </main>
     </div>
     <!-- 弹储层 -->
@@ -61,29 +89,80 @@
 <script type="text/javascript">
     apiready = function() {
         var param = api.pageParam;
-        var header = $api.byId('wrap');
-        $api.fixStatusBar(header);
-
+        $('.searchAll').on('click', '.cancel', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
     };
-    $(function(){
-      $('.yes_icon').show()
-      $('#modalShow').click(function() {
-          $('.modal').fadeIn()
-          $('.img').hide()
-          $('.imgActive').show()
-          $('.span').hide()
-          $('.spanActive').show()
-      })
-      $('.modal_item').click(function() {
-          $(this).addClass('Textactive').siblings().removeClass('Textactive');
-          $(this).children('img').show()
-          $(this).siblings().children('img').hide()
-          $('.spanActive').html($(this).data().name)
-              $('.modal').fadeOut()
-      })
-      $('.modal').click(function(){
-          $('.modal').hide()
-      })
+    $(function() {
+        $('.yes_icon').show()
+        $('#modalShow').click(function() {
+            $('.modal').show()
+            $('.img').hide()
+            $('.imgActive').show()
+            $('.span').hide()
+            $('.spanActive').show()
+        })
+        $('.modal_item').click(function() {
+            $(this).addClass('Textactive').siblings().removeClass('Textactive');
+            $(this).children('img').show()
+            $(this).siblings().children('img').hide()
+            $('.spanActive').html($(this).data().name)
+            $('.modal').fadeOut()
+        })
+        $('.modal').click(function() {
+                $('.modal').hide()
+            })
+            // 搜索
+        var str = localStorage.historyItems;
+        var s = '';
+        if (str == undefined) {
+            // $(".contain").append('<div class="info"></div>');
+        } else {
+            var strs = [];
+            strs = str.split("|");
+            for (var i = 0; i < strs.length; i++) {
+                s += `<li class="history_item" data-name="${strs[i]}">
+                <span>${strs[i]}</span>
+                <img class="del" src="../../image/delete.png" />
+            </li>`
+            }
+            $(".history_ul").html(s);
+            $('.searchHistory').show();
+        }
+
+
+        //点击搜索
+        $('.Input').on('keydown', function(e) {
+            if (e.keyCode == '13') {
+                var keyword = $('.Input').val();
+                setWorld(keyword);
+                $('.Input').val('');
+            }
+        })
+
+        function setWorld(keyword) {
+            $('.searchHistory').show();
+            //		var {historyItems}=localStorage;
+            var historyItems = localStorage.historyItems
+            if (historyItems === undefined) {
+                localStorage.historyItems = keyword;
+            } else {
+                historyItems = keyword + '|' + historyItems.split('|').filter(e => e != keyword).join('|');
+                localStorage.historyItems = historyItems;
+            }
+        }
+        $('.delectAll').click(function() {
+            localStorage.removeItem('historyItems');
+            $('.history_ul').html('');
+            $('.searchHistory').hide();
+        })
+        $('.history_item').on('click','.del',function(){
+        $(this).parent().remove()
+        })
     })
 </script>
 
