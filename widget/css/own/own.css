@@ -6,14 +6,13 @@ html, body, #wrap {
 }
 
 #wrap header {
-    height: 3.2rem;
+    height: .8rem;
     background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
 }
 
 .statusBar {
     height: .4rem;
 }
-
 #wrap main {
     width: 100%;
     flex: 1;
@@ -28,10 +27,19 @@ html, body, #wrap {
 
 /*用户信息*/
 
+.header{
+  width: 100%;
+  height: 2.4rem;
+  /*border: 1px solid black;*/
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+
+}
 .userInfo_box {
     width: 96%;
     /*border: 1px solid black;*/
-    margin: .5rem auto;
+    margin: 0rem auto;
     display: flex;
     justify-content: space-between;
 }
