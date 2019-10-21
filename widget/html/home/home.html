@@ -11,45 +11,16 @@
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
     <link rel="stylesheet" type="text/css" href="../../css/home/homeIndex.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/shopList.css">
     <style>
-        .timeGo {
-            padding: 0 0.24rem;
-        }
 
-        .ml8 {
-            margin-left: 0.1rem;
-        }
-
-        .mt9 {
-            margin-left: 0.1rem;
-        }
-
-        .timeInt {
-            width: 1.5rem;
-            height: 0.4rem;
-            line-height: 0.4rem;
-            border-radius: 4px;
-        }
-
-        .TimeList {
-            width: 1.4rem;
-        }
-
-        .TimeList.active p:first-child {
-            background: linear-gradient(90deg, rgba(255, 42, 42, 1) 0%, rgba(255, 92, 92, 1) 100%);
-            border-radius: 20px;
-            color: #fff;
-        }
-
-        .TimeList.active p:last-child {
-            color: rgba(255, 50, 50, 1);
-        }
     </style>
 
     <body>
         <div id="wrap" class="por">
+          <div class="TopBatr">
             <!-- 输入框 -->
-            <div class="flex height88 headerSearch alineCenter spaceBetween">
+            <div class="flex height88 headerSearch alineCenter spaceBetween ">
                 <div class="bgfff flex searchInput radius20 por">
                     <i class="searchIcon poa topCenter"></i>
                     <input type="text" name="" value="" placeholder="复制商品标题搜淘宝 天猫 京东 拼多多优惠券" class="color666 fs24">
@@ -58,16 +29,18 @@
             </div>
             <!-- 输入框 -->
             <!-- 导航栏 -->
-            <div class="flex HeadNav height88" id="HeadNav"></div>
+            <div class="flex HeadNav height88 " id="HeadNav"></div>
             <!-- 导航栏 -->
-            <!-- 轮播 -->
-            <div class="swiper-container" id="banner">
-                <div class="swiper-wrapper" id="IndexBanner">
-                    <!-- <div class="swiper-slide"><img src="../../image/BannerL.png" data-cache="no" class="bgf5" /></div> -->
-                </div>
-                <div class="swiper-pagination" id="BannerRedio"></div>
-            </div>
+          </div>
+        </div>
 
+
+        <!-- 轮播 -->
+        <div class="swiper-container" id="banner">
+            <div class="swiper-wrapper" id="IndexBanner">
+                <!-- <div class="swiper-slide"><img src="../../image/BannerL.png" data-cache="no" class="bgf5" /></div> -->
+            </div>
+            <div class="swiper-pagination" id="BannerRedio"></div>
         </div>
         <div>
             <div class="navCenter swiper-container por" id="navBarList">
@@ -78,7 +51,7 @@
 
         <div class="flex spaceBetween tips alineCenter height88">
             <img src="../../image/homepage_icon_notice.png" alt="">
-            <p class="fs30">今日已经为用户省钱<i class="money fs36 blod">51654654</i>元</p>
+            <p class="fs30 color333">今日已经为用户省钱<i class="money fs36 blod">51654654</i>元</p>
         </div>
         <div>
             <img src="../../image/BannerL.png" data-cache="no" class="navImage bgf5" data-src="https://www.w3school.com.cn/sp/header.gif" />
@@ -89,7 +62,7 @@
                 <div>
                     <p class="fs40 colorred blod">限时抢购</p>
                     <div class="flex alineCenter">
-                        <p class="fs28 colorfff bgred timeInt textCenter">01:23:46</p>
+                        <p class="fs28 colorfff bgred timeInt textCenter" id="times">01:23:46</p>
                         <p class="colorgray fs22 ml8">倒计时</p>
                     </div>
                 </div>
@@ -108,8 +81,9 @@
                     </div>
                 </div>
             </div>
-            <div class="" id="RushBuyShop">
-
+            <div class="swiper-container" id="RushBuyShop">
+              <div class="swiper-wrapper" id="shopLost"></div>
+              <div class="swiper-pagination poa" id="ShopRedio"></div>
             </div>
         </div>
         <div class="activity">
@@ -134,6 +108,11 @@
 <script>
 </script>
 <script type="text/javascript">
+
+
+
+
+
     apiready = function() {
         function fanhui() {
             api.sendEvent({
@@ -150,6 +129,7 @@
         getdata();
         seTnavList();
         getactivityList();
+        getshopList();
     };
     // 导航栏切换
     $("#HeadNav").on("click", "p", function() {

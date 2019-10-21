@@ -96,6 +96,8 @@ function navList(res, id) {
     cacheImage();
 }
 
+//限时抢购
+
 
 //广告
 var getactivityList = () => {
@@ -126,4 +128,84 @@ function activity(res,id){
   $(`#${id}`).html(html);
 
   cacheImage();
+}
+
+
+//限时抢购
+
+function getshopList() {
+    ajaxPromise({
+        url: '../../script/home/home.json',
+    }).then(res => {
+        var ress = JSON.parse(res).timeShop;
+        timeShop(ress, "shopLost")
+    }).catch(err => {
+        console.log(err);
+    })
+}
+function timeShop(res,id){
+  var html = "";
+  var PageLength = Math.ceil(res.length  / 3);
+  console.log(PageLength)
+  for (var i = 0; i < PageLength; i++) {
+      var slideArr = res.slice(i > 0 ? (i * 3)  : 0, (i + 1) * 3);
+      var str = slideArr.map((item) => {
+          return `
+          <li class="RushShop_item">
+              <div class="RushShopImg">
+                  <img src="../../image/loginImage.png" data-src="${item.goodsImg}" data-cache="no" class="bgf5" />
+              </div>
+              <div class="RushShopInfo">
+                  <div class="RushShopName">${item.goodsName.substring(0,11) + "..."}</div>
+                  <div class="spike">${item.labal}</div>
+                  <div class="RushShopPrice">￥ <span>${item.goodsPrice}</span></div>
+              </div>
+          </li>
+          `
+      })
+      html +=`<ul class="RushShop swiper-slide">
+              ${str.toString().replace(/,/g,'')}
+          </ul>`
+  }
+  $(`#${id}`).html(html)
+
+  new Swiper('#RushBuyShop', {
+    pagination: {
+        el: '#ShopRedio',
+      },
+  })
+  cacheImage();
+}
+
+
+
+/*
+时间倒计时插件
+*/
+TimeDown("times", "2025-11-25 8:00:45");
+function TimeDown(id, endDateStr) {
+    //结束时间
+    var endDate = new Date(endDateStr);
+    //当前时间
+    var nowDate = new Date();
+    //相差的总秒数
+    var totalSeconds = parseInt((endDate - nowDate) / 1000);
+    //天数
+    var days = Math.floor(totalSeconds / (60 * 60 * 24));
+    //取模（余数）
+    var modulo = totalSeconds % (60 * 60 * 24);
+    //小时数
+    var hours = Math.floor(modulo / (60 * 60));
+    modulo = modulo % (60 * 60);
+    //分钟
+    var minutes = Math.floor(modulo / 60);
+    //秒
+    var seconds = modulo % 60;
+    //输出到页面
+
+    $(`#${id}`).html( `${hours}:${minutes}:${seconds}`);
+    //延迟一秒执行自己
+    setTimeout(function () {
+        TimeDown(id, endDateStr);
+    }, 1000)
 }
