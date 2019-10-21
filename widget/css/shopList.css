@@ -157,6 +157,7 @@
 .goods_item{
   width: 3.43rem;
   margin-bottom: .3rem;
+  list-style: none;
 }
 .goodsImg{
   width: 3.43rem;

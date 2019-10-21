@@ -13,7 +13,11 @@
     <link rel="stylesheet" type="text/css" href="../../css/home/homeIndex.css" />
     <link rel="stylesheet" type="text/css" href="../../css/shopList.css">
     <style>
+      .lick{
+        margin: 0.5rem 0 0 0;
+        padding: 0 0.24rem;
 
+      }
     </style>
 
     <body>
@@ -33,7 +37,6 @@
             <!-- 导航栏 -->
           </div>
         </div>
-
 
         <!-- 轮播 -->
         <div class="swiper-container" id="banner">
@@ -96,32 +99,34 @@
             </div>
             <div class="flex alineCenter activityImage" id="activity"></div>
         </div>
+        <div class="lick">
+          <p class="color333 fs32">猜你喜欢</p>
+          <div id="LickShopList">
+
+          </div>
+        </div>
     </body>
     <script type="text/javascript" src="../../script/home/imgLoding.js"></script>
     <script type="text/javascript" src="../../script/api.js"></script>
     <script type="text/javascript" src="../../script/jqmin.js"></script>
     <script type="text/javascript" src="../../script/home/homeAjax.js"></script>
-    <script type="text/javascript" src="../../script/home/homeIndex.js"></script>
     <script type="text/javascript" src="../../script/swiper.min.js"></script>
+    <script type="text/javascript" src="../../script/home/homeIndex.js"></script>
+    <script type="text/javascript" src="../../script/home/shopListTem.js"></script>
 </head>
 
 <script>
 </script>
 <script type="text/javascript">
-
-
-
-
-
     apiready = function() {
-        function fanhui() {
-            api.sendEvent({
-                name: 'shuaxin',
-            });
-            api.closeToWin({
-                name: 'pson'
-            });
-        }
+        // function fanhui() {
+        //     api.sendEvent({
+        //         name: 'shuaxin',
+        //     });
+        //     api.closeToWin({
+        //         name: 'pson'
+        //     });
+        // }
         // 适配iOS 7+，Android 4.4+状态栏
         var header = $api.byId('wrap');
         $api.fixStatusBar(header);
@@ -130,6 +135,7 @@
         seTnavList();
         getactivityList();
         getshopList();
+        getLickList();
     };
     // 导航栏切换
     $("#HeadNav").on("click", "p", function() {

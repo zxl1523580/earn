@@ -17,6 +17,7 @@
 .fs24{font-size: 0.24rem;}
 .fs28{font-size: 0.28rem;}
 .fs32{font-size: 0.32rem;}
+.fs34{font-size: 0.34rem;}
 .fs30{font-size: 0.3rem;}
 .fs36{font-size: 0.36rem;}
 .fs40{font-size: 0.40rem;}
@@ -38,9 +39,10 @@
 .redButtonGradual{background:linear-gradient(90deg,rgba(255,43,42,1) 0%,rgba(255,92,92,1) 100%);border-radius:20px;}
 .block{display: block;}
 .topAnimation{
-  animation: topAnimation 5s;
+  animation: topAnimation 1s ease infinite;
 }
 @keyframes topAnimation {
-  from {top:2rem;}
-  to {top:50%;}
+  0% {transform: translateY(-0rem);}
+    50% {transform: translateY(-0.06rem);}
+      100% {transform: translateY(-0rem);}
 }

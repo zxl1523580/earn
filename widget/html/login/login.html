@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+  <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+
+  <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/login/button.css" />
+  <title>登陆</title>
+  <style>
+  .warp{
+    padding-top: 1.9rem;
+  }
+    .logo{
+      width: 1.28rem;
+      height: 1.28rem;
+    }
+    .contain{
+      padding: 0 .8rem;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="warp textCenter" id="warp">
+    <img src="../../image/logo.png" alt="" class="logo">
+    <p class="fs34 color333">我是slogan</p>
+  </div>
+  <div class="contain">
+    <div class="InputBor">
+      <input type="number" placeholder="请输入您的手机号码" class="color333 fs28 inputText">
+    </div>
+    <div class="flex alineCenter InputBor mt26 spaceBetween">
+        <input type="number" placeholder="请输入验证码" class="color333 fs28 inputText">
+        <p id="getCode" class="fs22 colorfff getCode textCenter">获取验证码</p>
+    </div>
+  </div>
+  <div>
+    <div class="mainclick">登录</div>
+  </div>
+  <script type="text/javascript" src="../../script/api.js"></script>
+  <script>
+    apiready = function () {
+        var header = $api.byId('wrap');
+        $api.fixStatusBar(header);
+
+    //     api.setStatusBarStyle({
+      //     style: 'dark',
+      //     color: '#FFF'
+      // });
+    }
+  </script>
+</body>
+</html>

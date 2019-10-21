@@ -70,28 +70,29 @@ var seTnavList = () => {
         console.log(err);
     })
 }
+
 function navList(res, id) {
     var html = "";
     var PageLength = Math.ceil((res.length + 1) / 10);
-    $("#strip").css("width",(35 * PageLength / 100) + 'rem')
+    $("#strip").css("width", (35 * PageLength / 100) + 'rem')
 
     for (var i = 0; i < PageLength; i++) {
-        var slideArr = res.slice(i > 0 ? (i * 10)  : 0, (i + 1) * 10);
+        var slideArr = res.slice(i > 0 ? (i * 10) : 0, (i + 1) * 10);
         var str = slideArr.map((item) => {
             return `<div class="SlideItem shrink textCenter"><img src="../../image/loginImage.png" data-src="${item.img}" data-cache="no" class="bgf5" /><p class="fs24 color333">${item.title}</p></div>`
         })
-        html +=`<div class="NavItem  swiper-slide flex flexWrap">
+        html += `<div class="NavItem  swiper-slide flex flexWrap">
                 ${str.toString().replace(/,/g,'')}
             </div>`
     }
     $(`#${id}`).html(html)
     new Swiper('#navBarList', {
-      on: {
-          slideChange: function() {
-              // cacheImage();
-              $("#strip i").css("left",((35 * this.activeIndex) / 100) + 'rem')
-          },
-      },
+        on: {
+            slideChange: function() {
+                // cacheImage();
+                $("#strip i").css("left", ((35 * this.activeIndex) / 100) + 'rem')
+            },
+        },
     })
     cacheImage();
 }
@@ -110,8 +111,9 @@ var getactivityList = () => {
         console.log(err);
     })
 }
-function activity(res,id){
-  var html = `
+
+function activity(res, id) {
+    var html = `
   <div class="fileftImg shrink">
       <img src="../../image/loginImage.png" data-cache="no" class="bgf5" data-src="${res[0]}" />
   </div>
@@ -125,9 +127,9 @@ function activity(res,id){
       </div>
   </div>
   `
-  $(`#${id}`).html(html);
+    $(`#${id}`).html(html);
 
-  cacheImage();
+    cacheImage();
 }
 
 
@@ -143,14 +145,14 @@ function getshopList() {
         console.log(err);
     })
 }
-function timeShop(res,id){
-  var html = "";
-  var PageLength = Math.ceil(res.length  / 3);
-  console.log(PageLength)
-  for (var i = 0; i < PageLength; i++) {
-      var slideArr = res.slice(i > 0 ? (i * 3)  : 0, (i + 1) * 3);
-      var str = slideArr.map((item) => {
-          return `
+
+function timeShop(res, id) {
+    var html = "";
+    var PageLength = Math.ceil(res.length / 3);
+    for (var i = 0; i < PageLength; i++) {
+        var slideArr = res.slice(i > 0 ? (i * 3) : 0, (i + 1) * 3);
+        var str = slideArr.map((item) => {
+            return `
           <li class="RushShop_item">
               <div class="RushShopImg">
                   <img src="../../image/loginImage.png" data-src="${item.goodsImg}" data-cache="no" class="bgf5" />
@@ -162,27 +164,50 @@ function timeShop(res,id){
               </div>
           </li>
           `
-      })
-      html +=`<ul class="RushShop swiper-slide">
+        })
+        html += `<ul class="RushShop swiper-slide">
               ${str.toString().replace(/,/g,'')}
           </ul>`
-  }
-  $(`#${id}`).html(html)
+    }
+    $(`#${id}`).html(html)
 
-  new Swiper('#RushBuyShop', {
-    pagination: {
-        el: '#ShopRedio',
-      },
-  })
-  cacheImage();
+    new Swiper('#RushBuyShop', {
+        observer: true,
+        observeParents: true,
+        pagination: {
+            el: '#ShopRedio',
+        },
+    })
+    cacheImage();
+}
+
+//猜你喜欢
+function getLickList() {
+    ajaxPromise({
+        url: '../../script/home/home.json',
+    }).then(res => {
+        var ress = JSON.parse(res).timeShop;
+        LickList(ress, "LickShopList")
+    }).catch(err => {
+        console.log(err);
+    })
+}
+
+function LickList(res, id) {
+    var html = "";
+    res.filter((item, index) => {
+        html += shipList(item, 0);
+    })
+    $(`#${id}`).html(html)
+    cacheImage();
 }
 
 
 
-/*
-时间倒计时插件
-*/
+/*倒计时
+ */
 TimeDown("times", "2025-11-25 8:00:45");
+
 function TimeDown(id, endDateStr) {
     //结束时间
     var endDate = new Date(endDateStr);
@@ -203,9 +228,9 @@ function TimeDown(id, endDateStr) {
     var seconds = modulo % 60;
     //输出到页面
 
-    $(`#${id}`).html( `${hours}:${minutes}:${seconds}`);
+    $(`#${id}`).html(`${hours}:${minutes}:${seconds}`);
     //延迟一秒执行自己
-    setTimeout(function () {
+    setTimeout(function() {
         TimeDown(id, endDateStr);
     }, 1000)
 }
