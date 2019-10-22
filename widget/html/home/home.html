@@ -21,22 +21,7 @@
     </style>
 
     <body>
-        <div id="wrap" class="por">
-          <div class="TopBatr">
-            <!-- 输入框 -->
-            <div class="flex height88 headerSearch alineCenter spaceBetween ">
-                <div class="bgfff flex searchInput radius20 por">
-                    <i class="searchIcon poa topCenter"></i>
-                    <input type="text" name="" value="" placeholder="复制商品标题搜淘宝 天猫 京东 拼多多优惠券" class="color666 fs24">
-                </div>
-                <a href="javascript:;" class="flex alineCenter"><img src="../../image/homepage_icon_news.png" alt="" class="newIcon" /></a>
-            </div>
-            <!-- 输入框 -->
-            <!-- 导航栏 -->
-            <div class="flex HeadNav height88 " id="HeadNav"></div>
-            <!-- 导航栏 -->
-          </div>
-        </div>
+
 
         <!-- 轮播 -->
         <div class="swiper-container" id="banner">
@@ -119,6 +104,39 @@
 </script>
 <script type="text/javascript">
     apiready = function() {
+
+      // api.setCustomRefreshHeaderInfo({
+      //     bgColor: '#C0C0C0',
+      //     // image: {
+      //     //     pull: 'widget://image/refresh/pulling.png',
+      //     //     transform: [
+      //     //         'widget://image/refresh/transform0.png',
+      //     //         'widget://image/refresh/transform1.png',
+      //     //         'widget://image/refresh/transform2.png',
+      //     //         'widget://image/refresh/transform3.png',
+      //     //         'widget://image/refresh/transform4.png',
+      //     //         'widget://image/refresh/transform5.png',
+      //     //         'widget://image/refresh/transform6.png'
+      //     //     ],
+      //     //     load: [
+      //     //         'widget://image/refresh/loading0.png',
+      //     //         'widget://image/refresh/loading1.png',
+      //     //         'widget://image/refresh/loading2.png',
+      //     //         'widget://image/refresh/loading3.png',
+      //     //         'widget://image/refresh/loading4.png'
+      //     //     ]
+      //     // }
+      // }, function() {
+      //     //下拉刷新被触发，自动进入加载状态，使用 api.refreshHeaderLoadDone() 手动结束加载中状态
+      //     //下拉刷新被触发，使用 api.refreshHeaderLoadDone() 结束加载中状态
+      //     alert('开始加载刷新数据，摇一摇停止加载状态');
+      // });
+      // api.addEventListener({
+      //     name: 'shake'
+      // }, function(ret, err) {
+      //     api.refreshHeaderLoadDone()
+      // });
+      //
         // function fanhui() {
         //     api.sendEvent({
         //         name: 'shuaxin',
@@ -128,8 +146,8 @@
         //     });
         // }
         // 适配iOS 7+，Android 4.4+状态栏
-        var header = $api.byId('wrap');
-        $api.fixStatusBar(header);
+        // var header = $api.byId('wrap');
+        // $api.fixStatusBar(header);
         getBannerList();
         getdata();
         seTnavList();
@@ -138,10 +156,23 @@
         getLickList();
     };
     // 导航栏切换
-    $("#HeadNav").on("click", "p", function() {
-        $("#HeadNav p").removeClass("active")
-        $(this).addClass("active")
-    })
+    // $("#HeadNav").on("click", "p", function() {
+    //     $("#HeadNav p").removeClass("active")
+    //     $(this).addClass("active");
+    //     api.openFrame({
+    //       name: 'tabChild',
+    //       url: './tabChild.html',
+    //       rect: {
+    //           // x: 0,
+    //           // y: 150,
+    //           marginTop:110,
+    //           marginBottom:80
+    //       },
+    //       pageParam: {
+    //           name: 'home'
+    //       }
+    //   });
+    // })
 
     //抢购切换
     $("#timeTab .TimeList").click(function() {

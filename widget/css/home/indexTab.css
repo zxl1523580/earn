@@ -1,10 +1,10 @@
 
 #wrap {
   background-image: url("../../image/IndexBg.png");
-      background-color: #777;
+      /*background-color: #777;*/
     /*width: 100vw;*/
-    background-size: 100vw 100%;
-    padding-bottom: 3.5rem;
+    /*background-size: 100vw 100%;*/
+    /*padding-bottom: 3.5rem;*/
 }
 
 .height88 {
@@ -231,9 +231,9 @@
   left: 0;*/
   /*padding-top: 20px;*/
   z-index: 999;
-  background-color: #fff;
-  background-image: url("../../image/IndexBg.png");
-  background-size: 100vw 4rem;
+  /*background-color: #fff;*/
+  /*background-image: url("../../image/IndexBg.png");*/
+  /*background-size: 100vw 4rem;*/
 }
 .timeGo {
     padding: 0 0.24rem;
@@ -281,6 +281,6 @@
 }
 
 .swiper-container{
-  /*touch-action: none;*/
+  touch-action: none;
    display: block;
 }
