@@ -1,26 +1,212 @@
-.InputBor{
-  border-bottom: 1px solid #E0E0E0;
-  margin-top: 0.26rem;
+.InputBor {
+    border-bottom: 1px solid #E0E0E0;
+    margin-top: 0.26rem;
 }
-.inputText{
-  height: 0.73rem;
-}
-.getCode{
-  width: 1.34rem;
-  height: 0.48rem;
-  line-height: 0.48rem;
-  background-color: #D6D6D6;
-  border-radius: 24px;
+.InputBorRed{
+    border-bottom: 1px solid rgba(255,77,0,1);
 }
 
-.mainclick{
-  width:5rem;
-  height:0.8rem;
-  line-height: 0.8rem;
+.inputText {
+    height: 0.73rem;
+}
+
+
+
+
+/*主要按钮(可点击)*/
+
+.mainclick {
+    width: 5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
   background:linear-gradient(90deg,rgba(255,77,0,1) 0%,rgba(255,125,69,1) 100%);
-  border-radius:40px;
-  color: #fff;
-  font-size:32px;
-  margin: 0 auto;
-  text-align: center;
+    border-radius: 40px;
+    color: #fff;
+    font-size: 0.32rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/*主要按钮(点击中)*/
+
+.moveclick {
+    width: 5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+    border-radius: 40px;
+    color: #fff;
+    font-size: 0.32rem;
+    margin: 0 auto;
+    text-align: center;
+    pointer-events:none;
+}
+
+
+/*主要按钮(禁用)*/
+
+.NoClick {
+    width: 5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    opacity:0.7;
+    background:linear-gradient(90deg,rgba(255,77,0,1) 0%,rgba(255,125,69,1) 100%);
+    border-radius: 40px;
+    color: #fff;
+    font-size: 0.32rem;
+    margin: 0 auto;
+    text-align: center;
+    pointer-events:none;
+}
+
+
+/*次要按钮(可点击)*/
+
+.Cmainclick {
+    width: 5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-radius: 40px;
+    font-size: 0.32rem;
+    margin: 0 auto;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    border: 1px #FF7D45 solid;
+    background-image: -webkit-linear-gradient(0deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+
+/*次要按钮(点击中)*/
+
+.Cmoveclick {
+    width: 5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-radius: 40px;
+    font-size: 0.32rem;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+    pointer-events:none;
+}
+
+
+/*次要按钮(禁用)*/
+
+.CNoclick {
+    width: 5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-radius: 40px;
+    font-size: 0.32rem;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    border: 1px #FF7D45 solid;
+    background-image: -webkit-linear-gradient(0deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    pointer-events:none;
+}
+
+
+/*微信登录(可点击)*/
+
+.WXclick {
+    width: 5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-radius: 40px;
+    font-size: 0.32rem;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    border: 1px #02E26E solid;
+    background-image: -webkit-linear-gradient(0deg, rgba(3, 198, 97, 1) 0%, rgba(2, 226, 110, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.WXclick:before {
+    content: "";
+    background-image: url(../../image/page_icon_wechat.png);
+    background-size: 0.4rem 0.34rem;
+    width: 0.4rem;
+    height: 0.34rem;
+    display: inline-block;
+    margin-right: 0.1rem;
+}
+
+
+/*微信登录(点击中)*/
+.WXNoclick {
+    width: 5rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    border-radius: 40px;
+    font-size: 0.32rem;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    border: 1px #02E26E solid;
+    background-image: -webkit-linear-gradient(90deg,rgba(3,198,97,1),rgba(2,226,110,1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events:none;
+}
+
+.WXNoclick:before {
+    content: "";
+    background-image: url(../../image/icon_wechat_selected.png);
+    background-size: 0.4rem 0.34rem;
+    width: 0.4rem;
+    height: 0.34rem;
+    display: inline-block;
+    margin-right: 0.1rem;
+}
+.mt16{
+  margin-top: 0.16rem;
+}
+
+
+.rightRedio{
+  width: 2.62rem;
+  height: 2.62rem;
+  background:linear-gradient(-45deg,rgba(255,77,0,1),rgba(255,125,69,1));
+  opacity:0.07;
+  border-radius:50%;
+  position: fixed;
+  right: -1.2rem;
+  top: 1.4rem;
+}
+.leftRedio{
+  width: 2.38rem;
+  height: 2.38rem;
+  background:linear-gradient(-45deg,rgba(255,77,0,1),rgba(255,125,69,1));
+  opacity:0.07;
+  border-radius:50%;
+  position: fixed;
+  left: -1rem;
+  top: 4rem;
+}
+.centerRedio{
+  width: 1.63rem;
+  height: 1.63rem;
+  background:linear-gradient(-45deg,rgba(255,77,0,1),rgba(255,125,69,1));
+  opacity:0.07;
+  border-radius:50%;
+  position: fixed;
+  right: 1rem;
+  bottom: 3.8rem;
 }

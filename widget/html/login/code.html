@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/login/button.css" />
+    <title>邀请码</title>
+    <style>
+        .contain {
+            width: 5rem;
+            margin: 0 auto;
+        }
+
+        .bottom {
+            margin-top: 0.8rem;
+        }
+
+        .userList {
+            margin-top: 20px;
+        }
+
+        .item {
+            height: 1.4rem;
+            background-color: #F5F5F5;
+            border-radius: 4px;
+        }
+
+        .HeaderImage {
+            margin: 0 0.24rem 0 0.17rem;
+            width: 0.92rem;
+            height: 0.92rem;
+        }
+
+        .headers {
+            height: 0.88rem;
+            box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.04);
+            padding: 0 0.24rem;
+        }
+
+        .cloneIocn {
+            width: 0.48rem;
+            height: 0.48rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="warp" id="warp"></div>
+    <div class="headers flex alineCenter spaceBetween">
+        <img src="../../image/icon_closed.png" alt="" class="cloneIocn" onclick="back()">
+        <p class="fs36 color333">邀请码</p>
+        <p></p>
+    </div>
+    <div class="contain">
+        <div class="InputBor">
+            <input type="number" placeholder="请输入您的邀请码" class="color333 fs28 inputText" id="phoneValue" oninput="setcode(this)" onfocus="setfocus(this)" onblur="setBlue(this)">
+        </div>
+    </div>
+    <div class=" contain userList">
+        <div class="item flex alineCenter">
+            <img src="../../image/page_img_person.png" data-cache="no" class="HeaderImage bgf5" data-src="" />
+            <div class="">
+                <p class="titleName fs26 color666">边省边赚</p>
+                <p class="tips fs22 color999">邀请您加入边省边赚</p>
+            </div>
+        </div>
+    </div>
+    <div class="rightRedio"></div>
+    <div class="leftRedio"></div>
+    <div class="centerRedio"></div>
+    <div class="bottom">
+        <div class="NoClick">确定</div>
+        <div class="Cmainclick mt16" onclick="back()">跳过邀请码</div>
+    </div>
+    <script type="text/javascript" src="../../script/api.js"></script>
+    <script type="text/javascript" src="../../script/jqmin.js"></script>
+    <script type="text/javascript" src="../../script/home/imgLoding.js"></script>
+    <script type="text/javascript" src="../../script/login/input.js"></script>
+    <script type="text/javascript">
+        apiready = function() {
+            var header = $api.byId('warp');
+            $api.fixStatusBar(header);
+
+        }
+        function setcode(that){
+          console.log($(that).val())
+        }
+        function back(){
+                  api.openWin({
+                      name: 'main',
+                      url: '../main.html',
+                      pageParam: {
+                          name: 'code'
+                      }
+                })
+        }
+    </script>
+</body>
+
+</html>

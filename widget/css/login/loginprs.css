@@ -1,0 +1,19 @@
+
+  .logo{
+    width: 1.28rem;
+    height: 1.28rem;
+    margin-top:  1.9rem;
+  }
+  .contain{
+    padding: 0.8rem;
+  }
+.getCode {
+    width: 1.34rem;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    background-color: #D6D6D6;
+    border-radius: 24px;
+}
+.clickgetCode{
+  background:linear-gradient(90deg,rgba(255,77,0,1) 0%,rgba(255,125,69,1) 100%);
+}
