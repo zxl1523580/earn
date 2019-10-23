@@ -1,0 +1,109 @@
+html, body, #wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#wrap header {
+    /*height: 1.28rem;*/
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+}
+
+.statusBar {
+    height: .4rem;
+}
+
+.title {
+    width: 96%;
+    margin: 0 auto;
+    height: .88rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.title>span {
+    display: inline-block;
+    flex: 1;
+    font-size: .36rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+.navBar{
+  width: 100%;
+  background: #FFFFFF;
+}
+.navBar_con{
+  width: 96%;
+  margin: 0 auto;
+}
+.navBar_con{
+    height: .88rem;
+    line-height: .88rem;
+    display: flex;
+    text-align: center;
+}
+
+.navBar_con {
+    font-size: .24rem;
+    color: #333333;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.navBar_con p{
+    flex: 1;
+}
+.navBaractive{
+position: relative;
+  font-weight: bold;
+}
+.navBaractive::after {
+    position: absolute;
+    bottom: .1rem;
+    left: 50%;
+    margin-left: -.1rem;
+    content: "";
+    width: .2rem;
+    height: .1rem;
+    background:linear-gradient(90deg,rgba(255,77,0,1),rgba(255,125,69,1));
+    border-radius: .04rem;
+}
+#wrap main {
+    width: 100%;
+    flex: 1;
+    /*overflow: auto;*/
+}
+
+#wrap main::-webkit-scrollbar {
+    display: none;
+}
+.record{
+  width: 96%;
+  margin: .2rem auto;
+}
+.record_item{
+  width: 100%;
+  height: .88rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F5F5F5;
+}
+.record_item>span{
+  color: #666666;
+  font-size: .24rem;
+  flex: 1;
+  text-align: center;
+}
+.tipsText{
+  font-size: .26rem;
+  color: #333333;
+  flex: 1;
+  text-align: center;
+}

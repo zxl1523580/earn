@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/setAccount.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <img src="../../image/backArrow.png" id="back" />
+                <span class="title_span">支付宝账号设置</span>
+            </div>
+        </header>
+        <main>
+          <div class="setAccount">
+            <div class="rule_title">
+                <img src="../../image/Paytreasure.png" />
+            </div>
+            <ul class="from">
+              <li><input class="input" type="text" placeholder="请输入您的真实姓名" /></li>
+              <li><input  type="text" class='input' placeholder="请输入您的支付宝账户" /></li>
+            </ul>
+              <div class="cashOutBtn">保存</div>
+          </div>
+
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+      $('.title').on('click', '#back', function() {
+          api.historyBack({}, function(ret, err) {
+              if (!ret.status) {
+                  api.closeWin();
+              }
+          });
+      })
+    };
+    $(function(){
+  //     $(".input").bind("input propertychange",function(event){
+  //       alert($(".input").val())
+  //        if($(".input").val()!=""){
+  //          $(this).parent().addClass('liActive')
+  //        }else {
+  //          $(this).parent().removeClass('liActive')
+  //        }
+  // });
+    })
+</script>
+
+</html>

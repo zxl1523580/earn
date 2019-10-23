@@ -1,0 +1,317 @@
+html, body, #wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*margin-bottom: .5rem;*/
+}
+
+#wrap header {
+    height: 1.28rem;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+}
+
+.statusBar {
+    height: .4rem;
+}
+
+.title {
+    width: 96%;
+    margin: 0 auto;
+    height: .88rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.title>span {
+    font-size: .36rem;
+    color: #FFFFFF;
+}
+
+.cashRecord {
+    width: .48rem;
+    height: .48rem;
+    display: flex;
+}
+
+.cashRecord>img {
+    width: 100%;
+    height: 100%;
+}
+
+#wrap main {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+#wrap main::-webkit-scrollbar {
+    display: none;
+}
+
+.cashOut {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+}
+
+.cashOut_con {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.cashOut_title {
+    width: 100%;
+    height: .8rem;
+    line-height: .88rem;
+    font-size: .3rem;
+    color: #FFFFFF;
+}
+
+.cashOut_money {
+    width: 100%;
+    height: .88rem;
+    font-size: .28rem;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.money {
+    color: #FFFFFF;
+    font-size: .4rem;
+    font-weight: 800;
+}
+
+.Settlement {
+    width: 100%;
+    height: .88rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Settlement>span {
+    display: inline-block;
+    margin-right: .2rem;
+    color: #FFFFFF;
+    font-size: .26rem;
+}
+
+.Tips {
+    width: 100%;
+    height: .8rem;
+    opacity: .8;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Tips_con {
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Tips_text {
+    width: 65%;
+    overflow: hidden;
+    font-size: .26rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.Look_details {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    opacity: 0.8;
+    border-radius: .24rem;
+}
+
+.Look_details>span {
+    font-size: .25rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #FF4D00;
+    padding-left: .2rem;
+}
+
+.Look_details>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.set {
+    width: 96%;
+    height: 1.44rem;
+    border-bottom: 1px solid #F5F5F5;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.set_right, .set_Left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.set_Left>img {
+    width: .82rem;
+    height: .82rem;
+}
+
+.set_Left>span {
+    color: #333333;
+    font-size: .28rem;
+    padding-left: .1rem;
+}
+
+.set_right>span {
+    color: #999999;
+    font-size: .28rem;
+}
+
+.set_right>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.set1_Left {
+    width: 65%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.Imgbox {
+    width: .82rem;
+    height: .82rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Imgbox>img {
+    width: 100%;
+    height: 100%;
+}
+
+.accountInfo {
+    flex: 1;
+    padding-left: .1rem;
+}
+
+.accountName {
+    font-size: .28rem;
+    color: #333333;
+}
+
+.accountNum {
+    font-size: .28rem;
+    color: #666666;
+}
+
+.set1_right {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Isshow {
+    width: .48rem;
+    height: .48rem;
+    display: flex;
+}
+
+.Isshow>img {
+    width: 100%;
+    height: 100%;
+}
+.block{
+  display: none;
+}
+.replace {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.replace>span {
+    color: #999999;
+    font-size: .28rem;
+}
+
+.replace>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.myCashOut {
+    width: 96%;
+    margin: .2rem auto;
+}
+
+.myCashtitle {
+    width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    color: #333333;
+    font-size: .3rem;
+}
+
+.Prompt {
+    width: 100%;
+    height: .8rem;
+    text-align: center;
+    line-height: .8rem;
+    color: #B3B3B3;
+    font-size: .24rem;
+}
+
+.Input_box {
+    width: 50%;
+    margin: 0 auto;
+    color: #B3B3B3;
+    font-size: .59rem;
+    border-bottom: 1px solid #F5F5F5;
+}
+.Input_val{
+    color: #333333;
+    border-bottom: 1px solid #  FF4D00;
+}
+.Input_box>input {
+    width: 60%;
+}
+
+.cashOutBtn {
+    width: 100%;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+    opacity: 0.9;
+    border-radius: .4rem;
+    color: #FFFFFF;
+    font-size: .32rem;
+    font-weight: bold;
+    margin: .3rem auto;
+}
+.ishide{
+display: none; 
+}

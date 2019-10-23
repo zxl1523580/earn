@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/myCollection.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/shopList.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <div class="title_con">
+                    <img src="../../image/backArrow.png" id="back" />
+                    <span class="title_span">我的收藏</span>
+                </div>
+            </div>
+        </header>
+        <main>
+          <div class="shopList_box">
+              <ul class="shopList_con">
+                  <li class="shop_item">
+                      <div class="shopImg">
+                          <img src="https://gaitaobao4.alicdn.com/tfscom/i1/3155376346/TB2Ov2is0cnBKNjSZR0XXcFqFXa_!!3155376346.jpg_240x240xz.jpg" />
+                      </div>
+                      <div class="shopInfo">
+                          <div class="shopName_box">
+                              <p class="labals">天猫</p>2019新款初秋ins女学生网红长袖上衣韩版宽松慵懒风bf套头卫衣潮的海景房电话就说复合大师打开市房管局
+                          </div>
+                          <div class="shopCoupon">
+                              <span class="priceCoupon">50元券</span>
+                              <span class="sold">已售 4699</span>
+                          </div>
+                          <div class="shopPrice">卷后价：<span>￥：69.9</span></div>
+                          <div class="upgrade_share">
+                              <div class="share">
+                                  <img src="../../image/share.png" />
+                                  <p>分享赚￥6.69</p>
+                              </div>
+                              <div class="upgrade">
+                                  <img src="../../image/share.png" />
+                                  <p>升级赚￥6.69</p>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="shop_item">
+                      <div class="shopImg">
+                          <img src="https://gaitaobao4.alicdn.com/tfscom/i1/3155376346/TB2Ov2is0cnBKNjSZR0XXcFqFXa_!!3155376346.jpg_240x240xz.jpg" />
+                      </div>
+                      <div class="shopInfo">
+                          <div class="shopName_box">
+                              <p class="labals">天猫</p>2019新款初秋ins女学生网红长袖上衣韩版宽松慵懒风bf套头卫衣潮的海景房电话就说复合大师打开市房管局
+                          </div>
+                          <div class="shopCoupon">
+                              <span class="priceCoupon">50元券</span>
+                              <span class="sold">已售 4699</span>
+                          </div>
+                          <div class="shopPrice">卷后价：<span>￥：69.9</span></div>
+                          <div class="upgrade_share">
+                              <div class="share">
+                                  <img src="../../image/share.png" />
+                                  <p>分享赚￥6.69</p>
+                              </div>
+                              <div class="upgrade">
+                                  <img src="../../image/share.png" />
+                                  <p>升级赚￥6.69</p>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="shop_item">
+                      <div class="shopImg">
+                          <img src="https://gaitaobao4.alicdn.com/tfscom/i1/3155376346/TB2Ov2is0cnBKNjSZR0XXcFqFXa_!!3155376346.jpg_240x240xz.jpg" />
+                      </div>
+                      <div class="shopInfo">
+                          <div class="shopName_box">
+                              <p class="labals">天猫</p>2019新款初秋ins女学生网红长袖上衣韩版宽松慵懒风bf套头卫衣潮的海景房电话就说复合大师打开市房管局
+                          </div>
+                          <div class="shopCoupon">
+                              <span class="priceCoupon">50元券</span>
+                              <span class="sold">已售 4699</span>
+                          </div>
+                          <div class="shopPrice">卷后价：<span>￥：69.9</span></div>
+                          <div class="upgrade_share">
+                              <div class="share">
+                                  <img src="../../image/share.png" />
+                                  <p>分享赚￥6.69</p>
+                              </div>
+                              <div class="upgrade">
+                                  <img src="../../image/share.png" />
+                                  <p>升级赚￥6.69</p>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+    };
+    $(function() {
+
+    })
+</script>
+
+</html>

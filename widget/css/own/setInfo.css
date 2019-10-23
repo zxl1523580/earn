@@ -1,0 +1,201 @@
+html, body, #wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #F7F7F7;
+}
+
+#wrap header {
+    /*height: 1.28rem;*/
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+}
+
+.statusBar {
+    height: .4rem;
+}
+
+.title {
+    width: 96%;
+    margin: 0 auto;
+    height: .88rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.title>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.title>span {
+    display: inline-block;
+    flex: 1;
+    font-size: .36rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#wrap main {
+    width: 100%;
+    flex: 1;
+    /*overflow: auto;*/
+}
+
+#wrap main::-webkit-scrollbar {
+    display: none;
+}
+
+.userHeadImg_box {
+    width: 100%;
+    margin: .15rem auto;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userHeadImg {
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 1px soid black;
+    position: relative;
+    padding: .2rem 0rem;
+}
+
+.userHeadImg>img {
+    width: 100%;
+    height: 100%;
+}
+
+.picture_icon {
+    width: .48rem;
+    height: .48rem;
+    display: flex;
+    position: absolute;
+    top: 0.9rem;
+    right: 0.1rem;
+}
+
+.picture {
+    width: 100%;
+    height: 100%;
+}
+
+.userInfo {
+    width: 100%;
+    background: #FFFFFF;
+    margin: .15rem auto;
+}
+
+.userInfo_item {
+    width: 96%;
+    padding: .2rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.tipsText {
+    color: #333333;
+    font-size: .28rem;
+}
+
+.userInfoText {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.userInfoText>span {
+    color: #666666;
+    font-size: .28rem;
+}
+
+.userInfoText>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.clearn {
+    padding: .05rem .1rem;
+    background: #999999;
+    border-radius: .22rem;
+    font-size: .24rem;
+    color: #ffffff;
+}
+
+.cashOutBtn {
+    width: 96%;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+    opacity: 0.9;
+    border-radius: .4rem;
+    color: #FFFFFF;
+    font-size: .32rem;
+    font-weight: bold;
+    margin: .3rem auto;
+}
+
+
+/*开关*/
+
+.switch {
+    width: 57px;
+    height: 28px;
+    position: relative;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 20px;
+    background-clip: content-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none;
+}
+
+.switch:before {
+    content: '';
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.switch:checked {
+    border-color: #FF4D00;
+    box-shadow: #FF4D00 0 0 0 16px inset;
+    background-color: #FF4D00;
+}
+
+.switch:checked:before {
+    left: 30px;
+}
+
+.switch.switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+}
+
+.switch.switch-anim:before {
+    transition: left 0.3s;
+}
+
+.switch.switch-anim:checked {
+    box-shadow: #FF4D00 0 0 0 16px inset;
+    background-color: #FF4D00;
+    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+}
+
+.switch.switch-anim:checked:before {
+    transition: left 0.3s;
+}

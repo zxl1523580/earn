@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/contributeRank.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <div class="title_con">
+                    <img src="../../image/backArrow.png" id="back" />
+                    <span class="title_span">贡献排行榜</span>
+                </div>
+            </div>
+            <div class="search_box">
+                <div class="search">
+                  您距离上榜只有一步之遥，请再接再厉！
+                </div>
+            </div>
+        </header>
+        <main>
+            <ul class="NumberList">
+                <li class="List_item form_head">
+                  <p>排名</p>
+                  <p>会员ID</p>
+                  <p>订单数</p>
+                  <p>佣金</p>
+                </li>
+                <li class="List_item">
+                  <div class="Img"><img src="../../image/Contributionrankingone.png" alt=""></div>
+                  <span>李*明</span>
+                  <span>34单</span>
+                  <span>240,123.42</span>
+                </li>
+                <li class="List_item">
+                  <div class="Img"><img src="../../image/Contributionrankingtwo.png" alt=""></div>
+                  <span>王*</span>
+                  <span>34单</span>
+                  <span>240,123.42</span>
+                </li>
+                <li class="List_item">
+                  <div class="Img"><img src="../../image/Contributionrankingthree.png" alt=""></div>
+                  <span>李*明</span>
+                  <span>34单</span>
+                  <span>240,123.42</span>
+                </li>
+                <li class="List_item">
+                  <span class="ranking">4</span>
+                  <span>李*明</span>
+                  <span>34单</span>
+                  <span>240,123.42</span>
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+        $('.List_item').click(function(){
+          api.openWin({
+              name: 'DaMember',
+              url: './DaMember.html',
+              pageParam: {
+                  name: 'test'
+              }
+          });
+
+        })
+    };
+    $(function() {
+$('.navBar_con p').click(function(){
+  $(this).addClass('navBaractive').siblings().removeClass('navBaractive')
+})
+    })
+</script>
+
+</html>

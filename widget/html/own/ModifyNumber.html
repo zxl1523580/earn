@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/ModifyNumber.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <img src="../../image/Leftback.png" id="back" />
+                <span class="title_span">验证原手机号码</span>
+            </div>
+        </header>
+        <main>
+            <ul class="userInfo">
+                <li class="userInfo_item">
+                    <input type="number" id='Input' name="" value="" placeholder='请输入原手机号码'>
+                </li>
+                <li class="userInfo_item" id="phone">
+                    <input type="number" name="" value="" placeholder="请输入验证码">
+                    <span class="feachBtn">获取验证码</span>
+                </li>
+            </ul>
+            <!-- <button type="button" class="feachBtn">获取验证码</button> -->
+            <div class="cashOutBtn">下一步</div>
+            <div class="default">
+              确定
+            </div>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+        $('#phone').click(function() {
+            api.openWin({
+                name: "ModifyNumber",
+                url: './ModifyNumber.html'
+            })
+        })
+        $('.default').click(function(){
+          api.historyBack({}, function(ret, err) {
+              if (!ret.status) {
+                  api.closeWin();
+              }
+          });
+        })
+    };
+    $(function() {
+        // 点击获取验证码操作
+        $("#Input").bind("input propertychange", function(event) {
+            if ($("#Input").val() != "") {
+                $(this).parent().siblings().children('span').addClass('getCode')
+            } else {
+                $(this).parent().siblings().children('span').removeClass('getCode')
+            }
+        });
+        $('.feachBtn').click(function() {
+            if ($('#Input').val() == "") {
+                alert('请输入电话号码')
+                return
+            } else if (!(/^1[3456789]\d{9}$/.test($('#Input').val()))) {
+                alert('手机号码有误，请慎重')
+                return
+            }
+            let count = 60;
+            const countDown = setInterval(() => {
+                if (count === 0) {
+                    $('.feachBtn').text('重新发送').removeAttr('disabled');
+                    $('.feachBtn').css({
+                        background: '#FF4D00',
+                        color: '#FFFFFF',
+                    });
+                    clearInterval(countDown);
+                } else {
+                    $('.feachBtn').attr('disabled', true);
+                    $('.feachBtn').css({
+                        background: 'linear-gradient(90deg,rgba(255,77,0,1),rgba(255,125,69,1));',
+                        color: '#FFFFFF',
+                    });
+                    $('.feachBtn').text(count + 's');
+                }
+                count--;
+            }, 1000);
+        })
+      $('.cashOutBtn').click(function(){
+        $('.title_span').text('验证新手机号码')
+        $('.cashOutBtn').hide()
+        $('.default').show()
+      })
+    })
+</script>
+
+</html>

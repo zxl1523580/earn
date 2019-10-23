@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/problemDetails.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <div class="title_con">
+                    <img src="../../image/backArrow.png" id="back" />
+                    <span class="title_span">常见问题</span>
+                </div>
+            </div>
+        </header>
+        <main>
+          <div class="problem_con">
+            <div class="problem_title">
+              <span>问：</span>为什么下单后没有显示？
+            </div>
+            <p>拍下订单40分钟内付款或者退款，一般情况下，5分钟内可以
+同步订单到边省边赚；如创建的订单超过40分钟付款或者退
+款，次日才同步，如果您下单时，使用了别人的超级红包、积
+分，也会无法同步哦。</p>
+          </div>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+    };
+    $(function() {
+
+    })
+</script>
+
+</html>

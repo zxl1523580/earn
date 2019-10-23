@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/api.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/cooperation.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <div class="title_con">
+                    <img src="../../image/backArrow.png" id="back" />
+                    <span class="title_span">商务合作</span>
+                </div>
+            </div>
+        </header>
+        <main>
+          <div class="logo">
+            <img src="../../image/logo1.png" alt="">
+            <span>边省边赚V1.0</span>
+          </div>
+          <div class="cooperation">
+            <div class="cooperation_title">商务合作</div>
+            <ul class="cooperation_ul">
+                <li class="form_item">
+                  <div class="text">
+                    <span class="Must_fill">*</span>
+                    <span class="tipsText">品牌 / 公司</span>
+                  </div>
+                  <input type="text" name="" value="" placeholder="请输入公司名称">
+                </li>
+                <li class="form_item">
+                  <div class="text">
+                    <span class="Must_fill">*</span>
+                    <span class="tipsText">姓名</span>
+                  </div>
+                  <input type="text" name="" value="" placeholder="请输入公司名称">
+                </li>
+                <li class="form_item">
+                  <div class="text">
+                    <span class="Must_fill"></span>
+                    <span class="tipsText" style="padding-left:.15rem;">岗位</span>
+                  </div>
+                  <input type="text" name="" value="" placeholder="请输入公司名称">
+                </li>
+                <li class="form_item">
+                  <div class="text">
+                    <span class="Must_fill">*</span>
+                    <span class="tipsText">联系电话</span>
+                  </div>
+                  <input type="text" name="" value="" placeholder="请输入公司名称">
+                </li>
+            </ul>
+          </div>
+          <div class="cooperation">
+            <div class="cooperation_title">意向说明</div>
+            <ul class="cooperation_ul">
+                <li class="form_text">
+                  <div class="form_title">
+                    <span class="Must_fill">*</span>
+                    <span class="tipsText">意向合作</span>
+                  </div>
+                  <textarea name="name" rows="8" cols="80" id="feedbackcontent" placeholder="例如：淘宝店铺的推广"></textarea>
+                </li>
+            </ul>
+          </div>
+            <div class="cashOutBtn">提交</div>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+    };
+    $(function() {
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/news.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <div class="title_con">
+                    <img src="../../image/backArrow.png" id="back" />
+                    <span class="title_span">消息</span>
+                </div>
+            </div>
+            <div class="navBar">
+                <p class="navBaractive">官方通知</p>
+                <p>订单通知</p>
+            </div>
+        </header>
+        <main>
+            <div class="messageList">
+                <div class="messageModel">
+                    <div class="messageModelTop">
+                        <div class="messageModelTopL">
+                            <img src="../../image/message2.png" />
+                        </div>
+                        <div class="messageModelTopC">
+                            <p class="messagename">淘宝认证授权</p>
+                            <p class="messagetime">2019.9.29 17:11</p>
+                        </div>
+                    </div>
+                    <div class="messageModelBottom">
+                        <div class="messageModelBottomText">
+                            1.用户违反《用户推广行为规范》第1条的，首次处以警告，屡教不改的将当月佣金的30%，最高不超过10000元； 2.用户违反《用户推广行为规范》第2、3条的，直接扣除当月佣金的30%作为处罚,最高不超过10000元，情节严重者将扣除当月全部佣金，账号封禁； 3.用户违反《用户推广行为规范》第4、5条的，淘宝会全额扣除相关佣金，情节严重者账号封禁； 4.用户违反《用户推广行为规范》第6条的，将视情况对违规用户处罚包括但不限于警告、扣除佣金、账号封禁的处理。
+
+                        </div>
+                        <div class="messageModelBottomImgOne">
+                            <img src="../../image/message1.png" />
+                        </div>
+                        <div class="messageModelBottomImgTwo">
+                            <img src="../../image/message3.png" />
+                            <img src="../../image/message3.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+    };
+    $(function(){
+      $('.navBar p').click(function(){
+        $(this).addClass('navBaractive').siblings().removeClass('navBaractive')
+      })
+    })
+</script>
+
+</html>

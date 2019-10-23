@@ -1,0 +1,419 @@
+html, body, #wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(55deg, rgba(255, 129, 75, 1), rgba(255, 86, 14, 1));
+}
+
+#wrap header {
+    /*height: 1.28rem;*/
+    /*background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);*/
+}
+
+.statusBar {
+    height: .4rem;
+}
+
+.title {
+    /*background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);*/
+}
+
+.title_con {
+    width: 96%;
+    margin: 0 auto;
+    height: .88rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title_con>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.title_span {
+    display: inline-block;
+    font-size: .24rem;
+    color: #FFFFFF;
+    padding: .05rem .1rem;
+    border: 1px solid #FFFFFF;
+    text-align: center;
+    border-radius: .2rem;
+}
+
+#wrap main {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+#wrap main::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    width: 100%;
+    margin: .2rem auto;
+}
+
+.pageTitle {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.inviteT {
+    font-size: .8rem;
+    color: rgba(246, 189, 187, 1);
+    font-weight: 800;
+    text-shadow: .05rem .09rem .12rem rgba(178, 11, 3, 0.1);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.91) 44.5556640625%, rgba(255, 125, 69, 0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.textClor {
+    font-size: .8rem;
+    font-family: PingFang SC;
+    font-weight: 800;
+    color: #FEE439;
+    text-shadow: .05rem .09rem .12rem rgba(178, 11, 3, 0.3);
+}
+
+.showBg {
+    width: 100%;
+    height: 6.5rem;
+    background: url('../../image/Invitefriendsbackground.png');
+    background-size: 100% 100%;
+}
+
+.HighestMoney {
+    width: 100%;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: .6rem;
+    text-align: center;
+    margin: 0rem auto;
+    margin-top: .8rem;
+}
+
+.shareBtn {
+    width: 55%;
+    height: .8rem;
+    margin: .6rem auto;
+    text-align: center;
+    line-height: .8rem;
+    font-size: .36rem;
+    color: #FFFFFF;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1), rgba(255, 125, 69, 1));
+    border-radius: .5rem;
+    animation: mymove 3s infinite;
+    animation: mymove 3s infinite;
+    animation-direction: alternate;
+    /*轮流反向播放动画。*/
+    animation-timing-function: ease-in-out;
+    /*动画的速度曲线*/
+    text-shadow: 0 -.01rem 0 rgba(0, 0, 0, .3);
+    box-shadow: 0 .1rem 0 #DD6734;
+}
+
+@keyframes mymove {
+    0% {
+        transform: scale(1);
+        /*开始为原始大小*/
+    }
+    25% {
+        transform: scale(1.1);
+        /*放大1.1倍*/
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.1);
+    }
+}
+
+
+/*如何赚*/
+
+.makeMoneystep {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1.2rem;
+    border-radius: .15rem;
+    background: #FFFFFF;
+}
+
+.tipsTitle {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    font-size: .3rem;
+    color: #FF4D01;
+    margin: 0 auto;
+    padding: .35rem 0rem;
+}
+
+.left {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 125, 69, 0)0%, rgba(255, 77, 0, 1) 100%);
+}
+
+.right {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 0) 100%);
+}
+
+.stepList {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .1rem 0rem .2rem 0rem;
+}
+
+.stepItem {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.stepItem>img {
+    width: .9rem;
+    height: .9rem;
+}
+
+.stepItem>span {
+    color: #333333;
+    font-size: .26rem;
+    margin-top: .15rem;
+}
+
+
+/**/
+
+.earnMore {
+    width: 100%;
+    height: .88rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.earnMore>span {
+    color: #ffffff;
+    font-size: .3rem;
+}
+
+.earnLeft {
+    width: .5rem;
+    height: .02rem;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.earnRight {
+    width: .5rem;
+    height: .02rem;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+
+/*点击领红包*/
+
+.clickEnvelopes {
+    width: 95%;
+    background: #FFFFFF;
+    margin: 0 auto;
+    border-radius: .15rem;
+}
+
+.redEnv_list {
+    width: 95%;
+    margin: 0 auto;
+    padding: .5rem 0rem .2rem 0rem;
+    border-bottom: 1px solid #FF5207;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.redEnvItem {
+    width: 33.33%;
+    margin-bottom: .1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.rebBg {
+    width: 2.12rem;
+    height: 2.48rem;
+    background: url('../../image/redEnvOPEN.png');
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.rebBgActive::before {
+    width: 1.7rem;
+    height: .49rem;
+    content: '当前奖励区间';
+    font-size: .2rem;
+    text-align: center;
+    line-height: .4rem;
+    font-weight: bold;
+    color: #EA3F28;
+    left: .2rem;
+    top: -.25rem;
+    position: absolute;
+    background: url('../../image/this.png');
+    background-size: 100% 100%;
+}
+
+.redMoney {
+    width: 100%;
+    text-align: center;
+    font-size: .3rem;
+    margin: .2rem auto;
+    color: #FBEB4E;
+}
+
+.redMoneyActive {
+    color: #EB4828;
+    margin: .4rem auto;
+}
+
+.redMoneyActive>span, .redMoney>span {
+    font-size: .68rem;
+    font-weight: bold;
+}
+
+.perNum {
+    width: 100%;
+    margin: .75rem auto;
+    text-align: center;
+    font-size: .22rem;
+    color: #FFFFFF;
+}
+
+.perNumActive {
+    width: 100%;
+    margin: .6rem auto;
+    text-align: center;
+    font-size: .22rem;
+    color: #FBEB4E;
+}
+
+.myInvite {
+    width: 95%;
+    height: .88rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.tipsText {
+    font-size: .28rem;
+    color: #003333;
+}
+
+.reward {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.reward>span {
+    color: #FF4D00;
+    font-size: .26rem;
+}
+
+.reward>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+.earnMoneys {
+    color: #FE6161;
+    font-size: .26rem;
+}
+.earnMoneys>span{
+  font-size: .28rem;
+  font-weight: bold;
+}
+.rightOffBtn {
+    padding: .15rem .25rem;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+    border-radius: .3rem;
+    font-size: .24rem;
+    color: #FFFFFF;
+}
+/**/
+.InviteFriend{
+  width: 95%;
+  border-radius: .15rem;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+.InviteFriend_con{
+  width: 95%;
+  margin: 0 auto;
+  padding: .5rem 0rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.InviteFriend_item{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.InviteFriend_item>img{
+width: .84rem;
+height: 1.2rem;
+}
+.InviteFriend_item>span{
+  display: inline-block;
+  width: 75%;
+  margin-top: .3rem;
+  font-size: .24rem;
+  color: #333333;
+  text-align: center;
+}
+.tipsCon{
+  width: 95%;
+  margin: 0 auto;
+  font-size: .24rem;
+  color: #B3B3B3;
+  padding-bottom: .3rem;
+}
+.stepText{
+  width: 95%;
+  background: #FFFFFF;
+  border-radius: .15rem;
+  margin: 0 auto;
+}
+.stepText_con{
+  width: 95%;
+  margin: 0 auto;
+  padding: .3rem 0rem;
+}
+.stepText_con>p{
+  color: #333333;
+  line-height: .4rem;
+  font-size: .26rem;
+  margin: .1rem auto;
+}

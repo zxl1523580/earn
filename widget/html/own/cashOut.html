@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/cashOut.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <img src="../../image/backArrow.png" id="back" />
+                <span class="title_span">提现</span>
+                <div class="cashRecord" id="cashRecord">
+                    <img src="../../image/IconRecord.png" />
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="cashOut">
+                <div class="cashOut_con">
+                    <div class="cashOut_title">可提现：</div>
+                    <div class="cashOut_money">
+                        <span class="money">546.92</span>(元)
+                    </div>
+                    <div class="Settlement">
+                        <span>上月一结算 0</span>
+                        <span>本月一结算 0</span>
+                        <span>待结算 0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="Tips">
+                <div class="Tips_con">
+                    <div class="Tips_text">每月25号后可提现上月已结算佣金！</div>
+                    <div class="Look_details">
+                        <span>查看详情</span>
+                        <img src="../../image/rightArrow2.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="set isset">
+                <div class="set_Left">
+                    <img src="../../image/Paytreasure.png" />
+                    <span>设置支付宝账户</span>
+                </div>
+                <div class="set_right">
+                    <span>去设置</span>
+                    <img src="../../image/RightArrow.png" />
+                </div>
+            </div>
+            <div class="set ishide">
+                <div class="set1_Left">
+                    <div class="Imgbox">
+                        <img src="../../image/Paytreasure.png" />
+                    </div>
+                    <div class="accountInfo">
+                        <div class="accountName">***</div>
+                        <div class="accountNum">***********</div>
+                    </div>
+                </div>
+                <div class="set1_right">
+                  <div class="Isshow none" >
+                    <img class="IsShowInfo none" data-type="1" src="../../image/iconVisible.png" />
+                    <img class="IsShowInfo block" data-type="2" src="../../image/iconVisible1.png" />
+                  </div>
+                  <div class="replace">
+                        <span>去更换</span>
+                        <img src="../../image/RightArrow.png" />
+                  </div>
+                </div>
+            </div>
+            <div class="myCashOut">
+                <div class="myCashtitle">我要提现</div>
+                <div class="Prompt">请输入提现金额：</div>
+                <div class="Input_box">
+                  ￥<input type="number" id="Input"  />
+                </div>
+                <div class="cashOutBtn">提现</div>
+            </div>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.Look_details').click(function() {
+            api.openWin({
+                name: 'WithdrawalRules',
+                url: './WithdrawalRules.html'
+            });
+
+        })
+        $('.set_right').click(function() {
+            api.openWin({
+                name: 'setAccount',
+                url: './setAccount.html',
+                pageParam: {
+                    name: 'test'
+                }
+            });
+
+        })
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+        $('#cashRecord').click(function(){
+          api.openWin({
+            name:"WithdrawalsRecord",
+            url:'./WithdrawalsRecord.html'
+          })
+        })
+    };
+    $(function(){
+      //
+      // <div class="accountInfo block">
+      //     <div class="accountName">Lianer</div>
+      //     <div class="accountNum">62189556302899</div>
+      // </div>
+      $('.IsShowInfo').click(function(){
+        if($(this).data().type==1){
+          $('.accountName').text('Lianer');
+          $('.accountNum').text('18296568963')
+          $(this).hide()
+          $(this).siblings().show()
+        }else{
+          $('.accountName').text('***');
+          $('.accountNum').text('***********')
+          $(this).hide()
+          $(this).siblings().show()
+        }
+      })
+      $("#Input").bind("input propertychange",function(event){
+         if($("#Input").val()!=""){
+           $(this).parent().addClass('Input_val')
+         }else {
+           $(this).parent().removeClass('Input_val')
+         }
+  });
+    })
+</script>
+
+</html>

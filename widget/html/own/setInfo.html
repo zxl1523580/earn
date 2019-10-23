@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/setInfo.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <img src="../../image/backArrow.png" id="back" />
+                <span class="title_span">设置</span>
+            </div>
+        </header>
+        <main>
+            <div class="userHeadImg_box">
+                <div class="userHeadImg">
+                    <img src="../../image/defaultavatar.png" alt="">
+                    <div class="picture_icon">
+                        <img class='picture' src="../../image/settingpicture.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <ul class="userInfo">
+                <li class="userInfo_item">
+                    <div class="tipsText">我的昵称</div>
+                    <div class="userInfoText">
+                        <span>153****1970</span>
+                        <img src="../../image/RightArrow.png" alt="">
+                    </div>
+                </li>
+                <li class="userInfo_item" id="phone">
+                    <div class="tipsText">手机绑定</div>
+                    <div class="userInfoText">
+                        <span>153****1970</span>
+                        <img src="../../image/RightArrow.png" alt="">
+                    </div>
+                </li>
+                <li class="userInfo_item">
+                    <div class="tipsText">淘宝渠道认证</div>
+                    <div class="userInfoText">
+                        <span>已认证</span>
+                        <img src="../../image/RightArrow.png" alt="">
+                    </div>
+                </li>
+                <li class="userInfo_item">
+                    <div class="tipsText">微信号</div>
+                    <div class="userInfoText">
+                        <span style='color:#FF4D00'>未绑定</span>
+                        <img src="../../image/RightArrow.png" alt="">
+                    </div>
+                </li>
+            </ul>
+            <ul class="userInfo">
+                <li class="userInfo_item">
+                    <div class="tipsText">分享商品带APP下载</div>
+                    <div class="userInfoText">
+                        <input class="switch switch-anim"  type="checkbox" >
+                    </div>
+                </li>
+                <li class="userInfo_item">
+                    <div class="tipsText">订单收益通知</div>
+                    <div class="userInfoText">
+                        <input class="switch switch-anim"  type="checkbox" >
+                    </div>
+                </li>
+                <li class="userInfo_item">
+                    <div class="tipsText">
+                        <p>淘宝渠道认证</p>
+                        <p style="color:#666;padding-top:.1rem;">开启后将隐藏对外订单用户信息</p>
+                    </div>
+                    <div class="userInfoText">
+                            <input class="switch switch-anim"  type="checkbox" >
+                    </div>
+                </li>
+            </ul>
+            <ul class="userInfo">
+                <li class="userInfo_item">
+                    <div class="tipsText">
+                      <span>清除缓存</span>
+                      <span style="color:#666;padding-left:.1rem;">32.20MB</span>
+                    </div>
+                    <div class="clearn">清除</div>
+                </li>
+                <li class="userInfo_item">
+                    <div class="tipsText">版本号</div>
+                    <div class="userInfoText">
+                        <span>版本1.0</span>
+                        <img src="../../image/RightArrow.png" alt="">
+                    </div>
+                </li>
+            </ul>
+            <div class="cashOutBtn">提现</div>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+        $('#phone').click(function(){
+          api.openWin({
+            name:"ModifyNumber",
+            url:'./ModifyNumber.html'
+          })
+        })
+    };
+    $(function() {
+        // (function(select) {
+        //     var box = document.querySelector(select)
+        //     var checkbox = box.querySelector("input");
+        //     box.onclick = function() {
+        //         this.classList.toggle("swich-on");
+        //         if (checkbox.checked) {
+        //             console.log("已经选中");
+        //             alert(1)
+        //             checkbox.checked = "true";
+        //         } else {
+        //           alert(‘''’)
+        //             console.log("没有选中");
+        //             checkbox.checked = "false";
+        //         }
+        //     }
+        // })(".swich");
+        $('.switch').click(function(){
+          if ($(this).prop('checked')) {
+              // console.log("选中");
+              alert(1)
+          } else {
+              // console.log("没选中");
+              alert(2)
+          }
+        })
+    })
+</script>
+
+</html>

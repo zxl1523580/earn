@@ -1,7 +1,7 @@
 apiready = function() {
     var header = $api.byId('wrap');
     $api.fixStatusBar(header);
-    $(".more").click(function(){
+    // $(".more").click(function(){
     $('.nav_content_title').on("click", '.more', function() {
         api.openWin({     
             name: 'classifyMore',
@@ -11,14 +11,6 @@ apiready = function() {
             }   
         });
       })
-        // $('.nav_content_title').on("click", '.more', function() {
-        //     api.openWin({     
-        //         name: 'search',
-        //              url: '../home/search.html',
-        //              pageParam: {       
-        //             id: 1     
-        //         }   
-        //     });
         $('.Input').click(function(){
         // $('.search_text').on("click", '.search_icon', function() {
           api.openWin({
@@ -30,7 +22,6 @@ apiready = function() {
           });
 
         })
-    })
     api.addEventListener({
         name: 'aa'
     }, function(ret, err) {

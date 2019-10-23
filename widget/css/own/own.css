@@ -3,20 +3,21 @@ html, body, #wrap {
     height: 100%;
     display: flex;
     flex-direction: column;
+    /*margin-bottom: .5rem;*/
 }
 
 #wrap header {
-    height: .8rem;
+    height: .4rem;
     background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
 }
 
 .statusBar {
     height: .4rem;
 }
+
 #wrap main {
     width: 100%;
     flex: 1;
-    background: pink;
     overflow: auto;
 }
 
@@ -27,18 +28,16 @@ html, body, #wrap {
 
 /*用户信息*/
 
-.header{
-  width: 100%;
-  height: 2.4rem;
-  /*border: 1px solid black;*/
-  display: flex;
-  align-items: center;
-  background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
-
+.header {
+    width: 100%;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
 }
+
 .userInfo_box {
     width: 96%;
-    /*border: 1px solid black;*/
     margin: 0rem auto;
     display: flex;
     justify-content: space-between;
@@ -46,7 +45,6 @@ html, body, #wrap {
 
 .userInfo_con {
     width: 80%;
-    /*border: 1px solid black;*/
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -55,7 +53,6 @@ html, body, #wrap {
 .userInfo {
     flex: 1;
     margin-left: .2rem;
-    /*border: 1px solid black;*/
 }
 
 .Avatar {
@@ -81,8 +78,9 @@ html, body, #wrap {
     color: #FFFFFF;
     font-size: .28rem;
 }
-.coin{
-line-height: .5rem;
+
+.coin {
+    line-height: .5rem;
 }
 
 .vip {
@@ -102,39 +100,339 @@ line-height: .5rem;
     font-size: .22rem;
     color: #FFFFFF;
 }
-.Info_set{
-  width: 16%;
-  /*border: 1px solid black;*/
-  font-size: .26rem;
-  display: flex;
-  justify-content: space-between;
+
+.Info_set {
+    width: 16%;
+    font-size: .26rem;
+    display: flex;
+    justify-content: space-between;
 }
-.info{
+
+.info {
     width: .48rem;
     height: .48rem;
     position: relative;
 }
-.info>span{
-  position: absolute;
-  top: -.1rem;
-  right: -.1rem;
-  display: inline-block;
-  padding: .05rem .1rem;
-  border-radius: 100%;
-  background: red;
-  color: #ffffff;
-  font-size: .18rem;
-  text-align: center;
+
+.info>span {
+    position: absolute;
+    top: -.1rem;
+    right: -.1rem;
+    display: inline-block;
+    padding: .05rem .1rem;
+    border-radius: 100%;
+    background: red;
+    color: #ffffff;
+    font-size: .18rem;
+    text-align: center;
 }
-.info>img{
-  width: 100%;
-  height: 100%;
+
+.info>img {
+    width: 100%;
+    height: 100%;
 }
-.set{
+
+.set {
     width: .48rem;
     height: .48rem;
 }
-.set>img{
+
+.set>img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*余额展示*/
+
+.balance {
+    width: 96%;
+    height: .98rem;
+    margin: .1rem auto;
+    margin-top: -.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(236, 209, 149, 1)0%, rgba(212, 176, 124, 1) 100%);
+    box-shadow: 0rem .04rem .16rem 0rem rgba(0, 0, 0, 0.1);
+    border-radius: .1rem;
+}
+
+.balance_con {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balance_title {
+    width: 70%;
+    font-size: .26rem;
+    color: #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+}
+
+.CashBtn {
+    width: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.CashBtn>span {
+    color: #FFFFFF;
+    font-size: .28rem;
+}
+
+.CashBtn>img {
+    width: .48rem;
+    height: .48rem;
+}
+
+
+/*我的收益*/
+
+.Profit_box, .makeMoney_box, .Utilities ,.Quick_access {
+    width: 96%;
+    margin: 0 auto;
+}
+
+.Profit_title {
+    width: 100%;
+    height: .88rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Profit_title>h2 {
+    color: #333333;
+    font-size: .3rem;
+}
+
+.more {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.more>span {
+    font-size: .24rem;
+    color: #B3B3B3;
+}
+
+.more>img {
+    width: .45rem;
+    height: .45rem;
+}
+
+.Profit_price_box {
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0rem 0rem .1rem 0rem rgba(0, 0, 0, 0.06);
+    border-radius: .1rem;
+}
+
+.Profit_price {
+    width: 95%;
+    height: 1.49rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order_box {
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0rem 0rem .1rem 0rem rgba(0, 0, 0, 0.06);
+    border-radius: .1rem;
+    margin: .2rem auto;
+}
+
+.order {
+    width: 90%;
+    height: 1.49rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Profit_item, .order_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.num {
+    font-size: .28rem;
+    font-family: Lato;
+    font-weight: 800;
+    color: #333333;
+}
+
+.money {
+    font-size: .24rem;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #999999;
+    margin-top: .1rem;
+}
+
+.order_item>img {
+    width: .56rem;
+    height: .56rem;
+}
+
+.order_item>span {
+    color: #333333;
+    font-size: .24rem;
+}
+
+.makeMoney_title, .Utilities_title , .access_title{
+    width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    color: #333333;
+    font-size: .3rem;
+}
+
+.makeMoney_ul {
+    width: 100%;
+    height: 1.34rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.makeMoney_item {
+    width: 48%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0rem 0rem .1rem 0rem rgba(0, 0, 0, 0.06);
+    border-radius: .1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.makeMoney_con {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    ;
+    align-items: center;
+}
+
+.makeMoneyText {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.makeMoneyText>span {
+    font-size: .26rem;
+    font-weight: bold;
+    color: #FE3B3B;
+}
+
+.makeMoneyText>p {
+    font-size: .22rem;
+    color: #999999;
+    text-align: left;
+    margin-top: .05rem;
+}
+
+.makeMoneyImg {
+    width: .96rem;
+    height: .86rem;
+}
+
+.makeMoneyImg>img {
+    width: 100%;
+    height: 100%;
+}
+
+.adv_box {
+    width: 100%;
+    height: 1.81rem;
+    background: #F5F5F5;
+    margin: .2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adv_con {
+    width: 96%;
+    height: 1.49rem;
+}
+
+.adv_con>img {
+    width: 100%;
+    height: 100%;
+}
+/*实用工具*/
+.Utilities {
+    width: 96%;
+}
+.Utilities_con {
+    width: 100%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0rem 0rem .1rem 0rem rgba(0, 0, 0, 0.06);
+    border-radius: .1rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.Utilities_item {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*border: 1px solid red;*/
+    padding: .2rem 0rem;
+}
+
+.Utilities_item>img {
+    width: .56rem;
+    height: .56rem;
+}
+
+.Utilities_item>span {
+    width: 100%;
+    overflow: hidden;
+    display: inline-block;
+    font-size: .24rem;
+    color: #333333;
+    text-align: center;
+    margin-top: .1rem;
+}
+.access_ul{
   width: 100%;
-  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rem 0rem .1rem 0rem rgba(0, 0, 0, 0.06);
+  border-radius: .1rem;
+}
+.access_item{
+  width: 95%;
+  height: .88rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #F5F5F5;
+  margin: 0  auto;
+}
+.access_item>span{
+  color: #333333;
+  font-size: .28rem;
+}
+.access_item>img{
+  width: .44rem;
+  height: .44rem;
 }

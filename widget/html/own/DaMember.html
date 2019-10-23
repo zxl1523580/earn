@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/DaMember.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <div class="title_con">
+                    <img src="../../image/backArrow.png" id="back" />
+                    <span class="title_span">直属会员</span>
+                </div>
+            </div>
+            <div class="search_box">
+                <div class="search">
+                    <div class="search_con">
+                        <img src="../../image/icon_search.png" alt="">
+                        <input type="text" name="" value="" placeholder="请输入手机号码查询">
+                    </div>
+                </div>
+            </div>
+            <div class="navBar">
+              <div class="navBar_con">
+                <p class="navBaractive">注册时间</p>
+                <p>推荐人数</p>
+                <p>出单数量</p>
+              </div>
+            </div>
+        </header>
+        <main>
+            <ul class="NumberList">
+                <li class="List_item">
+                    <div class="List_item_con">
+                        <div class="list_Info">
+                            <div class="img">
+                                <img src="https://img.alicdn.com/bao/uploaded/i1/1663277566/O1CN01cJuwfz25lHBjFYDXm_!!0-item_pic.jpg" alt="">
+                            </div>
+                            <div class="perInfo">
+                                <div class="namePhone">
+                                    <span class="nickName">Lianer</span>
+                                    <span class="phone">(1121212121)</span>
+                                </div>
+                                <div class="time">
+                                    2019.9.26 17:52
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Recommend">
+                      <div class="persnumber">
+                        <span class="num">20</span>
+                        <span class="tipsText">推荐人数</span>
+                      </div>
+                      <div class="order">
+                        <span class="num">20</span>
+                        <span class="tipsText">本月出单</span>
+                      </div>
+                    </div>
+                </li>
+                <li class="List_item">
+                    <div class="List_item_con">
+                        <div class="list_Info">
+                            <div class="img">
+                                <img src="https://img.alicdn.com/bao/uploaded/i1/1663277566/O1CN01cJuwfz25lHBjFYDXm_!!0-item_pic.jpg" alt="">
+                            </div>
+                            <div class="perInfo">
+                                <div class="namePhone">
+                                    <span class="nickName">Lianer</span>
+                                    <span class="phone">(1121212121)</span>
+                                </div>
+                                <div class="time">
+                                    2019.9.26 17:52
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Recommend">
+                      <div class="persnumber">
+                        <span class="num">20</span>
+                        <span class="tipsText">推荐人数</span>
+                      </div>
+                      <div class="order">
+                        <span class="num">20</span>
+                        <span class="tipsText">本月出单</span>
+                      </div>
+                    </div>
+                </li>
+            </ul>
+        </main>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+        $('.List_item').click(function(){
+          api.openWin({
+              name: 'DaMember',
+              url: './DaMember.html',
+              pageParam: {
+                  name: 'test'
+              }
+          });
+
+        })
+    };
+    $(function() {
+$('.navBar_con p').click(function(){
+  $(this).addClass('navBaractive').siblings().removeClass('navBaractive')
+})
+    })
+</script>
+
+</html>
