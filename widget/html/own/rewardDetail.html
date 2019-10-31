@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/api.css" />
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
-    <link rel="stylesheet" type="text/css" href="../../css/own/TotalNumber.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/rewardDetail.css" />
     <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
 </head>
 
@@ -20,19 +20,29 @@
             <div class="title">
                 <div class="title_con flex flexStart alineCenter">
                     <img src="../../image/backArrow.png" id="back" />
-                    <span class="title_span textCenter fs36 colorfff"></span>
+                    <span class="title_span textCenter fs36 colorfff">奖励明细</span>
                 </div>
             </div>
-            <div class="search_box bgfff flex justiCenter alineCenter">
-                <div class="search flex alineCenter">
-                    <div class="search_con flex flexStart">
-                        <img src="../../image/icon_search.png" alt="">
-                        <input type="text" name="" value="" placeholder="请输入手机号码查询">
-                    </div>
+            <div class="navBar bgfff">
+                <div class="navBar_con flex fs28 color333 textCenter">
+                    <p class="navBaractive" data-type="1">待领取</p>
+                    <p data-type="2">我的邀请账单</p>
                 </div>
             </div>
         </header>
         <main>
+            <div class="myInvite">
+                <ul class="Cumulative_ul flex spaceBetween alineCenter">
+                    <li class="cumulative flex flexCloum alineCenter justiCenter">
+                        <span class="fs24 color666">累计邀请(人)</span>
+                        <span class="colorFF4D00 fw fs34" style="margin-top:.2rem">6</span>
+                    </li>
+                    <li class="cumulative after por flex flexCloum alineCenter justiCenter">
+                        <span class="fs24 color666">累计入账(元)</span>
+                        <span class="colorFF4D00 fw fs34" style="margin-top:.2rem">6</span>
+                    </li>
+                </ul>
+            </div>
             <ul class="NumberList">
                 <li class="List_item">
                     <div class="List_item_con flex spaceBetween alineCenter">
@@ -50,9 +60,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="Recommend flex flexCloum justiCenter alineCenter">
-                            <span class="num fs32 colorFF4D00">20</span>
-                            <span class="tipsText color999 fs28">推荐人数</span>
+                        <div class="Recommend fs24 colorFF4D00">
+                            <span class="num fw fs32">+20</span>元
                         </div>
                     </div>
                 </li>
@@ -64,16 +73,16 @@
 <script type="text/javascript" src="../../script/jqmin.js"></script>
 <script type="text/javascript">
     apiready = function() {
-        var param=api.pageParam
-          if(param.name ==1){
+        var param = api.pageParam
+        if (param.name == 1) {
             $('.title_span').text('总人数')
-          }else if (param.name ==2) {
-          $('.title_span').text('直属总监')
-        }else if (param.name ==3) {
+        } else if (param.name == 2) {
+            $('.title_span').text('直属总监')
+        } else if (param.name == 3) {
             $('.title_span').text('今日新增')
-        }else if (param.name ==4) {
+        } else if (param.name == 4) {
             $('.title_span').text('昨日新增')
-        }else if (param.name ==5) {
+        } else if (param.name == 5) {
             $('.title_span').text('直属会员下级')
         }
         $('.title').on('click', '#back', function() {
@@ -83,21 +92,26 @@
                 }
             });
         })
-        $('.List_item').click(function(){
-          api.openWin({
-              name: 'DaMember',
-              url: './DaMember.html',
-              pageParam: {
-                  name: 'test'
-              }
-          });
+        $('.List_item').click(function() {
+            api.openWin({
+                name: 'DaMember',
+                url: './DaMember.html',
+                pageParam: {
+                    name: 'test'
+                }
+            });
 
         })
     };
     $(function() {
-$('.navBar_con p').click(function(){
-  $(this).addClass('navBaractive').siblings().removeClass('navBaractive')
-})
+        $('.navBar_con p').click(function() {
+            $(this).addClass('navBaractive').siblings().removeClass('navBaractive')
+            if ($(this).data().type == 1) {
+                $('.myInvite').hide()
+            } else {
+                $('.myInvite').show()
+            }
+        })
     })
 </script>
 

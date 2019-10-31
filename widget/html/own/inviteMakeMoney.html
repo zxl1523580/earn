@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../../css/own/inviteMakeMoney.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/login/button.css" />
 </head>
 
 <body>
@@ -17,195 +19,218 @@
         <header>
             <div class="statusBar"></div>
             <div class="title">
-                <div class="title_con">
+                <div class="title_con flex spaceBetween alineCenter">
                     <img src="../../image/backArrow.png" id="back" />
-                    <span class="title_span">活动规则</span>
+                    <span class="title_span fs24 ModalBtn colorfff textCenter" data-type='0'>活动规则</span>
                 </div>
             </div>
         </header>
         <main>
             <div class="content">
                 <div class="showBg">
-                    <div class="pageTitle">
+                    <div class="pageTitle flex justiCenter alineCenter flexNoWrap">
                         <span class="inviteT">邀请好友  拿</span>
                         <span class="textClor">现金</span>
                     </div>
-                    <div class="HighestMoney">
+                    <div class="HighestMoney colorfff textCenter">
                         最高可得<span style="color:#FEE439;font-size:.8rem">5088</span>元
                     </div>
                     <div class="shareBtn">
                         立即分享微信赚钱
                     </div>
                     <!-- 如何赚 -->
-                    <div class="makeMoneystep">
-                        <div class="tipsTitle">
+                    <div class="makeMoneystep bgfff">
+                        <div class="tipsTitle flex alineCenter fs30">
                             <span class="left"></span>
                             <span style="padding:0rem .2rem;"> 如何赚5088元 </span>
                             <span class="right"></span>
                         </div>
-                        <div class="stepList">
-                            <div class="stepItem">
+                        <div class="stepList flex spaceBetween alineCenter">
+                            <div class="stepItem ModalBtn flex flexCloum justiCenter alineCenter" data-type="1">
                                 <img src="../../image/Invitefriendsone.png" alt="">
-                                <span>分享一次</span>
+                                <span class="color333 fs26">分享一次</span>
                             </div>
-                            <div class="stepItem">
+                            <div class="stepItem ModalBtn flex flexCloum justiCenter alineCenter" data-type="2">
                                 <img src="../../image/Invitefriendstwo.png" alt="">
-                                <span>分享到群</span>
+                                <span class="color333 fs26">分享到群</span>
                             </div>
-                            <div class="stepItem">
+                            <div class="stepItem ModalBtn flex flexCloum justiCenter alineCenter" data-type="3">
                                 <img src="../../image/Invitefriendsthree.png" alt="">
-                                <span>第一位</span>
+                                <span class="color333 fs26">第一位</span>
                             </div>
-                            <div class="stepItem">
+                            <div class="stepItem ModalBtn flex flexCloum justiCenter alineCenter" data-type="4">
                                 <img src="../../image/Invitefriendsfour.png" alt="">
-                                <span>奖励升级</span>
+                                <span class="color333 fs26">奖励升级</span>
                             </div>
                         </div>
                     </div>
                     <!-- 邀请越多 赚得越多 -->
-                    <div class="earnMore">
+                    <div class="earnMore flex alineCenter justiCenter">
                         <span class="earnLeft"></span>
-                        <span style="padding:0rem .2rem;">  邀请越多 赚得越多  </span>
+                        <span class="colorfff fs30" style="padding:0rem .2rem;">  邀请越多 赚得越多  </span>
                         <span class="earnRight"></span>
                     </div>
                     <!-- 点击领红包 -->
                     <div class="clickEnvelopes">
-                        <ul class="redEnv_list">
-                            <li class="redEnvItem">
-                                <div class="rebBg rebBgActive">
-                                    <div class="redMoney redMoneyActive">
+                        <ul class="redEnv_list flex justiCenter flexWrap">
+                            <li class="redEnvItem flex justiCenter">
+                                <div class="rebBg por rebBgActive ModalBtn" data-type='5'>
+                                    <div class="redMoney fs30 textCenter redMoneyActive">
                                         <span>8</span>元/位
                                     </div>
-                                    <div class="perNum perNumActive">
+                                    <div class="perNum colorfff textCenter fs22 perNumActive">
                                         邀请第1位
                                     </div>
                                 </div>
                             </li>
-                            <li class="redEnvItem">
-                                <div class="rebBg" style="background:url('../../image/redEnvClose.png');background-size: 100% 100%;">
-                                    <div class="redMoney">
+                            <li class="redEnvItem flex justiCenter">
+                                <div class="rebBg por ModalBtn" data-type='5'   style="background:url('../../image/redEnvClose.png');background-size: 100% 100%;">
+                                    <div class="redMoney textCenter fs30">
                                         <span>9</span>元/位
                                     </div>
-                                    <div class="perNum">
+                                    <div class="perNum colorfff textCenter fs22 ">
                                         邀请第2～3位
                                     </div>
                                 </div>
                             </li>
-                            <li class="redEnvItem">
-                                <div class="rebBg" style="background:url('../../image/redEnvClose.png');background-size: 100% 100%;">
-                                    <div class="redMoney">
+                            <li class="redEnvItem flex justiCenter">
+                                <div class="rebBg pro ModalBtn" data-type='5' style="background:url('../../image/redEnvClose.png');background-size: 100% 100%;">
+                                    <div class="redMoney  textCenter fs30">
                                         <span>10</span>元/位
                                     </div>
-                                    <div class="perNum">
+                                    <div class="perNum colorfff textCenter fs22 ">
                                         邀请第4～20位
                                     </div>
                                 </div>
                             </li>
-                            <li class="redEnvItem">
-                                <div class="rebBg" style="background:url('../../image/redEnvClose.png');background-size: 100% 100%;">
-                                    <div class="redMoney">
+                            <li class="redEnvItem flex justiCenter">
+                                <div class="rebBg pro ModalBtn" data-type='5' style="background:url('../../image/redEnvClose.png');background-size: 100% 100%;">
+                                    <div class="redMoney  textCenter fs30">
                                         <span>11</span>元/位
                                     </div>
-                                    <div class="perNum">
+                                    <div class="perNum colorfff textCenter fs22 ">
                                         邀请第21～100位
                                     </div>
                                 </div>
                             </li>
-                            <li class="redEnvItem">
-                                <div class="rebBg" style="background:url('../../image/redEnvClose.png');background-size: 100% 100%;">
-                                    <div class="redMoney">
+                            <li class="redEnvItem  flex justiCenter">
+                                <div class="rebBg pro ModalBtn" data-type='5' style="background:url('../../image/redEnvClose.png');background-size: 100% 100%;">
+                                    <div class="redMoney  textCenter fs30">
                                         <span>12</span>元/位
                                     </div>
-                                    <div class="perNum">
+                                    <div class="perNum colorfff textCenter fs22 ">
                                         邀请第101～300位
                                     </div>
                                 </div>
                             </li>
                         </ul>
-                        <div class="myInvite">
-                            <div class="tipsText">
+                        <div class="myInvite flex spaceBetween alineCenter">
+                            <div class="tipsText fs28">
                                 我的邀请奖励
                             </div>
-                            <div class="reward">
-                                <span>奖励明细</span>
+                            <div class="reward flex flexEnd alineCenter rewardDetail">
+                                <span class="fs26">奖励明细</span>
                                 <img src="../../image/rightArrow2.png" alt="">
                             </div>
                         </div>
-                        <div class="myInvite">
-                            <div class="earnMoneys">
-                                ￥ <span>0</span>
+                        <div class="myInvite  flex spaceBetween alineCenter">
+                            <div class="earnMoneys fs26">
+                                ￥ <span class="fs28">0</span>
                             </div>
-                            <div class="rightOffBtn">
+                            <div class="rightOffBtn colorfff AtOnceCashOut">
                                 立即提现
                             </div>
                         </div>
+                        <div class="stepC">
+                            邀新奖励可无门槛立即提现 <span class="fs24 cashOutRecord">提现记录</span>
+                        </div>
                     </div>
                     <!-- 怎么邀请好友 -->
-                    <div class="earnMore">
+                    <div class="earnMore  flex alineCenter justiCenter">
                         <span class="earnLeft"></span>
-                        <span style="padding:0rem .2rem;">  怎么邀请好友  </span>
+                        <span class="colorfff fs30" style="padding:0rem .2rem;">  怎么邀请好友  </span>
                         <span class="earnRight"></span>
                     </div>
                     <!--  -->
-                    <div class="InviteFriend">
-                      <ul class="InviteFriend_con">
-                        <li class="InviteFriend_item">
-                          <img src="../../image/Invitefriendsseven.png" alt="">
-                          <span>点击按钮分享给好友</span>
-                        </li>
-                        <li class="InviteFriend_item">
-                          <img src="../../image/Invitefriendseight.png" alt="">
-                          <span>好友打开链接下载安装</span>
-                        </li>
-                        <li class="InviteFriend_item">
-                          <img src="../../image/Invitefriendsnine.png" alt="">
-                          <span>好友注册完成您获得红包</span>
-                        </li>
-                      </ul>
-                      <div class="tipsCon">
-                        温馨提示：好友需要在新设备(之前从未登录过边省边赚)上注册，您方可获得奖励
-                      </div>
+                    <div class="InviteFriend bgfff">
+                        <ul class="InviteFriend_con flex spaceBetween alineCenter">
+                            <li class="InviteFriend_item flex justiCenter alineCenter flexCloum">
+                                <img src="../../image/Invitefriendsseven.png" alt="">
+                                <span class="color333 fs24 textCenter">点击按钮分享给好友</span>
+                            </li>
+                            <li class="InviteFriend_item  flex justiCenter alineCenter flexCloum">
+                                <img src="../../image/Invitefriendseight.png" alt="">
+                                <span class="color333 fs24 textCenter">好友打开链接下载安装</span>
+                            </li>
+                            <li class="InviteFriend_item flex justiCenter alineCenter flexCloum">
+                                <img src="../../image/Invitefriendsnine.png" alt="">
+                                <span class="color333 fs24 textCenter">好友注册完成您获得红包</span>
+                            </li>
+                        </ul>
+                        <div class="tipsCon fs24 colorB3B3">
+                            温馨提示：好友需要在新设备(之前从未登录过边省边赚)上注册，您方可获得奖励
+                        </div>
                     </div>
                     <!--  -->
                     <!-- 怎么邀请好友 -->
-                    <div class="earnMore">
+                    <div class="earnMore  flex alineCenter justiCenter">
                         <span class="earnLeft"></span>
-                        <span style="padding:0rem .2rem;">  邀请小技巧 提升成功率  </span>
+                        <span class="colorfff fs30" style="padding:0rem .2rem;">  邀请小技巧 提升成功率  </span>
                         <span class="earnRight"></span>
                     </div>
                     <!--  -->
-                    <div class="stepText">
-                      <div class="stepText_con">
-                        <p>1.邀请您的家人、朋友、同学、同事的成功率高。</p>
-                        <p>2.分享到3个以上微信群，成功邀请积累提升200%</p>
-                        <p>3.如果在微信分享时弹出“发上异常、无法分享”等提示，只需将微信退出重新登录，即可正常分享。</p>
-                      </div>
+                    <div class="stepText bgfff">
+                        <div class="stepText_con">
+                            <p>1.邀请您的家人、朋友、同学、同事的成功率高。</p>
+                            <p>2.分享到3个以上微信群，成功邀请积累提升200%</p>
+                            <p>3.如果在微信分享时弹出“发上异常、无法分享”等提示，只需将微信退出重新登录，即可正常分享。</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- <div class="wxTitle">
-                您的微信专属客服：
-            </div>
-            <div class="wxInfo_box">
-                <div class="wxInfo_con">
-                    <div class="logo">
-                        <img src="../../image/logo1.png" alt="">
-                    </div>
-                    <div class="wxInfo">
-                        <span class="wxName">微信专属客服</span>
-                        <span class="wxNumber">lucy240101</span>
-                    </div>
-                    <div class="copyWxNum" id="Copy">
-                        点击复制微信号
-                    </div>
-                </div>
-            </div>
-            <div class="copyBtn">
-                复制去微信添加
-            </div> -->
-
         </main>
     </div>
+    <!-- 弹出层 -->
+    <div class="Modal">
+        <div class="Modal_box">
+            <div class="Modal_con">
+                <div class="Modal_title">活动规则</div>
+                <div class="redEnvImg">
+                    <div class="redEnvM redEnvMActive">
+                        <span>8</span>元/位
+                    </div>
+                    <div class="perNumber  colorfff textCenter fs22  perNumberActive">
+                        <!-- 邀请第1位 -->
+                    </div>
+                </div>
+                <ul class="setpDescribe">
+                    <!-- <li>1. 邀新奖励有效期为邀请成功日起7天内，新用户接受A邀请后7天内打开app都记为A邀请成功，期间无法接受其他用户的邀请。</li>
+              <li>2. 奖励细则：邀请好友登录奖励每天限一次，分三次发放。好友注册后自下日起7内，每次打开App，邀新奖励立即入账。当新用户完成首单并确认收货后，你还可以得5元现金奖励。</li>
+              <li>3. 奖励细则：邀请好友登录奖励每天限一次，分三次发放。好友注册后自下日起7内，每次打开App，邀新奖励立即入账。当新用户完成首单并确认收货后，你还可以得5元现金奖励。</li> -->
+                </ul>
+                <div class="tips_t">
+                  注：邀新奖励有效期为好友注册后7日内
+                </div>
+                <div class="confirmBtn flex justiCenter alineCenter">
+                  <button type="button fs32 colorfff textCenter" class='mainclick' id='Btn' name="button">我知道了</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer flex spaceBetween bgfff">
+      <div class="foot_item flex flexCloum justiCenter alineCenter">
+        <img src="../../image/wx.png" alt="">
+        <span class="color333 fs22">微信邀请</span>
+      </div>
+      <div class="foot_item flex flexCloum justiCenter alineCenter" id="FtoFInvite">
+        <img src="../../image/code1.png" alt="">
+        <span class="color333 fs22">面对面邀请</span>
+      </div>
+      <div class="foot_item">
+        <img src="../../image/wxq.png" alt="">
+        <span class="color333 fs22">微信群邀请</span>
+      </div>
+    </footer>
 </body>
 <script type="text/javascript" src="../script/api.js"></script>
 <script type="text/javascript" src="../../script/jqmin.js"></script>
@@ -216,9 +241,93 @@
                 if (!ret.status) {
                     api.closeWin();
                 }
-            });
+            })
         })
+            $('#FtoFInvite').click(function(){
+              api.openWin({
+                  name: 'FtoFInvite',
+                  url: './FtoFInvite.html'
+                })
+            })
+            $('.AtOnceCashOut').click(function(){
+              api.openWin({
+                  name: 'cashOut',
+                  url: './cashOut.html'
+                })
+            })
+            $('.cashOutRecord').click(function(){
+              api.openWin({
+                  name: 'WithdrawalsRecord',
+                  url: './WithdrawalsRecord.html'
+                })
+            })
+            $('.rewardDetail').click(function(){
+              api.openWin({
+                  name: 'rewardDetail',
+                  url: './rewardDetail.html'
+                })
+            })
     };
+    $(function() {
+        $('.ModalBtn').click(function() {
+          // alert($(this).data().type)
+            $('.Modal').show()
+            if ($(this).data().type == 0) {
+              $('.redEnvImg').hide()
+              $('.tips_t').hide()
+                $('.Modal_title').text('活动规则')
+                $('#Btn').text('我知道了')
+                $('.setpDescribe').html(
+                    '<li>1. 邀新奖励有效期为邀请成功日起7天内，' +
+                    '新用户接受A邀请后7天内打开app都记为A邀请成功，' +
+                    '期间无法接受其他用户的邀请。</li>' +
+                    '<li>2. 奖励细则：邀请好友登录奖励每天限一次，分三次发放。' +
+                    '好友注册后自下日起7内，每次打开App，邀新奖励立即入账。' +
+                    '当新用户完成首单并确认收货后，你还可以得5元现金奖励。</li>' +
+                    '<li>3. 奖励细则：邀请好友登录奖励每天限一次，分三次发放。' +
+                    '友注册后自下日起7内，每次打开App，邀新奖励立即入账。' +
+                    '当新用户完成首单并确认收货后，你还可以得5元现金奖励。</li>')
+            } else if ($(this).data().type == 1) {
+              $('.redEnvImg').hide()
+              $('.tips_t').hide()
+                $('.Modal_title').text('如何分享？')
+                $('#Btn').text('立即分享')
+                $('.setpDescribe').html('<li style="text-align:center">点击分享，选择微信好友 </li>')
+
+            }else if ($(this).data().type == 2) {
+                $('.redEnvImg').hide()
+                $('.tips_t').hide()
+              $('.Modal_title').text('邀请第一位好友')
+              $('#Btn').text('立即分享赚钱')
+              $('.setpDescribe').html('<li style="text-align:center">分享至2～3个群，成功率提升200%</li>')
+            }else if ($(this).data().type == 3) {
+              $('.redEnvImg').show()
+              $('.tips_t').hide()
+              $('.Modal_title').text('邀请第一位好友')
+              $('#Btn').text('立即分享赚钱')
+              $('.setpDescribe').html('<li style="text-align:center">好友注册成功，即可收到现金</li>')
+            }else if ($(this).data().type == 4) {
+              $('.redEnvImg').show()
+              $('.Modal_title').text('奖励升级')
+              $('#Btn').text('立即分享赚钱')
+              $('.setpDescribe').html('<li style="text-align:center">再邀请一位，奖励升级位9元/位</li>')
+            }else if($(this).data().type == 5){
+              alert($(this).children('.perNum').text())
+              $('.redEnvImg').show()
+              $('.tips_t').show()
+              $('.perNumber').text($(this).children('.perNum').text())
+              $('.Modal_title').text('奖励说明')
+              $('#Btn').text('立即邀请好友')
+              $('.setpDescribe').html(
+              '<li>1. 邀新第一位好友，好友第一天打开APP并注册奖励<span style="color:#EB4828">1</span>元；</li>' +
+              '<li>2. 好友第二天打开App奖励<span style="color:#EB4828">1</span>元；</li>' +
+              '<li>3. 好友完成首单并确认收货奖励<span style="color:#EB4828">1</span>元；</li>')
+            }
+        })
+        $('.Modal').click(function(){
+          $(this).hide()
+        })
+    })
 </script>
 
 </html>

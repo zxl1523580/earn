@@ -6,8 +6,7 @@ html, body, #wrap {
 }
 
 #wrap header {
-    /*height: 1.28rem;*/
-      background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
 }
 
 .statusBar {
@@ -23,22 +22,16 @@ html, body, #wrap {
     width: 96%;
     margin: 0 auto;
     height: .88rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-.title_con>img {
+.title_con img {
     width: .48rem;
     height: .48rem;
 }
 
-.title_con>span {
+.title_span {
     display: inline-block;
     flex: 1;
-    font-size: .36rem;
-    color: #FFFFFF;
-    text-align: center;
 }
 
 .orderNavbar {
@@ -49,27 +42,23 @@ html, body, #wrap {
 .orderNavbar_con {
     width: 96%;
     margin: 0 auto;
-    font-size: .28rem;
-    color: #FFFFFF;
 }
-.navBar{
-  width: 100%;
-  background: #FFFFFF;
-}
-.navBar_con{
-  width: 96%;
-  margin: 0 auto;
-}
-.navBar_con, .orderNavbar_con {
-    height: .88rem;
-    line-height: .88rem;
-    display: flex;
-    text-align: center;
+
+.navBar {
+    width: 100%;
 }
 
 .navBar_con {
-    font-size: .24rem;
-    color: #333333;
+    width: 96%;
+    margin: 0 auto;
+}
+
+.navBar_con, .orderNavbar_con {
+    height: .88rem;
+    line-height: .88rem;
+}
+
+.navBar_con {
     border-bottom: 1px solid #F5F5F5;
 }
 
@@ -98,6 +87,7 @@ html, body, #wrap {
     background: #FFFFFF;
     border-radius: .04rem;
 }
+
 #wrap main {
     width: 100%;
     flex: 1;
@@ -123,33 +113,20 @@ html, body, #wrap {
 .order_con {
     width: 96%;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
 }
 
 .shopInfo_box {
     width: 100%;
     height: .7rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-bottom: 1px solid #F5F5F5;
 }
 
-.shopInfo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.shopInfo>img {
+.shopInfo img {
     width: .4rem;
     height: .4rem
 }
 
-.shopInfo>span {
-    color: #333333;
-    font-size: .24rem;
+.shopInfo span {
     padding-left: .1rem;
 }
 
@@ -159,10 +136,7 @@ html, body, #wrap {
 }
 
 .orderInfo {
-    display: flex;
-    justify-content: flex-start;
     padding: .2rem 0rem;
-    /*align-items: center;*/
 }
 
 .goodsImg {
@@ -171,7 +145,7 @@ html, body, #wrap {
     border-radius: .1rem;
 }
 
-.goodsImg>img {
+.goodsImg img {
     width: 100%;
     height: 100%;
 }
@@ -184,44 +158,25 @@ html, body, #wrap {
 .goodsTitle {
     width: 100%;
     height: .75rem;
-    font-size: .24rem;
     line-height: .38rem;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    color: #666666;
 }
+
 .labals {
     font-size: .18rem;
     width: .52rem;
     height: .28rem;
     line-height: .3rem;
-    text-align: center;
-    color: #FFFFFF;
     border-radius: .04rem;
     background: #FF0030;
     display: inline-block;
 }
-/*.labals {
-    padding: .01rem .06rem;
-    font-size: .18rem;
-    color: #ffffff;
-    background: #FF0030;
-    border-radius: .04rem;
-}*/
 
 .goodsPrice {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.price {
-    color: #333333;
-    font-size: .24rem;
-    font-weight: bold;
 }
 
 .subsidy_box {
@@ -233,17 +188,13 @@ html, body, #wrap {
     width: 100%;
     text-align: right;
     color: #FF6F31;
-    font-size: .24rem;
 }
 
 .earn {
     color: #FF2B2A;
-    font-size: .24rem;
 }
 
 .order_on {
     width: 100%;
-    color: #999999;
-    font-size: .24rem;
     padding-bottom: .25rem;
 }

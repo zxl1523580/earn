@@ -1,10 +1,14 @@
 .flex{display: flex;}
 .spaceAround{justify-content: space-around;}
 .spaceBetween{justify-content: space-between;}
+.flexStart{justify-content: flex-start;}
+.flexEnd{justify-content:flex-end;}
+.justiCenter{justify-content: center;}
 .alineCenter{align-items: center;}
 .textCenter{text-align: center;}
 .shrink{flex-shrink: 0;}
 .flexWrap{flex-wrap: wrap;}
+.flexNoWrap{flex-wrap:nowrap;}
 
 .flexCloum{flex-direction: column;}
 .color666{color: #666;}
@@ -13,6 +17,11 @@
 .colorgray{color: #C2C2C2;}
 .colorfff{color:#fff;}
 .colorred{color: #FF0101;}
+.colorFF4D01{color: #FF4D01;}
+.colorFF4D00{color: #FF4D00;}
+.colorB3B3{color: #B3B3B3;}
+.fs18{font-size: 0.18rem;}
+.fs20{font-size: 0.2rem;}
 .fs22{font-size: 0.22rem;}
 .fs24{font-size: 0.24rem;}
 .fs26{font-size: 0.26rem;}
@@ -22,6 +31,7 @@
 .fs30{font-size: 0.3rem;}
 .fs36{font-size: 0.36rem;}
 .fs40{font-size: 0.40rem;}
+.fw{font-weight:bold;}
 .bgfff{background-color: #fff}
 .bgf5{
   background-color: #F5F5F5;

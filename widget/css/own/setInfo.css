@@ -7,7 +7,6 @@ html, body, #wrap {
 }
 
 #wrap header {
-    /*height: 1.28rem;*/
     background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
 }
 
@@ -19,28 +18,21 @@ html, body, #wrap {
     width: 96%;
     margin: 0 auto;
     height: .88rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-.title>img {
+.title img {
     width: .48rem;
     height: .48rem;
 }
 
-.title>span {
+.title_span {
     display: inline-block;
     flex: 1;
-    font-size: .36rem;
-    color: #FFFFFF;
-    text-align: center;
 }
 
 #wrap main {
     width: 100%;
     flex: 1;
-    /*overflow: auto;*/
 }
 
 #wrap main::-webkit-scrollbar {
@@ -50,21 +42,15 @@ html, body, #wrap {
 .userHeadImg_box {
     width: 100%;
     margin: .15rem auto;
-    background: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .userHeadImg {
     width: 1.2rem;
     height: 1.2rem;
-    border: 1px soid black;
-    position: relative;
     padding: .2rem 0rem;
 }
 
-.userHeadImg>img {
+.userHeadImg img {
     width: 100%;
     height: 100%;
 }
@@ -72,8 +58,6 @@ html, body, #wrap {
 .picture_icon {
     width: .48rem;
     height: .48rem;
-    display: flex;
-    position: absolute;
     top: 0.9rem;
     right: 0.1rem;
 }
@@ -85,37 +69,17 @@ html, body, #wrap {
 
 .userInfo {
     width: 100%;
-    background: #FFFFFF;
     margin: .15rem auto;
 }
 
 .userInfo_item {
     width: 96%;
     padding: .2rem 0rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
     border-bottom: 1px solid #F5F5F5;
 }
 
-.tipsText {
-    color: #333333;
-    font-size: .28rem;
-}
-
-.userInfoText {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.userInfoText>span {
-    color: #666666;
-    font-size: .28rem;
-}
-
-.userInfoText>img {
+.userInfoText img {
     width: .48rem;
     height: .48rem;
 }
@@ -124,21 +88,15 @@ html, body, #wrap {
     padding: .05rem .1rem;
     background: #999999;
     border-radius: .22rem;
-    font-size: .24rem;
-    color: #ffffff;
 }
 
 .cashOutBtn {
     width: 96%;
     height: .8rem;
     line-height: .8rem;
-    text-align: center;
     background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
     opacity: 0.9;
     border-radius: .4rem;
-    color: #FFFFFF;
-    font-size: .32rem;
-    font-weight: bold;
     margin: .3rem auto;
 }
 

@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/FtoFInvite.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title flex alineCenter">
+                <div class="title_con">
+                    <img src="../../image/backArrow.png" id="back" />
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="showBg">
+                    <div class="pageTitle flex alineCenter">
+                        <span class="inviteT">面对面扫码邀请好友</span>
+                    </div>
+                    <div class="HighestM">
+                        好友下载APP即可领取最高 <span>1000</span>元可提现红包
+                    </div>
+                    <ul class="step_ul  flex alineCenter spaceBetween">
+                      <li class="step_li flex alineCenter flexCloum">
+                        <div class="stepImg  flex alineCenter justiCenter">
+                          <img src="../../image/onewx.png" alt="">
+                        </div>
+                        <span class="colorfff fs20">好友打开微信</span>
+                      </li>
+                      <li class="step_li flex alineCenter flexCloum">
+                        <div class="stepImg  flex alineCenter justiCenter">
+                          <img src="../../image/faceicontwo.png" alt="">
+                        </div>
+                        <span class="colorfff fs20">打开扫一扫</span>
+                      </li>
+                      <li class="step_li flex alineCenter flexCloum">
+                        <div class="stepImg  flex alineCenter justiCenter">
+                          <img src="../../image/threeCode.png" alt="">
+                        </div>
+                        <span class="colorfff fs20">扫描二维码</span>
+                      </li>
+                      <li class="step_li flex alineCenter flexCloum">
+                        <div class="stepImg  flex alineCenter justiCenter">
+                          <img src="../../image/facetofaceiconfour.png" alt="">
+                        </div>
+                        <span class="colorfff fs20">领取红包</span>
+                      </li>
+                      <li class="step_li flex alineCenter flexCloum">
+                        <div class="stepImg  flex alineCenter justiCenter">
+                          <img src="../../image/facetofaceiconfive.png" alt="">
+                        </div>
+                        <span class="colorfff fs20">获得奖励</span>
+                      </li>
+                    </ul>
+                    <div class="codeImg">
+                      <img src="https://img.alicdn.com/imgextra/O1CN01xcUaK41QjXRzPMJVi_!!1093222012-2-xcode.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+            api.historyBack({}, function(ret, err) {
+                if (!ret.status) {
+                    api.closeWin();
+                }
+            });
+        })
+    };
+    $(function() {
+
+    })
+</script>
+
+</html>

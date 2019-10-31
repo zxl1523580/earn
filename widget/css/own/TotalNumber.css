@@ -6,7 +6,6 @@ html, body, #wrap {
 }
 
 #wrap header {
-    /*height: 1.28rem;*/
     background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
 }
 
@@ -20,22 +19,16 @@ html, body, #wrap {
     width: 96%;
     margin: 0 auto;
     height: .88rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-.title_con>img {
+.title_con img {
     width: .48rem;
     height: .48rem;
 }
 
-.title_con>span {
+.title_span{
     display: inline-block;
     flex: 1;
-    font-size: .36rem;
-    color: #FFFFFF;
-    text-align: center;
 }
 #wrap main {
     width: 100%;
@@ -49,28 +42,19 @@ html, body, #wrap {
 .search_box{
   width: 100%;
   height: 1rem;
-  background: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .search{
   width: 96%;
   height: .6rem;
   margin: 0rem auto;
-  background: red;
-  display: flex;
-  align-items: center;
   border-radius: .3rem;
   background: #f7f7f7;
 }
 .search_con{
   width: 90%;
   margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
 }
-.search_con>img{
+.search_con img{
   width: .27rem;
   height: .24rem;
 }
@@ -88,15 +72,9 @@ html, body, #wrap {
   width: 95%;
   margin: .2rem auto;
   padding: .2rem 0rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .list_Info{
   width: 70%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
 .img{
   width: 1rem;
@@ -104,7 +82,7 @@ html, body, #wrap {
   border-radius: 50%;
   overflow: hidden;
 }
-.img>img{
+.img img{
   width: 100%;
   height: 100%;
 }
@@ -112,35 +90,8 @@ html, body, #wrap {
   flex: 1;
   padding-left:.15rem;
 }
-.namePhone{
-  display: flex;
-}
-.nickName{
-  font-size: .28rem;
-  color: #333333;
-}
-.phone{
-  color: #999999;
-  font-size: .28rem;
-}
 .time{
-  color: #999999;
-  font-size: .24rem;
   margin-top: .25rem;
-}
-.Recommend{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.num{
-  color: #FF4D00;
-  font-size: .32rem;
-}
-.tipsText{
-  color: #999999;
-  font-size: .28rem;
 }
 input::-webkit-input-placeholder{
 color:#666666;

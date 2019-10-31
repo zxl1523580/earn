@@ -7,7 +7,6 @@ html, body, #wrap {
 }
 
 #wrap header {
-    /*height: 1.28rem;*/
     color: #333333;
     background: #ffffff;
 }
@@ -20,80 +19,71 @@ html, body, #wrap {
     width: 96%;
     margin: 0 auto;
     height: .88rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-.title>img {
+.title img {
     width: .48rem;
     height: .48rem;
 }
 
-.title>span {
+.title_span {
     display: inline-block;
     flex: 1;
-    font-size: .36rem;
-    color: #333333;
-    text-align: center;
 }
 
 #wrap main {
     width: 100%;
     flex: 1;
-    /*overflow: auto;*/
 }
 
 #wrap main::-webkit-scrollbar {
     display: none;
 }
-.userInfo{
-  width: 100%;
-  margin: .2rem auto;
-  background: #ffffff;
+
+.userInfo {
+    width: 100%;
+    margin: .2rem auto;
 }
-.userInfo_item{
-  width: 95%;
-  height: .88rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  border-bottom: 1px solid #F5F5F5;
+
+.userInfo_item {
+    width: 95%;
+    height: .88rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #F5F5F5;
 }
-input::-webkit-input-placeholder{
-color:#999999;
-font-size:.28rem;
+
+input::-webkit-input-placeholder {
+    color: #999999;
+    font-size: .28rem;
 }
-input{
-  width: 80%;
-  color: #333333;
-  font-size: .28rem;
-  border: none;
+
+input {
+    width: 80%;
+    color: #333333;
+    font-size: .28rem;
+    border: none;
 }
-.getCode{
-  background:#FF4D00!important;
+
+.userInfo_item span {
+    padding: .09rem .15rem;
+    background: #D6D6D6;
+    border-radius: .24rem;
 }
-.userInfo_item>span{
-  padding: .09rem .15rem;
-  background: #D6D6D6;
-  color: #FFFFFF;
-  font-size: .22rem;
-  border-radius: .24rem;
+
+.getCode {
+    background: #FF4D00!important;
 }
-.cashOutBtn , .default {
+
+.cashOutBtn, .default {
     width: 90%;
     height: .8rem;
     line-height: .8rem;
-    text-align: center;
     background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
     opacity: 0.9;
     border-radius: .4rem;
-    color: #FFFFFF;
-    font-size: .32rem;
-    font-weight: bold;
     margin: .3rem auto;
 }
-.default{
-  display: none;
+
+.default {
+    display: none;
 }

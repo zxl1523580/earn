@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../../css/own/order.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
 </head>
 
 <body>
@@ -17,21 +18,21 @@
         <header>
             <div class="statusBar"></div>
             <div class="title">
-                <div class="title_con">
+                <div class="title_con flex flexStart alineCenter">
                     <img src="../../image/backArrow.png" id="back" />
-                    <span class="title_span"></span>
+                    <span class="title_span colorfff fs36 textCenter"></span>
                 </div>
             </div>
             <div class="orderNavbar">
-                <ul class="orderNavbar_con">
+                <ul class="orderNavbar_con flex textCenter fs28 colorfff">
                     <li class="orderActive">全部</li>
                     <li>已付款</li>
                     <li>已结算</li>
                     <li>已失效</li>
                 </ul>
             </div>
-            <div class="navBar">
-              <div class="navBar_con">
+            <div class="navBar bgfff">
+              <div class="navBar_con flex textCenter color333 fs24">
                   <p class="navBaractive">淘宝订单</p>
                   <p>京东订单</p>
                   <p>拼多多订单</p>
@@ -41,131 +42,35 @@
         <main>
             <ul class="order_list">
                 <li class="order_item">
-                    <div class="order_con">
-                      <div class="shopInfo_box">
-                          <div class="shopInfo">
+                    <div class="order_con flex flexCloum">
+                      <div class="shopInfo_box flex spaceBetween alineCenter">
+                          <div class="shopInfo flex alineCenter flexStart">
                               <img src="../../image/store.png" alt="">
-                              <span>秋安旗舰店</span>
+                              <span class="color333 fs24">秋安旗舰店</span>
                           </div>
-                          <div class="status">已结算</div>
+                          <div class="status color666 fs24">已结算</div>
                       </div>
-                      <div class="orderInfo">
+                      <div class="orderInfo flex flexStart">
                           <div class="goodsImg">
                               <img src="https://img.alicdn.com/bao/uploaded/i3/2229356017/O1CN01vjuT3l1uJpgHawzUb_!!0-item_pic.jpg" alt="">
                           </div>
                           <div class="goodsInfo">
-                              <div class="goodsTitle">
-                                  <p class="labals">天猫</p>韩版女装2019年新款秋冬加绒加厚卫衣bf
+                              <div class="goodsTitle color666 fs24">
+                                  <p class="labals textCenter colorfff">天猫</p>韩版女装2019年新款秋冬加绒加厚卫衣bf
                                   慵懒风宽松上衣冬季ins潮韩版女装2019年新款秋冬加绒加厚卫衣b
                                   f慵懒风宽松上衣冬季ins潮
                               </div>
 
-                              <div class="goodsPrice">
-                                  <div class="price">￥69.9</div>
-                                  <div class="subsidy_box">
-                                      <span class="subsidy">平台补贴：¥0.23</span>
-                                      <span class="earn">预计赚：1.42</span>
+                              <div class="goodsPrice flex spaceBetween alineCenter">
+                                  <div class="price color333 fs24 fw">￥69.9</div>
+                                  <div class="subsidy_box flex flexCloum">
+                                      <span class="subsidy fs24">平台补贴：¥0.23</span>
+                                      <span class="earn fs24">预计赚：1.42</span>
                                   </div>
                               </div>
                           </div>
                       </div>
-                      <div class="order_on">订单编号： 45785654545642221</div>
-                    </div>
-                </li>
-                <li class="order_item">
-                    <div class="order_con">
-                      <div class="shopInfo_box">
-                          <div class="shopInfo">
-                              <img src="../../image/store.png" alt="">
-                              <span>秋安旗舰店</span>
-                          </div>
-                          <div class="status">已结算</div>
-                      </div>
-                      <div class="orderInfo">
-                          <div class="goodsImg">
-                              <img src="https://img.alicdn.com/bao/uploaded/i3/2229356017/O1CN01vjuT3l1uJpgHawzUb_!!0-item_pic.jpg" alt="">
-                          </div>
-                          <div class="goodsInfo">
-                              <div class="goodsTitle">
-                                  <p class="labals">天猫</p>韩版女装2019年新款秋冬加绒加厚卫衣bf
-                                  慵懒风宽松上衣冬季ins潮韩版女装2019年新款秋冬加绒加厚卫衣b
-                                  f慵懒风宽松上衣冬季ins潮
-                              </div>
-
-                              <div class="goodsPrice">
-                                  <div class="price">￥69.9</div>
-                                  <div class="subsidy_box">
-                                      <span class="subsidy">平台补贴：¥0.23</span>
-                                      <span class="earn">预计赚：1.42</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="order_on">订单编号： 45785654545642221</div>
-                    </div>
-                </li>
-                <li class="order_item">
-                    <div class="order_con">
-                      <div class="shopInfo_box">
-                          <div class="shopInfo">
-                              <img src="../../image/store.png" alt="">
-                              <span>秋安旗舰店</span>
-                          </div>
-                          <div class="status">已结算</div>
-                      </div>
-                      <div class="orderInfo">
-                          <div class="goodsImg">
-                              <img src="https://img.alicdn.com/bao/uploaded/i3/2229356017/O1CN01vjuT3l1uJpgHawzUb_!!0-item_pic.jpg" alt="">
-                          </div>
-                          <div class="goodsInfo">
-                              <div class="goodsTitle">
-                                  <p class="labals">拼</p>韩版女装2019年新款秋冬加绒加厚卫衣bf
-                                  慵懒风宽松上衣冬季ins潮韩版女装2019年新款秋冬加绒加厚卫衣b
-                                  f慵懒风宽松上衣冬季ins潮
-                              </div>
-
-                              <div class="goodsPrice">
-                                  <div class="price">￥69.9</div>
-                                  <div class="subsidy_box">
-                                      <span class="subsidy">平台补贴：¥0.23</span>
-                                      <span class="earn">预计赚：1.42</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="order_on">订单编号： 45785654545642221</div>
-                    </div>
-                </li>
-                <li class="order_item">
-                    <div class="order_con">
-                      <div class="shopInfo_box">
-                          <div class="shopInfo">
-                              <img src="../../image/store.png" alt="">
-                              <span>秋安旗舰店</span>
-                          </div>
-                          <div class="status">已结算</div>
-                      </div>
-                      <div class="orderInfo">
-                          <div class="goodsImg">
-                              <img src="https://img.alicdn.com/bao/uploaded/i3/2229356017/O1CN01vjuT3l1uJpgHawzUb_!!0-item_pic.jpg" alt="">
-                          </div>
-                          <div class="goodsInfo">
-                              <div class="goodsTitle">
-                                  <p class="labals">淘</p>韩版女装2019年新款秋冬加绒加厚卫衣bf
-                                  慵懒风宽松上衣冬季ins潮韩版女装2019年新款秋冬加绒加厚卫衣b
-                                  f慵懒风宽松上衣冬季ins潮
-                              </div>
-
-                              <div class="goodsPrice">
-                                  <div class="price">￥69.9</div>
-                                  <div class="subsidy_box">
-                                      <span class="subsidy">平台补贴：¥0.23</span>
-                                      <span class="earn">预计赚：1.42</span>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="order_on">订单编号： 45785654545642221</div>
+                      <div class="order_on fs24 color999">订单编号： 45785654545642221</div>
                     </div>
                 </li>
             </ul>

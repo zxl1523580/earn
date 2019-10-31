@@ -10,32 +10,30 @@
     <link rel="stylesheet" type="text/css" href="../../css/public.css" />
     <link rel="stylesheet" type="text/css" href="../../css/base.css" />
     <link rel="stylesheet" type="text/css" href="../../css/own/ModifyNumber.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
 </head>
 
 <body>
     <div id="wrap">
         <header>
             <div class="statusBar"></div>
-            <div class="title">
+            <div class="title flex flexStart alineCenter">
                 <img src="../../image/Leftback.png" id="back" />
-                <span class="title_span">验证原手机号码</span>
+                <span class="title_span textCenter fs36 color333">验证原手机号码</span>
             </div>
         </header>
         <main>
-            <ul class="userInfo">
-                <li class="userInfo_item">
+            <ul class="userInfo bgfff">
+                <li class="userInfo_item flex spaceBetween alineCenter">
                     <input type="number" id='Input' name="" value="" placeholder='请输入原手机号码'>
                 </li>
-                <li class="userInfo_item" id="phone">
+                <li class="userInfo_item  flex spaceBetween alineCenter" id="phone">
                     <input type="number" name="" value="" placeholder="请输入验证码">
-                    <span class="feachBtn">获取验证码</span>
+                    <span class="feachBtn colorfff fs22">获取验证码</span>
                 </li>
             </ul>
-            <!-- <button type="button" class="feachBtn">获取验证码</button> -->
-            <div class="cashOutBtn">下一步</div>
-            <div class="default">
-              确定
-            </div>
+            <div class="cashOutBtn textCenter colorfff fw fs32">下一步</div>
+            <div class="default textCenter colorfff fw fs32">确定</div>
         </main>
     </div>
 </body>
@@ -69,7 +67,7 @@
         $("#Input").bind("input propertychange", function(event) {
             if ($("#Input").val() != "") {
                 $(this).parent().siblings().children('span').addClass('getCode')
-            } else {
+            } else if($("#Input").val() == "") {
                 $(this).parent().siblings().children('span').removeClass('getCode')
             }
         });
@@ -84,18 +82,14 @@
             let count = 60;
             const countDown = setInterval(() => {
                 if (count === 0) {
-                    $('.feachBtn').text('重新发送').removeAttr('disabled');
-                    $('.feachBtn').css({
-                        background: '#FF4D00',
-                        color: '#FFFFFF',
-                    });
+                    $('.feachBtn').text('重新获取').removeAttr('disabled');
+                    $('.feachBtn').removeClass('getCode')
+                    $('.feachBtn').css({background: '#D6D6D6;'});
                     clearInterval(countDown);
                 } else {
                     $('.feachBtn').attr('disabled', true);
-                    $('.feachBtn').css({
-                        background: 'linear-gradient(90deg,rgba(255,77,0,1),rgba(255,125,69,1));',
-                        color: '#FFFFFF',
-                    });
+                      $('.feachBtn').removeClass('getCode')
+                    $('.feachBtn').css({background: '#FF4D00;'});
                     $('.feachBtn').text(count + 's');
                 }
                 count--;

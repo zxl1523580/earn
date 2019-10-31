@@ -1,0 +1,129 @@
+html, body, #wrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(55deg, rgba(255, 129, 75, 1), rgba(255, 86, 14, 1));
+}
+
+#wrap header {
+    /*height: 1.28rem;*/
+    /*background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);*/
+}
+
+.statusBar {
+    height: .44rem;
+}
+
+.title {
+    /*background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);*/
+}
+
+.title_con {
+    width: 96%;
+    margin: 0 auto;
+    height: .88rem;
+    justify-content:flex-start;
+}
+
+.title_con img {
+    width: .48rem;
+    height: .48rem;
+}
+
+#wrap main {
+    width: 100%;
+    flex: 1;
+    overflow: auto;
+}
+
+#wrap main::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    width: 100%;
+    margin: .2rem auto;
+}
+
+.pageTitle {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1.2rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.inviteT {
+    font-size: .66rem;
+    color: rgba(246, 189, 187, 1);
+    font-weight: bold;
+    text-shadow: .05rem .09rem .12rem rgba(178, 11, 3, 0.1);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.91) 44.5556640625%, rgba(255, 125, 69, 0.8) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.showBg {
+  position: fixed;
+  bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../image/facetofacebackground.png');
+    background-size: 100% 100%;
+}
+
+.HighestM {
+    width: 100%;
+    height: .7rem;
+    line-height: .7rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: .26rem;
+    text-align: center;
+    margin: 0rem auto;
+}
+.HighestM span{
+  color: #FEE439;
+  font-size: .28rem;
+  font-weight: bold;
+}
+.step_ul{
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: .1rem;
+}
+.step_li{
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.step_ul::before{
+  width: 60%;
+  height: .1rem;
+  background:yellow;
+  opacity: .1;
+  content: '';
+  position: absolute;
+  left: 20%;
+}
+.stepImg{
+  width: .6rem;
+  height: .6rem;
+  background: #fff;
+  border-radius: 100%;
+  margin-bottom: .1rem;
+}
+.stepImg img{
+  width: .38rem;
+  height: .32rem;
+}
+.codeImg{
+  width: 4.14rem;
+  height: 4.14rem;
+  margin: .7rem auto;
+}
+.codeImg img{
+  width: 100%;
+  height: 100%;
+}

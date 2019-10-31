@@ -1,0 +1,291 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width" />
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/own/SignIn.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/initBase.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/login/button.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div class="statusBar"></div>
+            <div class="title">
+                <div class="title_con flex spaceBetween alineCenter">
+                    <img src="../../image/backArrow.png" id="back" />
+                    <span class="fs36 colorfff">任务赚钱</span>
+                    <span class="title_span fs24 ModalBtn colorfff textCenter" data-type='0'>活动规则</span>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="content">
+                <div class="signIn">
+                    <div class="signIn_con">
+                        <ul class="signIn_ul flex flexStart">
+                            <li class="Goldcoin flex flexCloum alineCenter justiCenter" style="border-right:.01rem solid #fff;">
+                                <span class="fs40 colorfff fw">853</span>
+                                <span class="fs26 colorfff" style="margin-top:.1rem">我的金币</span>
+                            </li>
+                            <li class="Goldcoin flex flexCloum alineCenter justiCenter">
+                                <span class="fs40 colorfff fw">1105</span>
+                                <span class="fs26 colorfff" style="margin-top:.1rem">今日金币</span>
+                            </li>
+                        </ul>
+                        <div class="flex flexEnd alineCenter matchRed ModalBtn" data-type='2' id="matchRed">
+                            <span class="fs26 colorfff">去兑换红包</span>
+                            <img src="../../image/rightArrow1.png" alt="">
+                        </div>
+                        <p class="signInTime fs22">已签到两天，连续签到7天领大奖</p>
+                    </div>
+                </div>
+                <div class="showBg flex flexStart alineCenter">
+                    <div class="showBg_con flex flexCloum flexStart">
+                        <div class="showText fw colorfff">
+                            邀好友 拿<span>现金</span>
+                        </div>
+                        <div class="colorfff manyBtn fs18 flex justiCenter alineCenter">
+                            最高可得 <span style="color:#FEE439">1000</span>元
+                        </div>
+                    </div>
+                </div>
+                <div class="playMakeMoney">
+                    <div class="playMakeMoney_title fs30 color333">玩游戏赚现金</div>
+                    <ul class="playMakeMoney_ul">
+                        <li class="playMakeMoney_item flex alineCenter">
+                            <div class="InfoBox flex spaceBetween alineCenter">
+                                <div class="leftInfo flex flexStart alineCenter">
+                                    <div class="icon_box">
+                                        <img src="../../image/Signin.png" alt="">
+                                    </div>
+                                    <div class="tipsInfo flex flexCloum flexStart">
+                                        <span class="fs26 color333">今日签到</span>
+                                        <span class="fs24 color999" style="margin-top:.2rem;">签到赚双倍的钱</span>
+                                    </div>
+                                </div>
+                                <div class="rightBtn flex justiCenter alineCenter ModalBtn" data-type='1'>
+                                    <img src="../../image/btnIcon.png" alt="">
+                                    <span class="fs24 colorfff">+1000</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="playMakeMoney">
+                    <div class="playMakeMoney_title fs30 color333">限时推荐</div>
+                    <ul class="playMakeMoney_ul">
+                        <li class="playMakeMoney_item flex alineCenter">
+                            <div class="InfoBox flex spaceBetween alineCenter">
+                                <div class="leftInfo flex flexStart alineCenter">
+                                    <div class="icon_box">
+                                        <img src="../../image/Signin.png" alt="">
+                                    </div>
+                                    <div class="tipsInfo flex flexCloum flexStart">
+                                        <span class="fs26 color333">今日签到</span>
+                                        <span class="fs24 color999" style="margin-top:.2rem;">签到赚双倍的钱</span>
+                                    </div>
+                                </div>
+                                <div class="rightBtn flex justiCenter alineCenter ModalBtn" data-type='1'>
+                                    <img src="../../image/btnIcon.png" alt="">
+                                    <span class="fs24 colorfff">+1000</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- <div class="showBg"> -->
+                <!-- 邀请越多 赚得越多 -->
+                <div class="earnMore flex alineCenter justiCenter">
+                    <span class="earnLeft"></span>
+                    <span class="colorFF4D01 fs30 fw" style="padding:0rem .2rem;"> 热销商品0元购  </span>
+                    <span class="earnRight"></span>
+                </div>
+                <!-- </div> -->
+            </div>
+        </main>
+    </div>
+    <!-- 弹出层 -->
+    <div class="Modal">
+        <div class="Modal_box">
+            <!-- 活动规则 -->
+            <div class="Modal_con">
+                <div class="Modal_title">活动规则</div>
+                <ul class="setpDescribe">
+                    <li>1. 邀新奖励有效期为邀请成功日起7天内，新用户接受A邀请后7天内打开app都记为A邀请成功，期间无法接受其他用户的邀请。</li>
+                    <li>2. 奖励细则：邀请好友登录奖励每天限一次，分三次发放。好友注册后自下日起7内，每次打开App，邀新奖励立即入账。当新用户完成首单并确认收货后，你还可以得5元现金奖励。</li>
+                    <li>3. 奖励细则：邀请好友登录奖励每天限一次，分三次发放。好友注册后自下日起7内，每次打开App，邀新奖励立即入账。当新用户完成首单并确认收货后，你还可以得5元现金奖励。</li>
+                </ul>
+                <div class="tips_t">
+                    注：邀新奖励有效期为好友注册后7日内
+                </div>
+                <div class="confirmBtn flex justiCenter alineCenter">
+                    <button type="button fs32 colorfff textCenter" class='mainclick' id='Btn' name="button">我知道了</button>
+                </div>
+            </div>
+            <!-- 签到 -->
+            <div class="Modal_cons">
+                <div class="signInImg flex flexCloum alineCenter">
+                    <div class="SignInModal_title fs30">
+                        <span class="fw colorFF4D00 fs40">+40</span>金币
+                    </div>
+                </div>
+                <div class="signDay fs26 flex justiCenter alineCenter">
+                    已签到
+                    <span class="colorFF4D00">2</span> 天，连续签到
+                    <span class="colorFF4D00">7</span> 天领大礼
+                </div>
+                <ul class="progess_box flex flexStart .alineCenter{align-items: center;}
+              ">
+                    <li class="progess-bar">
+                        <div class="ball active colorfff fs26 flex alineCenter justiCenter">1</div>
+                        <div class="progress active"></div>
+                    </li>
+                    <li class="progess-bar">
+                        <div class="ball active colorfff fs26 flex alineCenter justiCenter">2</div>
+                        <div class="progress negative"></div>
+                    </li>
+                    <li class="progess-bar">
+                        <div class="ball colorfff fs26 flex alineCenter justiCenter">3</div>
+                        <div class="progress negative"></div>
+                    </li>
+                    <li class="progess-bar">
+                        <div class="ball colorfff fs26 flex alineCenter justiCenter">3</div>
+                        <div class="progress negative"></div>
+                    </li>
+                    <li class="progess-bar">
+                        <div class="ball colorfff fs26 flex alineCenter justiCenter">3</div>
+                        <div class="progress negative"></div>
+                    </li>
+                    <li class="progess-bar">
+                        <div class="ball colorfff fs26 flex alineCenter justiCenter">3</div>
+                        <div class="progress negative"></div>
+                    </li>
+                    <li class="progess-bar">
+                        <img src="../../image/TaskearnpageiconAredenvelope.png" alt="">
+                    </li>
+                </ul>
+                <div class="DoubleBtn flex justiCenter alineCenter colorfff fs32 fw">
+                    立即翻倍
+                </div>
+                <div class="KownBtn flex justiCenter alineCenter colorFF4D00 fs32 fw">
+                    我知道了
+                </div>
+                <div class="earnMore flex alineCenter justiCenter">
+                    <span class="earnLeftModal"></span>
+                    <span class="color999 fs30 fw" style="padding:0rem .2rem;"> 猜你喜欢  </span>
+                    <span class="earnRightModal"></span>
+                </div>
+                <div class="ad fs36">
+                    广告
+                </div>
+            </div>
+            <!-- 兑换 -->
+            <div class="convert_con">
+                <div class="comvertHead">
+                    <div class="closeIcon flex flexEnd alineCenter">
+                        <img src="../../image/closeBtn.png" alt="">
+                    </div>
+                    <ul class="modalcoin_ul flex spaceBetween borAfter">
+                        <li class="modalcoin flex flexCloum alineCenter justiCenter">
+                            <span class="fs26 colorfff">我的金币</span>
+                            <span class="fs40 colorfff fw" style="margin-top:.1rem">853</span>
+                            <span class="fs22 today">今日金币204</span>
+                        </li>
+                        <li class="modalcoin flex flexCloum alineCenter justiCenter">
+                            <span class="fs26 colorfff" >可兑换零钱</span>
+                            <span class="fs40 colorfff fw" style="padding-bottom:.2rem;margin-top:.1rem">1105</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="comvertFoot">
+                    <div class="AtOnceBtn flex justiCenter alineCenter fs32 colorfff fw">
+                        立即兑换
+                    </div>
+                    <div class="fs26 color999 textCenter" style="padding-bottom:.3rem;">
+                        金币只能兑换10000的倍数
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="SignInModal">
+        <div class="Modal_box">
+
+        </div>
+    </div> -->
+
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../../script/jqmin.js"></script>
+<script type="text/javascript">
+    apiready = function() {
+        $('.title').on('click', '#back', function() {
+                api.historyBack({}, function(ret, err) {
+                    if (!ret.status) {
+                        api.closeWin();
+                    }
+                })
+            })
+            // $('#FtoFInvite').click(function() {
+            //     api.openWin({
+            //         name: 'FtoFInvite',
+            //         url: './FtoFInvite.html'
+            //     })
+            // })
+            // 分享落地页
+        $('#matchRed').click(function() {
+            api.openWin({
+                name: "ShareToground",
+                url: "ShareToground.html"
+            })
+        })
+    };
+    $(function() {
+        $('.ModalBtn').click(function() {
+            // alert($(this).data().type)
+            $('.Modal').show()
+            if ($(this).data().type == 0) {
+                $('.redEnvImg').hide()
+                $('.Modal_con').show()
+                $('.Modal_cons').hide()
+                $('.tips_t').hide()
+                $('.convert_con').hide()
+                $('.Modal_title').text('活动规则')
+                $('#Btn').text('我知道了')
+                $('.setpDescribe').html(
+                    '<li>1. 邀新奖励有效期为邀请成功日起7天内，' +
+                    '新用户接受A邀请后7天内打开app都记为A邀请成功，' +
+                    '期间无法接受其他用户的邀请。</li>' +
+                    '<li>2. 奖励细则：邀请好友登录奖励每天限一次，分三次发放。' +
+                    '好友注册后自下日起7内，每次打开App，邀新奖励立即入账。' +
+                    '当新用户完成首单并确认收货后，你还可以得5元现金奖励。</li>' +
+                    '<li>3. 奖励细则：邀请好友登录奖励每天限一次，分三次发放。' +
+                    '友注册后自下日起7内，每次打开App，邀新奖励立即入账。' +
+                    '当新用户完成首单并确认收货后，你还可以得5元现金奖励。</li>')
+            } else if ($(this).data().type == 1) {
+                $('.Modal_cons').show()
+                $('.Modal_con').hide()
+                $('.convert_con').hide()
+            }else if ($(this).data().type == 2) {
+              $('.convert_con').show()
+              $('.Modal_cons').hide()
+              $('.Modal_con').hide()
+            }
+        })
+        $('.Modal').click(function() {
+            $(this).hide()
+        })
+    })
+</script>
+
+</html>

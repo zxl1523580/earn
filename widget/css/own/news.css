@@ -5,68 +5,58 @@ html, body, #wrap {
     flex-direction: column;
 }
 
-#wrap header {
-    /*height: 1.28rem;*/
-
-}
-
 .statusBar {
     height: .4rem;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
 }
-.title{
-  width:100%;
-  background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
+
+.title {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1) 0%, rgba(255, 125, 69, 1) 100%);
 }
+
 .title_con {
     width: 96%;
     margin: 0 auto;
     height: .88rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
 }
 
-.title_con>img {
+.title_con img {
     width: .48rem;
     height: .48rem;
 }
 
-.title_con>span {
+.title_span {
     display: inline-block;
     flex: 1;
-    font-size: .36rem;
-    color: #FFFFFF;
-    text-align: center;
 }
 
-.navBar{
-  height: .88rem;
-  line-height: .88rem;
-  display: flex;
-  font-size:.28rem;
-  font-weight:400;
-  color:#333333;
-  text-align: center;
+.navBar {
+    height: .88rem;
+    line-height: .88rem;
 }
-.navBar p{
-  flex: 1
+
+.navBar p {
+    flex: 1
 }
-.navBaractive{
-  font-size:.28rem;
-  font-weight:bold;
-  color:#333333;
-  position: relative;
+
+.navBaractive {
+    font-size: .28rem;
+    font-weight: bold;
+    color: #333333;
+    position: relative;
 }
-.navBaractive::after{
-  position: absolute;
-  bottom: .1rem;
-  left: 50%;
-  margin-left: -.1rem;
-  content: "";
-  width: .2rem;
-  height: .1rem;
-  background:linear-gradient(90deg,rgba(255,77,0,1),rgba(255,125,69,1));
-  border-radius: .04rem;
+
+.navBaractive::after {
+    position: absolute;
+    bottom: .1rem;
+    left: 50%;
+    margin-left: -.1rem;
+    content: "";
+    width: .2rem;
+    height: .1rem;
+    background: linear-gradient(90deg, rgba(255, 77, 0, 1), rgba(255, 125, 69, 1));
+    border-radius: .04rem;
 }
 
 #wrap main {
@@ -78,81 +68,65 @@ html, body, #wrap {
 #wrap main::-webkit-scrollbar {
     display: none;
 }
-.messageModel{
-  margin: .32rem .24rem;
+
+.messageModel {
+    margin: .32rem .24rem;
 }
-.messageModelTop{
-  height: .9rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.messageModelTop {
+    height: .9rem;
 }
-.messageModelTopL{
-  width: .9rem;
-  height: .9rem;
+
+.messageModelTopL {
+    width: .9rem;
+    height: .9rem;
 }
-.messageModelTopL img{
-  width: 100%;
-  height: auto;
+
+.messageModelTopL img {
+    width: 100%;
+    height: auto;
 }
-.messageModelTopC{
-  flex: 1;
-  margin-left: .15rem
+
+.messageModelTopC {
+    flex: 1;
+    margin-left: .15rem
 }
-.messagename{
-  font-size:.28rem;
-  color:rgba(51,51,51,1);
-  margin-top: .05rem
+
+.messagename {
+    font-size: .28rem;
+    color: rgba(51, 51, 51, 1);
+    margin-top: .05rem
 }
-.messagetime{
-  font-size:.22rem;
-  color:rgba(153,153,153,1);
-  margin-top: .23rem;
+
+.messagetime {
+    font-size: .22rem;
+    color: rgba(153, 153, 153, 1);
+    margin-top: .23rem;
 }
-.messageModelTopR{
-  width:1.34rem;
-  height:.5rem;
-  background:rgba(255,77,0,0.14);
-  border-radius:.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+.messageModelBottom {
+    margin-top: .26rem;
 }
-.messageBtn{
-  width: .27rem;
-  height: .26rem;
+
+.messageModelBottomText {
+    line-height: .36rem;
+    margin-bottom: .16rem
 }
-.messagesharnum{
-  font-size:.28rem;
-  color:rgba(255,77,0,1);
-  margin-left: .08rem
+
+.messageModelBottomImgOne {
+    margin-top: .16rem
 }
-.messageModelBottom{
-  display: flex;
-  flex-direction: column;
-  margin-top: .26rem;
+
+.messageModelBottomImgOne img {
+    width: 100%;
 }
-.messageModelBottomText{
-  font-size:.26rem;
-  color:#333333;
-  line-height:.36rem;
-  margin-bottom: .16rem
-}
-.messageModelBottomImgOne{
-  margin-top: .16rem
-}
-.messageModelBottomImgOne img{
-  width: 100%;
-}
-.messageModelBottomImgTwo{
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .messageModelBottomImgTwo img {
-  width: 2.28rem;
-  height: 2.28rem;
-  margin-bottom: .08rem;
+    width: 2.28rem;
+    height: 2.28rem;
+    margin-bottom: .08rem;
 }
-.messageModelBottomImgTwo img:nth-child(3n-1){
-  margin: 0 .08rem;
+
+.messageModelBottomImgTwo img:nth-child(3n-1) {
+    margin: 0 .08rem;
 }
